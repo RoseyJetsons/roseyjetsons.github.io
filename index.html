@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoseyJetsons | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a25;
+            --text-primary: #e4e4e8;
+            --text-secondary: #a0a0a8;
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-tertiary: #ec4899;
+            --border-color: rgba(99, 102, 241, 0.2);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+        header {
+            min-height: 100vh;
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            text-align: center; padding: 100px 20px;
+            background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%);
+        }
+        .profile-img {
+            width: 160px; height: 160px; border-radius: 50%;
+            border: 3px solid var(--accent-primary);
+            margin-bottom: 24px; object-fit: cover;
+        }
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+        }
+        .tagline { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 32px; }
+        .social-links { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+        .social-link {
+            padding: 12px 24px;
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 12px; color: var(--text-primary);
+            text-decoration: none; transition: all 0.3s ease;
+        }
+        .social-link:hover {
+            background: var(--accent-primary); transform: translateY(-2px);
+        }
+        section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+        .section-title {
+            font-size: 2rem; text-align: center;
+            margin-bottom: 48px; position: relative;
+        }
+        .section-title::after {
+            content: ''; display: block; width: 60px; height: 4px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-tertiary));
+            margin: 16px auto 0; border-radius: 2px;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        .project-card {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 16px; padding: 28px;
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px); border-color: var(--accent-primary);
+        }
+        .project-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
+        .project-card p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 16px; }
+        .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+        .tag {
+            padding: 4px 12px; background: rgba(99, 102, 241, 0.1);
+            border-radius: 12px; font-size: 0.75rem;
+            color: var(--accent-primary);
+        }
+        .project-link {
+            color: var(--accent-primary); text-decoration: none;
+            font-size: 0.9rem; font-weight: 500;
+        }
+        .project-link:hover { text-decoration: underline; }
+        .future-projects { background: var(--bg-secondary); border-radius: 24px; }
+        .coming-soon { opacity: 0.6; }
+        .coming-soon-badge {
+            display: inline-block; padding: 4px 12px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 12px; font-size: 0.7rem; font-weight: 600;
+            color: white; margin-bottom: 12px;
+        }
+        .about-content { max-width: 700px; margin: 0 auto; text-align: center; }
+        .about-content p { color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 16px; }
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 24px; }
+        .skill-item {
+            padding: 10px 18px; background: var(--bg-card);
+            border: 1px solid var(--border-color); border-radius: 8px;
+            font-size: 0.85rem; color: var(--text-primary);
+        }
+        footer {
+            background: var(--bg-secondary); padding: 40px 20px;
+            text-align: center; color: var(--text-secondary);
+        }
+        @media (max-width: 768px) {
+            header { padding: 60px 20px; }
+            h1 { font-size: 2rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://avatars.githubusercontent.com/u/270506515?v=4" alt="RoseyJetsons" class="profile-img">
+        <h1>RoseyJetsons</h1>
+        <p class="tagline">Developer • Creator • Innovator</p>
+        <div class="social-links">
+            <a href="https://github.com/RoseyJetsons" target="_blank" class="social-link">GitHub</a>
+            <a href="#projects" class="social-link">Projects</a>
+            <a href="#about" class="social-link">About</a>
+        </div>
+    </header>
+
+    <section id="projects">
+        <h2 class="section-title">🚀 Current Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>OpenClaw</h3>
+                <p>AI-powered automation and workflow management system</p>
+                <div class="project-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">Automation</span>
+                    <span class="tag">Node.js</span>
+                </div>
+                <a href="https://github.com/openclaw/openclaw" target="_blank" class="project-link">View on GitHub →</a>
+            </div>
+            
+            <div class="project-card">
+                <h3>Settings Manager</h3>
+                <p>Desktop application for customizable settings management</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">GUI</span>
+                    <span class="tag">Desktop</span>
+                </div>
+                <a href="#" class="project-link">Coming Soon →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Personal Portfolio</h3>
+                <p>Modern portfolio website with project showcase</p>
+                <div class="project-tags">
+                    <span class="tag">HTML/CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Web</span>
+                </div>
+                <a href="#" class="project-link">View Project →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="future-projects">
+        <h2 class="section-title">🌟 Future Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card coming-soon">
+                <span class="coming-soon-badge">COMING SOON</span>
+                <h3>AI Assistant Dashboard</h3>
+                <p>Centralized dashboard for managing AI-powered tasks</p>
+                <div class="project-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">Dashboard</span>
+                    <span class="tag">Web</span>
+                </div>
+            </div>
+
+            <div class="project-card coming-soon">
+                <span class="coming-soon-badge">COMING SOON</span>
+                <h3>Smart Home Controller</h3>
+                <p>IoT dashboard for home automation control</p>
+                <div class="project-tags">
+                    <span class="tag">IoT</span>
+                    <span class="tag">Home Automation</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+
+            <div class="project-card coming-soon">
+                <span class="coming-soon-badge">COMING SOON</span>
+                <h3>Code Generator Tool</h3>
+                <p>AI-powered code generation and refactoring tool</p>
+                <div class="project-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">Code Generation</span>
+                    <span class="tag">Tooling</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">👋 About Me</h2>
+        <div class="about-content">
+            <p>Hello! I'm a passionate developer focused on creating innovative solutions and exploring new technologies.</p>
+            <p>I believe that every new idea is built upon the foundation of earlier concepts and technologies. Understanding the basics first allows us to create more secure and reliable software.</p>
+            <div class="skills-grid">
+                <span class="skill-item">Python</span>
+                <span class="skill-item">JavaScript</span>
+                <span class="skill-item">Node.js</span>
+                <span class="skill-item">HTML/CSS</span>
+                <span class="skill-item">AI/ML</span>
+                <span class="skill-item">IoT</span>
+                <span class="skill-item">Automation</span>
+                <span class="skill-item">Git/GitHub</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 RoseyJetsons. Built with ❤️ and code.</p>
+        <p style="margin-top: 8px; font-size: 0.85rem;">
+            <a href="https://github.com/RoseyJetsons" style="color: var(--accent-primary); text-decoration: none;">github.com/RoseyJetsons</a>
+        </p>
+    </footer>
+</body>
+</html>
