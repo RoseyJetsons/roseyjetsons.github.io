@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Archive | RoseyJetsons</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a25;
+            --text-primary: #e4e4e8;
+            --text-secondary: #a0a0a8;
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-tertiary: #ec4899;
+            --border-color: rgba(99, 102, 241, 0.2);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+        header {
+            padding: 40px 20px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .header-content { max-width: 1200px; margin: 0 auto; }
+        .back-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            color: var(--text-secondary); text-decoration: none;
+            margin-bottom: 20px; font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover { color: var(--accent-primary); }
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+        .subtitle { color: var(--text-secondary); font-size: 1.1rem; }
+        .filter-section {
+            padding: 30px 20px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .filter-buttons {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; gap: 12px; flex-wrap: wrap;
+            justify-content: center;
+        }
+        .filter-btn {
+            padding: 10px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        .filter-btn:hover {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+        }
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border-color: transparent;
+        }
+        main { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+        }
+        .research-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 28px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .research-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+        }
+        .research-card.hidden { display: none; }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+            gap: 12px;
+        }
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 1.4;
+            flex: 1;
+        }
+        .card-date {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+        .card-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .tag {
+            padding: 4px 12px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 12px;
+            font-size: 0.75rem;
+            color: var(--accent-primary);
+        }
+        .tag.ai { background: rgba(99, 102, 241, 0.2); color: #a5b4fc; }
+        .tag.research { background: rgba(139, 92, 246, 0.2); color: #c4b5fd; }
+        .tag.system { background: rgba(236, 72, 153, 0.2); color: #fbcfe8; }
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-color);
+        }
+        .view-link {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .view-link:hover { gap: 8px; }
+        .status {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+        .status.completed { background: rgba(22, 163, 74, 0.2); color: #4ade80; }
+        .status.pending { background: rgba(251, 191, 36, 0.2); color: #fbbf24; }
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-secondary);
+        }
+        .empty-state .icon { font-size: 4rem; margin-bottom: 20px; }
+        footer {
+            background: var(--bg-secondary);
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            margin-top: 60px;
+        }
+        @media (max-width: 768px) {
+            .research-grid { grid-template-columns: 1fr; }
+            .filter-buttons { gap: 8px; }
+            .filter-btn { padding: 8px 16px; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            <h1>Research Archive</h1>
+            <p class="subtitle">AI, Machine Learning, and Emerging Technologies Research</p>
+        </div>
+    </header>
+
+    <section class="filter-section">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Research</button>
+            <button class="filter-btn" data-filter="ai">AI & LLMs</button>
+            <button class="filter-btn" data-filter="automation">Automation</button>
+            <button class="filter-btn" data-filter="system">System Design</button>
+            <button class="filter-btn" data-filter="research">Research Methods</button>
+        </div>
+    </section>
+
+    <main>
+        <div class="research-grid" id="researchGrid">
+            <div class="research-card" data-category="ai system">
+                <div class="card-header">
+                    <div class="card-title">HuggingFace Model Research for llama.cpp</div>
+                    <div class="card-date">2026-03-28</div>
+                </div>
+                <div class="card-description">
+                    Comprehensive analysis of HuggingFace models compatible with llama.cpp, including Llama 3.1, Mistral, Phi-3, Qwen2.5, and Gemma 2 families.
+                </div>
+                <div class="card-tags">
+                    <span class="tag ai">AI</span>
+                    <span class="tag system">System Design</span>
+                    <span class="tag">llama.cpp</span>
+                </div>
+                <div class="card-footer">
+                    <span class="status completed">Report Generated</span>
+                    <span class="view-link">View Report →</span>
+                </div>
+            </div>
+
+            <div class="research-card" data-category="ai automation">
+                <div class="card-header">
+                    <div class="card-title">DreamMode Architecture & Orchestrator Optimization</div>
+                    <div class="card-date">2026-03-28</div>
+                </div>
+                <div class="card-description">
+                    Research on ways for the orchestrator to stay in task during autonomous operation. Analyzed task persistence and context maintenance.
+                </div>
+                <div class="card-tags">
+                    <span class="tag ai">AI</span>
+                    <span class="tag automation">Automation</span>
+                    <span class="tag">Orchestrator</span>
+                </div>
+                <div class="card-footer">
+                    <span class="status completed">Completed</span>
+                    <span class="view-link">Details Available</span>
+                </div>
+            </div>
+
+            <div class="research-card" data-category="ai research">
+                <div class="card-header">
+                    <div class="card-title">Self-Improvement & Learning Efficiency</div>
+                    <div class="card-date">2026-03-28</div>
+                </div>
+                <div class="card-description">
+                    Exploration of methods to improve efficiency and productivity through local machine learning.
+                </div>
+                <div class="card-tags">
+                    <span class="tag ai">AI</span>
+                    <span class="tag research">Research</span>
+                    <span class="tag">ML</span>
+                </div>
+                <div class="card-footer">
+                    <span class="status completed">Completed</span>
+                    <span class="view-link">Details Available</span>
+                </div>
+            </div>
+
+            <div class="research-card" data-category="automation system">
+                <div class="card-header">
+                    <div class="card-title">OpenClaw Multi-Agent System Design</div>
+                    <div class="card-date">2026-03-26</div>
+                </div>
+                <div class="card-description">
+                    Analysis of flexible multi-agent architecture with dynamic role switching and sub-agent spawning.
+                </div>
+                <div class="card-tags">
+                    <span class="tag automation">Automation</span>
+                    <span class="tag system">System Design</span>
+                    <span class="tag">Architecture</span>
+                </div>
+                <div class="card-footer">
+                    <span class="status completed">Implemented</span>
+                    <span class="view-link">Details Available</span>
+                </div>
+            </div>
+
+            <div class="research-card" data-category="automation research">
+                <div class="card-header">
+                    <div class="card-title">Research Mode Strategies & Methodologies</div>
+                    <div class="card-date">2026-03-25</div>
+                </div>
+                <div class="card-description">
+                    Developed five research strategies: Quick, Deep, Focused, Comparative, and Trend with interactive menus.
+                </div>
+                <div class="card-tags">
+                    <span class="tag automation">Automation</span>
+                    <span class="tag research">Research</span>
+                    <span class="tag">Methodology</span>
+                </div>
+                <div class="card-footer">
+                    <span class="status completed">Implemented</span>
+                    <span class="view-link">Details Available</span>
+                </div>
+            </div>
+
+            <div class="research-card" data-category="system">
+                <div class="card-header">
+                    <div class="card-title">Cross-Platform Desktop Application Architecture</div>
+                    <div class="card-date">2026-03-25</div>
+                </div>
+                <div class="card-description">
+                    Avalonia UI + .NET 9 architecture for Windows, macOS, and Linux with MVVM pattern.
+                </div>
+                <div class="card-tags">
+                    <span class="tag system">System Design</span>
+                    <span class="tag">.NET</span>
+                    <span class="tag">Cross-Platform</span>
+                </div>
+                <div class="card-footer">
+                    <span class="status completed">Implemented</span>
+                    <span class="view-link">Details Available</span>
+                </div>
+            </div>
+
+            <div class="research-card" data-category="system ai">
+                <div class="card-header">
+                    <div class="card-title">Local LLM Infrastructure & Performance Optimization</div>
+                    <div class="card-date">2026-03-25</div>
+                </div>
+                <div class="card-description">
+                    llama.cpp server configuration on 128GB Mac with performance analysis and multi-model routing.
+                </div>
+                <div class="card-tags">
+                    <span class="tag system">System Design</span>
+                    <span class="tag ai">AI</span>
+                    <span class="tag">Performance</span>
+                </div>
+                <div class="card-footer">
+                    <span class="status completed">Optimized</span>
+                    <span class="view-link">Details Available</span>
+                </div>
+            </div>
+
+            <div class="research-card" data-category="system automation">
+                <div class="card-header">
+                    <div class="card-title">Security Filter System for AI Workflows</div>
+                    <div class="card-date">2026-03-25</div>
+                </div>
+                <div class="card-description">
+                    Built-in security filter with URL sanitization, prompt injection detection, and content filtering.
+                </div>
+                <div class="card-tags">
+                    <span class="tag system">System Design</span>
+                    <span class="tag automation">Automation</span>
+                    <span class="tag">Security</span>
+                </div>
+                <div class="card-footer">
+                    <span class="status completed">Active</span>
+                    <span class="view-link">Details Available</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="emptyState" class="empty-state" style="display: none;">
+            <div class="icon">🔍</div>
+            <h3>No research found</h3>
+            <p>Try selecting a different filter</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 RoseyJetsons. Powered by AI Research.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const researchCards = document.querySelectorAll('.research-card');
+            const emptyState =

@@ -99,6 +99,68 @@
             border-radius: 12px; font-size: 0.7rem; font-weight: 600;
             color: white; margin-bottom: 12px;
         }
+        /* Research Section */
+        .section-header {
+            text-align: center; margin-bottom: 48px;
+        }
+        .section-subtitle {
+            font-size: 1.1rem; color: var(--text-secondary);
+            margin-top: 8px;
+        }
+        .research-preview {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 20px; padding: 48px;
+            transition: all 0.3s ease;
+        }
+        .research-preview:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.15);
+        }
+        .research-stats {
+            display: flex; justify-content: center; gap: 48px;
+            margin-bottom: 32px; flex-wrap: wrap;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            display: block; font-size: 2.5rem; font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-label {
+            font-size: 0.85rem; color: var(--text-secondary);
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+        .research-description {
+            font-size: 1.1rem; color: var(--text-secondary);
+            text-align: center; margin: 0 auto 32px; max-width: 600px;
+            line-height: 1.8;
+        }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 16px 32px; border-radius: 14px;
+            text-decoration: none; font-weight: 600;
+            transition: all 0.3s ease; cursor: pointer;
+            border: none; font-size: 1rem;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white; box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.6);
+        }
+        .btn-arrow { transition: transform 0.3s ease; }
+        .btn-primary:hover .btn-arrow { transform: translateX(4px); }
+        @media (max-width: 768px) {
+            .research-stats { gap: 32px; }
+            .stat-number { font-size: 2rem; }
+            .research-preview { padding: 32px 24px; }
+        }
+        }
         .about-content { max-width: 700px; margin: 0 auto; text-align: center; }
         .about-content p { color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 16px; }
         .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 24px; }
@@ -126,6 +188,7 @@
         <div class="social-links">
             <a href="https://github.com/RoseyJetsons" target="_blank" class="social-link">GitHub</a>
             <a href="#projects" class="social-link">Projects</a>
+            <a href="#research" class="social-link">Research</a>
             <a href="#about" class="social-link">About</a>
         </div>
     </header>
@@ -203,6 +266,15 @@
                     <span class="tag">Tooling</span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="research">
+        <h2 class="section-title">🔬 Research</h2>
+        <div class="about-content">
+            <p style="font-size: 1.2rem; margin-bottom: 12px;">AI, Machine Learning, and Emerging Technologies</p>
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">Exploring the frontiers of artificial intelligence, local LLMs, and automated reasoning systems through hands-on research and experimentation.</p>
+            <a href="research.html" target="_blank" class="social-link" style="padding: 16px 32px; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); border: none; font-weight: 600;">View Research Archive →</a>
         </div>
     </section>
 
