@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IC & Microcontroller Testing Guide - Research</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <a href="/research.html" class="back-link">← Back to Research</a>
+            <h1>IC & Microcontroller Testing Guide</h1>
+            <p class="subtitle">Comprehensive electronics engineering research covering non-destructive/destructive testing methodologies, reliability mathematics, signal integrity analysis, thermal characterization, test equipment catalog, and facilities directory.</p>
+            <div class="meta">
+                <span class="date">March 29, 2026</span>
+                <span class="status completed">Completed</span>
+            </div>
+        </header>
+
+        <section class="research-content">
+            <h2>Executive Summary</h2>
+            <p>This comprehensive guide provides electronics engineers with a complete reference for IC and microcontroller testing methodologies, from non-destructive visual inspection to advanced destructive analysis techniques. It covers reliability mathematics, signal integrity analysis, thermal characterization, and includes an extensive catalog of test equipment and facilities worldwide.</p>
+
+            <h2>1. Non-Destructive Testing Methodologies</h2>
+            
+            <h3>1.1 X-Ray Imaging</h3>
+            <p>X-ray imaging is essential for internal inspection without destructive analysis. Key applications include:</p>
+            <ul>
+                <li>Wire bond inspection and void detection</li>
+                <li>Die placement verification</li>
+                <li>Internal structure analysis</li>
+                <li>Solder joint quality assessment</li>
+            </ul>
+
+            <h3>1.2 Computed Tomography (CT)</h3>
+            <p>3D X-ray imaging providing volumetric analysis:</p>
+            <ul>
+                <li>Complete internal 3D reconstruction</li>
+                <li>Multi-angle inspection capability</li>
+                <li>Advanced defect detection</li>
+                <li>Measurement of internal features</li>
+            </ul>
+
+            <h3>1.3 Scanning Acoustic Microscopy (SAM)</h3>
+            <p>Ultrasound-based inspection for delamination and void detection:</p>
+            <ul>
+                <li>Interface delamination detection</li>
+                <li>Void identification in solder joints</li>
+                <li>Crack detection</li>
+                <li>Non-contact surface inspection</li>
+            </ul>
+
+            <h3>1.4 Optical Microscopy</h3>
+            <p>Visual inspection at various magnification levels:</p>
+            <ul>
+                <li>External package inspection</li>
+                <li>Die surface examination</li>
+                <li>Wire bond visual assessment</li>
+                <li>Contamination detection</li>
+            </ul>
+
+            <h3>1.5 JTAG Boundary Scan</h3>
+            <p>Electronic testing through built-in test interfaces:</p>
+            <ul>
+                <li>Circuit connectivity verification</li>
+                <li>Short/open detection</li>
+                <li>Component identification</li>
+                <li>Functional testing capability</li>
+            </ul>
+
+            <h2>2. Destructive Testing Methodologies</h2>
+            
+            <h3>2.1 Wire Bond Shear Testing</h3>
+            <p>Mechanical strength assessment of wire bonds:</p>
+            <ul>
+                <li>Shear force measurement</li>
+                <li>Bond quality verification</li>
+                <li>Process validation</li>
+                <li>Failure analysis</li>
+            </ul>
+
+            <h3>2.2 Wire Bond Pull Testing</h3>
+            <p>Tensile strength evaluation:</p>
+            <ul>
+                <li>Pull force measurement</li>
+                <li>Ball bond quality assessment</li>
+                <li>Wedge bond verification</li>
+                <li>Process monitoring</li>
+            </ul>
+
+            <h3>2.3 Cross-Sectioning</h3>
+            <p>Internal structure exposure for analysis:</p>
+            <ul>
+                <li>Manual cross-sectioning</li>
+                <li>Automated polishing</li>
+                <li>Resin embedding</li>
+                <li>Multi-level exposure</li>
+            </ul>
+
+            <h3>2.4 Decapsulation</h3>
+            <p>Package removal for die access:</p>
+            <ul>
+                <li>Hot acid decap</li>
+                <li>Plasma decapsulation</li>
+                <li>Mechanical removal</li>
+                <li>Laser decapsulation</li>
+            </ul>
+
+            <h3>2.5 Scanning Electron Microscopy (SEM)</h3>
+            <p>High-resolution imaging and analysis:</p>
+            <ul>
+                <li>Surface topology imaging</li>
+                <li>Energy dispersive X-ray (EDX) analysis</li>
+                <li>Failure mechanism identification</li>
+                <li>Contaminant analysis</li>
+            </ul>
+
+            <h3>2.6 Focused Ion Beam (FIB)</h3>
+            <p>Precise milling and imaging:</p>
+            <ul>
+                <li>Cross-section preparation</li>
+                <li>Circuit modification</li>
+                <li>High-resolution imaging</li>
+                <li>3D reconstruction</li>
+            </ul>
+
+            <h3>2.7 Transmission Electron Microscopy (TEM)</h3>
+            <p>Ultra-high resolution internal imaging:</p>
+            <ul>
+                <li>Crystal structure analysis</li>
+                <li>Interface characterization</li>
+                <li>Defect analysis at atomic scale</li>
+                <li>Material properties assessment</li>
+            </ul>
+
+            <h2>3. Reliability Mathematics</h2>
+            
+            <h3>3.1 Arrhenius Equation</h3>
+            <p>Temperature acceleration model:</p>
+            <p><strong>AF = exp[Ea/k × (1/T_use - 1/T_test)]</strong></p>
+            <ul>
+                <li>Ea = Activation energy (eV)</li>
+                <li>k = Boltzmann constant (8.617×10⁻⁵ eV/K)</li>
+                <li>T = Absolute temperature (K)</li>
+            </ul>
+
+            <h3>3.2 Black's Equation</h3>
+            <p>Electromigration lifetime prediction:</p>
+            <p><strong>MTTF = A × J⁻ⁿ × exp[Ea/kT]</strong></p>
+            <ul>
+                <li>J = Current density</li>
+                <li>n = Current density exponent (typically 1-2)</li>
+                <li>A = Constant based on geometry</li>
+            </ul>
+
+            <h3>3.3 Coffin-Manson Equation</h3>
+            <p>Thermal cycling fatigue:</p>
+            <p><strong>Nf = C × (ΔT)ᵝ × (f)ᵞ</strong></p>
+            <ul>
+                <li>Nf = Cycles to failure</li>
+                <li>ΔT = Temperature range</li>
+                <li>f = Frequency</li>
+                <li>β, γ = Material constants</li>
+            </ul>
+
+            <h3>3.4 MIL-HDBK-217F</h3>
+            <p>Reliability prediction standard:</p>
+            <ul>
+                <li>λp = τp × πE × πQ × πL × πC</li>
+                <li>Environmental, quality, and load factors</li>
+                <li>Industry standard for military/aerospace</li>
+            </ul>
+
+            <h2>4. Signal Integrity Analysis</h2>
+            
+            <h3>4.1 S-Parameters</h3>
+            <p>Scattering parameters for high-frequency analysis:</p>
+            <ul>
+                <li>S11, S22 = Return loss</li>
+                <li>S21, S12 = Insertion loss</li>
+                <li>Frequency domain characterization</li>
+                <li>Vector network analyzer measurement</li>
+            </ul>
+
+            <h3>4.2 Eye Diagram Analysis</h3>
+            <p>Signal quality visualization:</p>
+            <ul>
+                <li>Eye opening measurement</li>
+                <li>Jitter analysis</li>
+                <li>Signal integrity assessment</li>
+                <li>BER estimation</li>
+            </ul>
+
+            <h2>5. Thermal Characterization</h2>
+            
+            <h3>5.1 Thermal Resistance (θJA, θJC)</h3>
+            <p>Heat transfer metrics:</p>
+            <ul>
+                <li>θJA = Junction-to-ambient</li>
+                <li>θJC = Junction-to-case</li>
+                <li>JESD51 standards</li>
+                <li>Thermal imaging verification</li>
+            </ul>
+
+            <h3>5.2 Power Derating</h3>
+            <p>Temperature-based power limitations:</p>
+            <ul>
+                <li>Maximum power vs. temperature</li>
+                <li>Ambient temperature effects</li>
+                <li>Derating curves</li>
+                <li>Thermal management strategies</li>
+            </ul>
+
+            <h2>6. Test Equipment Catalog</h2>
+            
+            <h3>6.1 X-Ray Systems</h3>
+            <ul>
+                <li>Hitachi HUX-series</li>
+                <li>Zeiss Compact Series</li>
+                <li>Bruker Desktop Series</li>
+                <li>Nordson Dage X-Ray</li>
+            </ul>
+
+            <h3>6.2 Acoustic Microscopy</h3>
+            <ul>
+                <li>Thermo Fisher SAM Series</li>
+                <li>Novanta C-SAM</li>
+            </ul>
+
+            <h3>6.3 Electron Microscopy</h3>
+            <ul>
+                <li>Thermo Fisher SEM</li>
+                <li>Zeiss SEM/FIB</li>
+                <li>Hitachi SEM</li>
+            </ul>
+
+            <h3>6.4 Optical Microscopy</h3>
+            <ul>
+                <li>Nordson Dage Microscopes</li>
+                <li>Keyence Microscopes</li>
+                <li>Olympus Microscopes</li>
+            </ul>
+
+            <h3>6.5 Electrical Test Equipment</h3>
+            <ul>
+                <li>Keysight Oscilloscopes</li>
+                <li>Teradyne Test Systems</li>
+                <li>Advantest ATP</li>
+            </ul>
+
+            <h2>7. Testing Facilities Directory</h2>
+            
+            <h3>7.1 North America</h3>
+            <ul>
+                <li>Cambridge Electronic Materials (CEM) - USA</li>
+                <li>Failure Analysis Associates (FAA) - USA</li>
+                <li>Intertek - Multiple locations</li>
+            </ul>
+
+            <h3>7.2 Europe</h3>
+            <ul>
+                <li>TÜV SÜD - Germany</li>
+                <li>DEKRA - Multiple locations</li>
+                <li>ERMEL - France</li>
+            </ul>
+
+            <h3>7.3 Asia</h3>
+            <ul>
+                <li>SGS - Multiple locations</li>
+                <li>ITS - Asia Pacific</li>
+                <li>Bureau Veritas - Asia</li>
+            </ul>
+
+            <h2>8. Standards Reference</h2>
+            
+            <h3>8.1 MIL-STD-883</h3>
+            <p>Test method standard for microcircuits</p>
+            
+            <h3>8.2 JEDEC Standards</h3>
+            <p>JESD22, JESD51, JESD78 series</p>
+            
+            <h3>8.3 IPC Standards</h3>
+            <p>IPC-925, IPC-9701</p>
+            
+            <h3>8.4 IEEE Standards</h3>
+            <p>IEEE 1149 series (JTAG)</p>
+
+            <h2>9. Methodology Selection Guide</h2>
+            
+            <table class="methodology-table">
+                <thead>
+                    <tr>
+                        <th>Objective</th>
+                        <th>Recommended Method</th>
+                        <th>Destructive?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Internal structure inspection</td>
+                        <td>X-Ray / CT</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Delamination detection</td>
+                        <td>SAM</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Wire bond strength</td>
+                        <td>Shear/Pull test</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Failure analysis</td>
+                        <td>SEM + Decap</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Circuit modification</td>
+                        <td>FIB</td>
+                        <td>Yes</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>10. Recommendations</h2>
+            
+            <h3>10.1 For Production Testing</h3>
+            <ul>
+                <li>Start with non-destructive methods</li>
+                <li>X-ray for internal inspection</li>
+                <li>SAM for delamination</li>
+                <li>JTAG for electrical verification</li>
+            </ul>
+
+            <h3>10.2 For Failure Analysis</h3>
+            <ul>
+                <li>Document everything before destruction</li>
+                <li>Start with non-destructive characterization</li>
+                <li>Progress to destructive only when necessary</li>
+                <li>Use SEM for final analysis</li>
+            </ul>
+
+            <h3>10.3 For Reliability Testing</h3>
+            <ul>
+                <li>Follow JEDEC standards</li>
+                <li>Use appropriate acceleration models</li>
+                <li>Document test conditions thoroughly</li>
+                <li>Statistical analysis of results</li>
+            </ul>
+        </section>
+
+        <footer class="research-footer">
+            <a href="/research.html" class="back-link">← Back to Research</a>
+        </footer>
+    </div>
+</body>
+</html>
