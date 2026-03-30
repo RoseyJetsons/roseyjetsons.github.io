@@ -94,12 +94,83 @@
             z-index: 1;
         }
         
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
         .header-meta {
             display: flex;
             gap: 16px;
             align-items: center;
             margin-bottom: 24px;
             flex-wrap: wrap;
+        }
+        
+        /* READ ALOUD BUTTON */
+        .read-aloud-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .read-aloud-btn:hover {
+            border-color: var(--accent-primary);
+            background: var(--bg-card-hover);
+        }
+        
+        .read-aloud-btn.active {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--accent-primary);
+        }
+        
+        .read-aloud-btn .icon {
+            font-size: 1.2rem;
+        }
+        
+        .read-aloud-btn.playing .icon::after {
+            content: '⏸️';
+        }
+        
+        .read-aloud-btn:not(.playing) .icon::after {
+            content: '🔊';
+        }
+        
+        /* READING PROGRESS BAR */
+        .reading-progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: transparent;
+            z-index: 1000;
+            pointer-events: none;
+        }
+        
+        .reading-progress-bar {
+            height: 100%;
+            background: var(--gradient-primary);
+            width: 0%;
+            transition: width 0.3s ease;
         }
         
         .status-badge {
@@ -495,5 +566,92 @@
             </div>
         </aside>
     </div>
+
+    <!-- READING PROGRESS BAR -->
+    <div class="reading-progress-container">
+        <div class="reading-progress-bar"></div>
+    </div>
+
+    <!-- READ ALOUD FUNCTIONALITY -->
+    <script>
+        let speechSynth = window.speechSynthesis;
+        let utterance = null;
+        let isReading = false;
+        let currentSection = null;
+
+        function toggleReadAloud() {
+            const btn = document.querySelector('.read-aloud-btn');
+            
+            if (isReading) {
+                stopReading();
+            } else {
+                startReading();
+            }
+        }
+
+        function startReading() {
+            const btn = document.querySelector('.read-aloud-btn');
+            btn.classList.add('playing');
+            btn.querySelector('.text').textContent = 'Stop';
+            
+            // Get all readable content
+            const title = document.querySelector('.research-title')?.textContent || '';
+            const subtitle = document.querySelector('.research-subtitle')?.textContent || '';
+            const abstract = document.querySelector('#abstract .section-text')?.textContent || '';
+            const methodology = document.querySelector('#methodology .section-text')?.textContent || '';
+            const findings = Array.from(document.querySelectorAll('#findings .finding-title, #findings .finding-text'))
+                .map(el => el.textContent).join(' ');
+            
+            // Combine all text
+            const fullText = `${title}. ${subtitle}. \n\nAbstract. ${abstract} \n\nMethodology. ${methodology} \n\nKey Findings. ${findings}`;
+            
+            // Create utterance
+            utterance = new SpeechSynthesisUtterance(fullText);
+            utterance.rate = 1.0; // Normal speed
+            utterance.pitch = 1.0; // Normal pitch
+            utterance.volume = 1.0; // Full volume
+            
+            // Update progress bar as reading progresses
+            utterance.onboundary = function(event) {
+                const progress = (event.charIndex / utterance.text.length) * 100;
+                document.querySelector('.reading-progress-bar').style.width = progress + '%';
+            };
+            
+            utterance.onend = function() {
+                stopReading();
+            };
+            
+            utterance.onerror = function(event) {
+                console.error('Speech synthesis error:', event);
+                stopReading();
+            };
+            
+            speechSynth.speak(utterance);
+            isReading = true;
+        }
+
+        function stopReading() {
+            if (speechSynth.speaking) {
+                speechSynth.cancel();
+            }
+            
+            const btn = document.querySelector('.read-aloud-btn');
+            btn.classList.remove('playing');
+            btn.querySelector('.text').textContent = 'Read Aloud';
+            
+            // Reset progress bar
+            document.querySelector('.reading-progress-bar').style.width = '0%';
+            
+            isReading = false;
+            utterance = null;
+        }
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', function() {
+            if (speechSynth.speaking) {
+                speechSynth.cancel();
+            }
+        });
+    </script>
 </body>
 </html>

@@ -162,9 +162,15 @@ let html = template;
 
 // Header section
 html = html.replace('<!-- HEADER_CONTENT -->', `
-            <div class="header-meta">
-                <span class="status-badge ${getStatusBadge(researchData.status).class}">${getStatusBadge(researchData.status).text}</span>
-                <span class="research-date">📅 ${formatDate(researchData.date)}</span>
+            <div class="header-top">
+                <div class="header-left">
+                    <span class="status-badge ${getStatusBadge(researchData.status).class}">${getStatusBadge(researchData.status).text}</span>
+                    <span class="research-date">📅 ${formatDate(researchData.date)}</span>
+                    <button class="read-aloud-btn" onclick="toggleReadAloud()">
+                        <span class="icon"></span>
+                        <span class="text">Read Aloud</span>
+                    </button>
+                </div>
             </div>
             <h1 class="research-title">${researchData.title}</h1>
             <p class="research-subtitle">${researchData.subtitle}</p>
