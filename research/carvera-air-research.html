@@ -529,88 +529,6 @@
             color: #c9d1d9;
         }
         
-        /* TEXT BLOCK WRAPPER */
-        .text-block-wrapper {
-            position: relative;
-            margin: 24px 0;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid #30363d;
-            background: #161b22;
-        }
-        
-        .text-block-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px 12px;
-            background: #0d1117;
-            border-bottom: 1px solid #30363d;
-        }
-        
-        .text-block-label {
-            font-size: 0.75rem;
-            color: #8b949e;
-            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        .text-copy-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 4px 10px;
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid #30363d;
-            border-radius: 4px;
-            color: #8b949e;
-            font-size: 0.75rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        
-        .text-copy-btn:hover {
-            background: rgba(99, 102, 241, 0.2);
-            border-color: #6366f1;
-            color: #6366f1;
-        }
-        
-        .text-copy-btn.copied {
-            background: rgba(34, 197, 94, 0.15);
-            border-color: #22c55e;
-            color: #22c55e;
-        }
-        
-        .text-copy-btn svg {
-            width: 14px;
-            height: 14px;
-        }
-        
-        .text-block {
-            width: 100%;
-            min-height: 120px;
-            max-height: 400px;
-            padding: 16px;
-            background: #0d1117;
-            color: #c9d1d9;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            font-size: 0.95rem;
-            line-height: 1.7;
-            resize: vertical;
-            border: none;
-            border-top: 1px solid #30363d;
-        }
-        
-        .text-block:focus {
-            outline: none;
-            background: #161b22;
-        }
-        
         /* RECOMMENDATIONS */
         .recommendations-grid {
             display: grid;
@@ -817,116 +735,32 @@
                     
             <div class="finding-card">
                 <div class="finding-title">Work Area Constraints</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>The Carvera Air offers a 30 × 20 × 13 cm work volume with 12 cm gantry clearance. Design with a 10-20mm safety margin for clamping, tool approach paths, and material irregularities. Perfect for jewelry, chess pieces, small signs, phone cases, and architectural models—not suitable for large furniture or full-size prototypes.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>The Carvera Air offers a 30 × 20 × 13 cm work volume with 12 cm gantry clearance. Design with a 10-20mm safety margin for clamping, tool approach paths, and material irregularities. Perfect for jewelry, chess pieces, small signs, phone cases, and architectural models—not suitable for large furniture or full-size prototypes.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Corner Radius = Bit Radius</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>This is the #1 mistake beginners make. Internal corners will ALWAYS be rounded by the bit radius. A 6mm bit creates a 3mm radius corner; a 3mm bit creates a 1.5mm radius. Golden rule: internal corner radius should be at least 1/3 of cavity depth for clean cuts.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>This is the #1 mistake beginners make. Internal corners will ALWAYS be rounded by the bit radius. A 6mm bit creates a 3mm radius corner; a 3mm bit creates a 1.5mm radius. Golden rule: internal corner radius should be at least 1/3 of cavity depth for clean cuts.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Minimum Feature Sizes</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Minimum feature width = 1.5 × bit diameter. A 3mm bit can reliably cut 4.5mm features; a 1.5mm bit handles 2.25mm details. Wall thickness: 2-3mm for rough cuts, 1-1.5mm for fine detail, 0.5-1mm for delicate features (requires care).</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Minimum feature width = 1.5 × bit diameter. A 3mm bit can reliably cut 4.5mm features; a 1.5mm bit handles 2.25mm details. Wall thickness: 2-3mm for rough cuts, 1-1.5mm for fine detail, 0.5-1mm for delicate features (requires care).</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Relief Carving Depths</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Bas-relief (1-3mm) for subtle decoration; medium relief (3-10mm) for signs and plaques; high relief (10-20mm) for dramatic sculptures; through-cut for cutouts and puzzles. Engraving depth typically 0.025-0.25mm, maximum practical 3.5mm.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Bas-relief (1-3mm) for subtle decoration; medium relief (3-10mm) for signs and plaques; high relief (10-20mm) for dramatic sculptures; through-cut for cutouts and puzzles. Engraving depth typically 0.025-0.25mm, maximum practical 3.5mm.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Material Hierarchy by Difficulty</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Easy: Balsa, plywood, basswood, MDF. Medium: Cherry, poplar, acrylic. Hard: Maple, hard acrylic. Very Hard: Aluminum (12mm max), brass (6mm max), steel (3mm engraving only). Beginners should start with basswood or MDF using a 3mm end mill.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Easy: Balsa, plywood, basswood, MDF. Medium: Cherry, poplar, acrylic. Hard: Maple, hard acrylic. Very Hard: Aluminum (12mm max), brass (6mm max), steel (3mm engraving only). Beginners should start with basswood or MDF using a 3mm end mill.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Software Options Compared</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Makera CAM (free, included) — beginner-friendly, pre-configured, cloud-based. VCarve Pro ($370) — best for 2.5D carving and lettering. Fusion 360 (free for hobbyists) — full 3D CAD+CAM, industry standard, steeper learning curve. Easel (free/$20/mo) — easiest browser-based option with project library.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Makera CAM (free, included) — beginner-friendly, pre-configured, cloud-based. VCarve Pro ($370) — best for 2.5D carving and lettering. Fusion 360 (free for hobbyists) — full 3D CAD+CAM, industry standard, steeper learning curve. Easel (free/$20/mo) — easiest browser-based option with project library.</p></div>
             </div>
                 </div>
             </section>
@@ -1275,23 +1109,12 @@
 
         // Initialize all copy buttons on page load
         document.addEventListener('DOMContentLoaded', function() {
-            // Code block copy buttons
             document.querySelectorAll('.code-copy-btn').forEach(function(button) {
                 button.addEventListener('click', function(e) {
                     e.stopPropagation();
                     const codeBlock = this.closest('.code-block-wrapper').querySelector('pre.code-block');
                     const codeText = codeBlock.textContent.trim();
                     copyToClipboard(codeText, this);
-                });
-            });
-            
-            // Text block copy buttons
-            document.querySelectorAll('.text-copy-btn').forEach(function(button) {
-                button.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    const textBlock = this.closest('.text-block-wrapper').querySelector('.text-block');
-                    const textContent = textBlock.value;
-                    copyToClipboard(textContent, this);
                 });
             });
         });

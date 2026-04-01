@@ -529,88 +529,6 @@
             color: #c9d1d9;
         }
         
-        /* TEXT BLOCK WRAPPER */
-        .text-block-wrapper {
-            position: relative;
-            margin: 24px 0;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid #30363d;
-            background: #161b22;
-        }
-        
-        .text-block-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px 12px;
-            background: #0d1117;
-            border-bottom: 1px solid #30363d;
-        }
-        
-        .text-block-label {
-            font-size: 0.75rem;
-            color: #8b949e;
-            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        .text-copy-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 4px 10px;
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid #30363d;
-            border-radius: 4px;
-            color: #8b949e;
-            font-size: 0.75rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        
-        .text-copy-btn:hover {
-            background: rgba(99, 102, 241, 0.2);
-            border-color: #6366f1;
-            color: #6366f1;
-        }
-        
-        .text-copy-btn.copied {
-            background: rgba(34, 197, 94, 0.15);
-            border-color: #22c55e;
-            color: #22c55e;
-        }
-        
-        .text-copy-btn svg {
-            width: 14px;
-            height: 14px;
-        }
-        
-        .text-block {
-            width: 100%;
-            min-height: 120px;
-            max-height: 400px;
-            padding: 16px;
-            background: #0d1117;
-            color: #c9d1d9;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            font-size: 0.95rem;
-            line-height: 1.7;
-            resize: vertical;
-            border: none;
-            border-top: 1px solid #30363d;
-        }
-        
-        .text-block:focus {
-            outline: none;
-            background: #161b22;
-        }
-        
         /* RECOMMENDATIONS */
         .recommendations-grid {
             display: grid;
@@ -817,97 +735,27 @@
                     
             <div class="finding-card">
                 <div class="finding-title">Non-Destructive Testing Methodologies</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>NDT methods enable inspection without device damage. X-ray radiography (1-10 μm resolution, $500-2,000) detects wire bond defects, die placement errors, and package cracks. X-ray CT provides 3D visualization (0.1-10 μm resolution, $2,000-15,000). Scanning acoustic microscopy (20-500 MHz, $1,000-5,000) excels at delamination detection. Optical microscopy (0.2-0.3 μm resolution) remains essential for surface inspection.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>NDT methods enable inspection without device damage. X-ray radiography (1-10 μm resolution, $500-2,000) detects wire bond defects, die placement errors, and package cracks. X-ray CT provides 3D visualization (0.1-10 μm resolution, $2,000-15,000). Scanning acoustic microscopy (20-500 MHz, $1,000-5,000) excels at delamination detection. Optical microscopy (0.2-0.3 μm resolution) remains essential for surface inspection.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Destructive Testing Methodologies</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>DT methods require device modification but reveal critical internal details. Wire bond shear testing (minimum 300-600g) and pull testing (350-650g) quantify bond strength per MIL-STD-883. Cross-section analysis exposes internal structures. SEM (1-20 nm resolution) provides high-resolution imaging with EDX. FIB (10-50 nm milling) enables precision circuit edit. TEM (0.1-0.2 nm resolution) reveals atomic-level details.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>DT methods require device modification but reveal critical internal details. Wire bond shear testing (minimum 300-600g) and pull testing (350-650g) quantify bond strength per MIL-STD-883. Cross-section analysis exposes internal structures. SEM (1-20 nm resolution) provides high-resolution imaging with EDX. FIB (10-50 nm milling) enables precision circuit edit. TEM (0.1-0.2 nm resolution) reveals atomic-level details.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Reliability Mathematics</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Temperature acceleration follows Arrhenius equation: AF = exp[(Ea/k) × (1/Tuse - 1/Tstress)] with activation energies ranging from 0.1-0.2 eV for hot carrier injection to 0.8-1.5 eV for diffusion-controlled mechanisms. Black&#39;s equation for electromigration: MTTF = A × (1/J^n) × exp(Ea/kT). Coffin-Manson for thermal cycling: Nf = C × (Δε_p)^(-m). MIL-HDBK-217F provides component-level predictions.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Temperature acceleration follows Arrhenius equation: AF = exp[(Ea/k) × (1/Tuse - 1/Tstress)] with activation energies ranging from 0.1-0.2 eV for hot carrier injection to 0.8-1.5 eV for diffusion-controlled mechanisms. Black&#39;s equation for electromigration: MTTF = A × (1/J^n) × exp(Ea/kT). Coffin-Manson for thermal cycling: Nf = C × (Δε_p)^(-m). MIL-HDBK-217F provides component-level predictions.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Signal Integrity Analysis</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>S-parameters characterize high-frequency behavior: S11 (input reflection), S21 (forward transmission), S12 (reverse isolation), S22 (output reflection). Return loss targets &gt;10-15 dB. Rise time-bandwidth relationship: BW × Tr ≈ 0.35. Transmission line effects become significant when Tprop &gt; Tr/6.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>S-parameters characterize high-frequency behavior: S11 (input reflection), S21 (forward transmission), S12 (reverse isolation), S22 (output reflection). Return loss targets &gt;10-15 dB. Rise time-bandwidth relationship: BW × Tr ≈ 0.35. Transmission line effects become significant when Tprop &gt; Tr/6.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Thermal Characterization</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Thermal resistance parameters: θJA (junction-to-ambient), θJC (junction-to-case), θJB (junction-to-board). Junction temperature: Tj = Ta + P × θJA. Typical θJA: 42°C/W for SOIC-8, 35°C/W for QFN-32, 15°C/W for BGA-100.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Thermal resistance parameters: θJA (junction-to-ambient), θJC (junction-to-case), θJB (junction-to-board). Junction temperature: Tj = Ta + P × θJA. Typical θJA: 42°C/W for SOIC-8, 35°C/W for QFN-32, 15°C/W for BGA-100.</p></div>
             </div>
                 </div>
             </section>
@@ -1158,23 +1006,12 @@
 
         // Initialize all copy buttons on page load
         document.addEventListener('DOMContentLoaded', function() {
-            // Code block copy buttons
             document.querySelectorAll('.code-copy-btn').forEach(function(button) {
                 button.addEventListener('click', function(e) {
                     e.stopPropagation();
                     const codeBlock = this.closest('.code-block-wrapper').querySelector('pre.code-block');
                     const codeText = codeBlock.textContent.trim();
                     copyToClipboard(codeText, this);
-                });
-            });
-            
-            // Text block copy buttons
-            document.querySelectorAll('.text-copy-btn').forEach(function(button) {
-                button.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    const textBlock = this.closest('.text-block-wrapper').querySelector('.text-block');
-                    const textContent = textBlock.value;
-                    copyToClipboard(textContent, this);
                 });
             });
         });

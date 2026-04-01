@@ -91,19 +91,12 @@ function processContentWithCodeBlocks(content) {
     let inCodeBlock = false;
     let codeLanguage = '';
     let codeContent = [];
-    let textLines = [];
     
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         
         // Check for code block start
         if (line.trim().startsWith('```')) {
-            // Process any accumulated text lines first
-            if (textLines.length > 0) {
-                result.push(renderTextBlock(textLines));
-                textLines = [];
-            }
-            
             if (!inCodeBlock) {
                 // Start of code block
                 inCodeBlock = true;
@@ -123,19 +116,17 @@ function processContentWithCodeBlocks(content) {
         } else {
             // Regular text line
             if (line.trim()) {
-                textLines.push(line);
-            } else if (textLines.length > 0) {
-                // Empty line signals end of text block
-                const block = renderTextBlock(textLines);
-                if (block) result.push(block);
-                textLines = [];
+                // Escape HTML entities and convert inline code
+                let processedLine = escapeHtml(line);
+                
+                // Convert inline code (text between backticks)
+                processedLine = processedLine.replace(/`([^`]+)`/g, '<code>$1</code>');
+                
+                result.push(`<p>${processedLine}</p>`);
+            } else {
+                result.push('<br>');
             }
         }
-    }
-    
-    // Process remaining text
-    if (textLines.length > 0) {
-        result.push(renderTextBlock(textLines));
     }
     
     // If still in code block at end, close it
@@ -145,36 +136,6 @@ function processContentWithCodeBlocks(content) {
     }
     
     return result.join('\n');
-}
-
-function renderTextBlock(lines) {
-    if (!lines || lines.length === 0) return '';
-    
-    // Process each line - escape HTML and convert inline code
-    const processedLines = lines.map(line => {
-        let processedLine = escapeHtml(line);
-        
-        // Convert inline code (text between backticks)
-        processedLine = processedLine.replace(/`([^`]+)`/g, '<code>$1</code>');
-        
-        return processedLine;
-    }).join('<br>');
-    
-    return `
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>${escapeHtml(lines.join('\n'))}</textarea>
-        </div>
-    `;
 }
 
 function renderCodeBlock(language, content) {

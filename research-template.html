@@ -529,88 +529,6 @@
             color: #c9d1d9;
         }
         
-        /* TEXT BLOCK WRAPPER */
-        .text-block-wrapper {
-            position: relative;
-            margin: 24px 0;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid #30363d;
-            background: #161b22;
-        }
-        
-        .text-block-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px 12px;
-            background: #0d1117;
-            border-bottom: 1px solid #30363d;
-        }
-        
-        .text-block-label {
-            font-size: 0.75rem;
-            color: #8b949e;
-            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        .text-copy-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 4px 10px;
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid #30363d;
-            border-radius: 4px;
-            color: #8b949e;
-            font-size: 0.75rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        
-        .text-copy-btn:hover {
-            background: rgba(99, 102, 241, 0.2);
-            border-color: #6366f1;
-            color: #6366f1;
-        }
-        
-        .text-copy-btn.copied {
-            background: rgba(34, 197, 94, 0.15);
-            border-color: #22c55e;
-            color: #22c55e;
-        }
-        
-        .text-copy-btn svg {
-            width: 14px;
-            height: 14px;
-        }
-        
-        .text-block {
-            width: 100%;
-            min-height: 120px;
-            max-height: 400px;
-            padding: 16px;
-            background: #0d1117;
-            color: #c9d1d9;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            font-size: 0.95rem;
-            line-height: 1.7;
-            resize: vertical;
-            border: none;
-            border-top: 1px solid #30363d;
-        }
-        
-        .text-block:focus {
-            outline: none;
-            background: #161b22;
-        }
-        
         /* RECOMMENDATIONS */
         .recommendations-grid {
             display: grid;
@@ -940,23 +858,12 @@
 
         // Initialize all copy buttons on page load
         document.addEventListener('DOMContentLoaded', function() {
-            // Code block copy buttons
             document.querySelectorAll('.code-copy-btn').forEach(function(button) {
                 button.addEventListener('click', function(e) {
                     e.stopPropagation();
                     const codeBlock = this.closest('.code-block-wrapper').querySelector('pre.code-block');
                     const codeText = codeBlock.textContent.trim();
                     copyToClipboard(codeText, this);
-                });
-            });
-            
-            // Text block copy buttons
-            document.querySelectorAll('.text-copy-btn').forEach(function(button) {
-                button.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    const textBlock = this.closest('.text-block-wrapper').querySelector('.text-block');
-                    const textContent = textBlock.value;
-                    copyToClipboard(textContent, this);
                 });
             });
         });

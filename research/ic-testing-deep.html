@@ -529,88 +529,6 @@
             color: #c9d1d9;
         }
         
-        /* TEXT BLOCK WRAPPER */
-        .text-block-wrapper {
-            position: relative;
-            margin: 24px 0;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid #30363d;
-            background: #161b22;
-        }
-        
-        .text-block-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px 12px;
-            background: #0d1117;
-            border-bottom: 1px solid #30363d;
-        }
-        
-        .text-block-label {
-            font-size: 0.75rem;
-            color: #8b949e;
-            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        .text-copy-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 4px 10px;
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid #30363d;
-            border-radius: 4px;
-            color: #8b949e;
-            font-size: 0.75rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        
-        .text-copy-btn:hover {
-            background: rgba(99, 102, 241, 0.2);
-            border-color: #6366f1;
-            color: #6366f1;
-        }
-        
-        .text-copy-btn.copied {
-            background: rgba(34, 197, 94, 0.15);
-            border-color: #22c55e;
-            color: #22c55e;
-        }
-        
-        .text-copy-btn svg {
-            width: 14px;
-            height: 14px;
-        }
-        
-        .text-block {
-            width: 100%;
-            min-height: 120px;
-            max-height: 400px;
-            padding: 16px;
-            background: #0d1117;
-            color: #c9d1d9;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            font-size: 0.95rem;
-            line-height: 1.7;
-            resize: vertical;
-            border: none;
-            border-top: 1px solid #30363d;
-        }
-        
-        .text-block:focus {
-            outline: none;
-            background: #161b22;
-        }
-        
         /* RECOMMENDATIONS */
         .recommendations-grid {
             display: grid;
@@ -817,2915 +735,669 @@
                     
             <div class="finding-card">
                 <div class="finding-title">Fundamental Device Equations</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>The foundation of IC testing lies in understanding the fundamental device physics.</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Physical Constants at 300K:**
-- Elementary charge (q): 1.602 × 10^(-19) C
-- Boltzmann constant (k): 1.381 × 10^(-23) J/K
-- Thermal voltage (Vt = kT/q): 25.85 mV at 300K
-- Permittivity of silicon (ε_si): 1.044 × 10^(-10) F/m
-- Intrinsic carrier concentration (n_i): 1.5 × 10^10 cm^(-3)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Shockley Diode Equation:**
-I = Is × [exp(qV/nkT) - 1]</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where:
-- I = diode current (A)
-- Is = reverse saturation current (A)
-- V = applied voltage (V)
-- n = ideality factor (1-2 for real diodes)
-- q/kT = 38.68 V^(-1) at 300K</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**BJT Ebers-Moll Model (Transport Version):**
-I_C = I_S × [exp(V_BE/Vt) - exp(V_BC/Vt)] - I_S/R_C × [exp(V_BC/Vt) - 1]
-I_B = (I_S/β_F) × [exp(V_BE/Vt) - 1] + (I_S/β_R) × [exp(V_BC/Vt) - 1]
-I_E = -(I_C + I_B)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where:
-- I_S = scale current (typically 10^-15 to 10^-16 A)
-- β_F = forward current gain (100-500)
-- β_R = reverse current gain (1-4)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**MOSFET Square-Law Model (Saturation Region):**
-I_D = (μ_n × C_ox × W / (2L)) × (V_GS - V_th)² × (1 + λ × V_DS)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where:
-- μ_n = electron mobility (400-600 cm²/V·s for bulk Si)
-- C_ox = gate oxide capacitance per unit area (F/cm²)
-- W = channel width
-- L = channel length
-- V_th = threshold voltage
-- λ = channel length modulation parameter</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**MOSFET Linear/Triode Region:**
-I_D = μ_n × C_ox × (W/L) × [(V_GS - V_th) × V_DS - V_DS²/2]</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Threshold Voltage:**
-V_th = V_FB + 2φ_F + (√(2ε_si × q × N_A × 2φ_F)) / C_ox</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where:
-- V_FB = flat-band voltage
-- φ_F = Fermi potential
-- N_A = substrate doping concentration</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>The foundation of IC testing lies in understanding the fundamental device physics.</p>
+<br>
+<p>**Physical Constants at 300K:**</p>
+<p>- Elementary charge (q): 1.602 × 10^(-19) C</p>
+<p>- Boltzmann constant (k): 1.381 × 10^(-23) J/K</p>
+<p>- Thermal voltage (Vt = kT/q): 25.85 mV at 300K</p>
+<p>- Permittivity of silicon (ε_si): 1.044 × 10^(-10) F/m</p>
+<p>- Intrinsic carrier concentration (n_i): 1.5 × 10^10 cm^(-3)</p>
+<br>
+<p>**Shockley Diode Equation:**</p>
+<p>I = Is × [exp(qV/nkT) - 1]</p>
+<br>
+<p>Where:</p>
+<p>- I = diode current (A)</p>
+<p>- Is = reverse saturation current (A)</p>
+<p>- V = applied voltage (V)</p>
+<p>- n = ideality factor (1-2 for real diodes)</p>
+<p>- q/kT = 38.68 V^(-1) at 300K</p>
+<br>
+<p>**BJT Ebers-Moll Model (Transport Version):**</p>
+<p>I_C = I_S × [exp(V_BE/Vt) - exp(V_BC/Vt)] - I_S/R_C × [exp(V_BC/Vt) - 1]</p>
+<p>I_B = (I_S/β_F) × [exp(V_BE/Vt) - 1] + (I_S/β_R) × [exp(V_BC/Vt) - 1]</p>
+<p>I_E = -(I_C + I_B)</p>
+<br>
+<p>Where:</p>
+<p>- I_S = scale current (typically 10^-15 to 10^-16 A)</p>
+<p>- β_F = forward current gain (100-500)</p>
+<p>- β_R = reverse current gain (1-4)</p>
+<br>
+<p>**MOSFET Square-Law Model (Saturation Region):**</p>
+<p>I_D = (μ_n × C_ox × W / (2L)) × (V_GS - V_th)² × (1 + λ × V_DS)</p>
+<br>
+<p>Where:</p>
+<p>- μ_n = electron mobility (400-600 cm²/V·s for bulk Si)</p>
+<p>- C_ox = gate oxide capacitance per unit area (F/cm²)</p>
+<p>- W = channel width</p>
+<p>- L = channel length</p>
+<p>- V_th = threshold voltage</p>
+<p>- λ = channel length modulation parameter</p>
+<br>
+<p>**MOSFET Linear/Triode Region:**</p>
+<p>I_D = μ_n × C_ox × (W/L) × [(V_GS - V_th) × V_DS - V_DS²/2]</p>
+<br>
+<p>**Threshold Voltage:**</p>
+<p>V_th = V_FB + 2φ_F + (√(2ε_si × q × N_A × 2φ_F)) / C_ox</p>
+<br>
+<p>Where:</p>
+<p>- V_FB = flat-band voltage</p>
+<p>- φ_F = Fermi potential</p>
+<p>- N_A = substrate doping concentration</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Small-Signal Parameters</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Small-signal analysis is critical for high-frequency IC characterization and amplifier design verification.</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**BJT Small-Signal Parameters:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Transconductance (g_m):
-g_m = I_C / V_t = q × I_C / (k × T)
-At 300K: g_m ≈ 38.68 × I_C (S when I_C in A)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Input resistance (r_π):
-r_π = β / g_m = β × V_t / I_C</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Output resistance (r_o):
-r_o = V_A / I_C
-Where V_A = Early voltage (50-150V typical)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Base spreading resistance (r_b):
-r_b = 50-200 Ω (parasitic, device-dependent)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Transition frequency (f_T):
-f_T = g_m / (2π × (C_π + C_μ))</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where:
-- C_π = C_je + τ_F × g_m (diffusion capacitance)
-- C_μ = C_jc (collector-base junction capacitance)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**MOSFET Small-Signal Parameters:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Transconductance (g_m) in saturation:
-g_m = ∂I_D/∂V_GS = μ_n × C_ox × (W/L) × (V_GS - V_th)
-Alternatively: g_m = 2 × I_D / (V_GS - V_th)
-Or: g_m = √(2 × μ_n × C_ox × (W/L) × I_D)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Body effect transconductance (g_mb):
-g_mb = χ × g_m = (γ / (2 × √(2φ_F + V_SB))) × g_m
-Where γ = body effect parameter</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Output conductance (g_ds):
-g_ds = ∂I_D/∂V_DS = λ × I_D = I_D / V_A</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**MOSFET Capacitances:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Gate-oxide capacitance: C_ox = ε_ox / t_ox
-For SiO₂: ε_ox = 3.45 × 10^(-11) F/m</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Intrinsic capacitances (saturation):
-- C_gs ≈ (2/3) × C_ox × W × L
-- C_gd ≈ C_overlap × W
-- C_db = C_j × A_D × (1 + V_DB/φ_j)^(-m)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Miller capacitance: C_M = C_gd × (1 + g_m × R_L)</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Small-signal analysis is critical for high-frequency IC characterization and amplifier design verification.</p>
+<br>
+<p>**BJT Small-Signal Parameters:**</p>
+<br>
+<p>Transconductance (g_m):</p>
+<p>g_m = I_C / V_t = q × I_C / (k × T)</p>
+<p>At 300K: g_m ≈ 38.68 × I_C (S when I_C in A)</p>
+<br>
+<p>Input resistance (r_π):</p>
+<p>r_π = β / g_m = β × V_t / I_C</p>
+<br>
+<p>Output resistance (r_o):</p>
+<p>r_o = V_A / I_C</p>
+<p>Where V_A = Early voltage (50-150V typical)</p>
+<br>
+<p>Base spreading resistance (r_b):</p>
+<p>r_b = 50-200 Ω (parasitic, device-dependent)</p>
+<br>
+<p>Transition frequency (f_T):</p>
+<p>f_T = g_m / (2π × (C_π + C_μ))</p>
+<br>
+<p>Where:</p>
+<p>- C_π = C_je + τ_F × g_m (diffusion capacitance)</p>
+<p>- C_μ = C_jc (collector-base junction capacitance)</p>
+<br>
+<p>**MOSFET Small-Signal Parameters:**</p>
+<br>
+<p>Transconductance (g_m) in saturation:</p>
+<p>g_m = ∂I_D/∂V_GS = μ_n × C_ox × (W/L) × (V_GS - V_th)</p>
+<p>Alternatively: g_m = 2 × I_D / (V_GS - V_th)</p>
+<p>Or: g_m = √(2 × μ_n × C_ox × (W/L) × I_D)</p>
+<br>
+<p>Body effect transconductance (g_mb):</p>
+<p>g_mb = χ × g_m = (γ / (2 × √(2φ_F + V_SB))) × g_m</p>
+<p>Where γ = body effect parameter</p>
+<br>
+<p>Output conductance (g_ds):</p>
+<p>g_ds = ∂I_D/∂V_DS = λ × I_D = I_D / V_A</p>
+<br>
+<p>**MOSFET Capacitances:**</p>
+<br>
+<p>Gate-oxide capacitance: C_ox = ε_ox / t_ox</p>
+<p>For SiO₂: ε_ox = 3.45 × 10^(-11) F/m</p>
+<br>
+<p>Intrinsic capacitances (saturation):</p>
+<p>- C_gs ≈ (2/3) × C_ox × W × L</p>
+<p>- C_gd ≈ C_overlap × W</p>
+<p>- C_db = C_j × A_D × (1 + V_DB/φ_j)^(-m)</p>
+<br>
+<p>Miller capacitance: C_M = C_gd × (1 + g_m × R_L)</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Noise Analysis</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Noise characterization is essential for low-noise amplifier design and precision analog circuit validation.</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Thermal (Johnson-Nyquist) Noise:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Voltage noise spectral density:
-&lt; v² &gt; = 4 × k × T × R × Δf</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Current noise spectral density:
-&lt; i² &gt; = 4 × k × T × Δf / R</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Noise voltage density: e_n = √(4kTR) V/√Hz
-At 300K: e_n = 128.9 × √R nV/√Hz</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Shot Noise:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Current noise spectral density:
-&lt; i² &gt; = 2 × q × I × Δf</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>RMS shot noise current: i_n = √(2qIΔf)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Shot noise is fundamental to pn junctions and occurs due to the discrete nature of charge carriers.</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**1/f (Flicker) Noise:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Voltage noise spectral density (MOSFET):
-&lt; v² &gt; / Δf = K / (C_ox × W × L × f)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where K is process-dependent (typically 10^-25 to 10^-23 V²·F)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Alternative form:
-e_n²(f) = K_f × I_D^A / (C_ox × W × L × f)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**MOSFET Total Input-Referred Noise:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Total voltage noise density:
-e_n,tot² = e_thermal² + e_flicker²</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>e_thermal² = 4kT × (2/3) × (1/g_m)
-e_flicker² = K / (C_ox × W × L × f)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Corners Frequency (1/f to Thermal):**
-f_c = K × g_m / (C_ox × W × L × (8kT/3))</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**BJT Noise:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Base shot noise: i_bn² = 2q(I_B + I_C/(β+1))Δf
-Collector shot noise: i_cn² = 2qI_CΔf
-Thermal noise: e_r² = 4kT(r_b + r_e)Δf</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Noise Figure:**
-F = (SNR_in) / (SNR_out)
-NF = 10 × log₁₀(F) dB</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Friis formula for cascaded stages:
-F_total = F₁ + (F₂-1)/A₁ + (F₃-1)/(A₁×A₂) + ...</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Noise characterization is essential for low-noise amplifier design and precision analog circuit validation.</p>
+<br>
+<p>**Thermal (Johnson-Nyquist) Noise:**</p>
+<br>
+<p>Voltage noise spectral density:</p>
+<p>&lt; v² &gt; = 4 × k × T × R × Δf</p>
+<br>
+<p>Current noise spectral density:</p>
+<p>&lt; i² &gt; = 4 × k × T × Δf / R</p>
+<br>
+<p>Noise voltage density: e_n = √(4kTR) V/√Hz</p>
+<p>At 300K: e_n = 128.9 × √R nV/√Hz</p>
+<br>
+<p>**Shot Noise:**</p>
+<br>
+<p>Current noise spectral density:</p>
+<p>&lt; i² &gt; = 2 × q × I × Δf</p>
+<br>
+<p>RMS shot noise current: i_n = √(2qIΔf)</p>
+<br>
+<p>Shot noise is fundamental to pn junctions and occurs due to the discrete nature of charge carriers.</p>
+<br>
+<p>**1/f (Flicker) Noise:**</p>
+<br>
+<p>Voltage noise spectral density (MOSFET):</p>
+<p>&lt; v² &gt; / Δf = K / (C_ox × W × L × f)</p>
+<br>
+<p>Where K is process-dependent (typically 10^-25 to 10^-23 V²·F)</p>
+<br>
+<p>Alternative form:</p>
+<p>e_n²(f) = K_f × I_D^A / (C_ox × W × L × f)</p>
+<br>
+<p>**MOSFET Total Input-Referred Noise:**</p>
+<br>
+<p>Total voltage noise density:</p>
+<p>e_n,tot² = e_thermal² + e_flicker²</p>
+<br>
+<p>e_thermal² = 4kT × (2/3) × (1/g_m)</p>
+<p>e_flicker² = K / (C_ox × W × L × f)</p>
+<br>
+<p>**Corners Frequency (1/f to Thermal):**</p>
+<p>f_c = K × g_m / (C_ox × W × L × (8kT/3))</p>
+<br>
+<p>**BJT Noise:**</p>
+<br>
+<p>Base shot noise: i_bn² = 2q(I_B + I_C/(β+1))Δf</p>
+<p>Collector shot noise: i_cn² = 2qI_CΔf</p>
+<p>Thermal noise: e_r² = 4kT(r_b + r_e)Δf</p>
+<br>
+<p>**Noise Figure:**</p>
+<p>F = (SNR_in) / (SNR_out)</p>
+<p>NF = 10 × log₁₀(F) dB</p>
+<br>
+<p>Friis formula for cascaded stages:</p>
+<p>F_total = F₁ + (F₂-1)/A₁ + (F₃-1)/(A₁×A₂) + ...</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Reliability Mathematics - Failure Analysis</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Reliability mathematics provides the statistical foundation for predicting IC lifetime and failure rates.</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Basic Reliability Functions:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Survival (Reliability) Function:
-R(t) = exp(-λt)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where λ = constant failure rate (failures/hour)
-R(t) = probability of survival to time t</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Failure Rate (Hazard Function):**
-λ(t) = f(t) / R(t)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>For constant failure rate: λ(t) = λ</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Mean Time To Failure (MTTF):**
-MTTF = ∫₀^∞ R(t) dt = 1/λ (for constant failure rate)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Mean Time Between Failures (MTBF):**
-MTBF = MTTF + MTTR (for repairable systems)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Bathtub Curve - Three Failure Regions:**
-1. Early failure: λ(t) = λ₀ × (β-1) × (t/θ)^(β-1), β &lt; 1
-2. Random failure: λ(t) = constant (exponential distribution)
-3. Wear-out: λ(t) increases with time, β &gt; 1</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Weibull Distribution:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Cumulative Distribution Function:
-F(t) = 1 - exp(-(t/η)^β)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Reliability Function:
-R(t) = exp(-(t/η)^β)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Probability Density Function:
-f(t) = (β/η) × (t/η)^(β-1) × exp(-(t/η)^β)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where:
-- η = scale parameter (characteristic life, 63.2% fail point)
-- β = shape parameter (failure mode indicator)
-  - β &lt; 1: infant mortality
-  - β = 1: constant failure rate (exponential)
-  - β &gt; 1: wear-out failures
-  - β ≈ 2: fatigue (Coffin-Manson)
-  - β ≈ 5-14: wear-related failures</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Arrhenius Equation for Temperature Acceleration:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Acceleration Factor (AF):
-AF = exp[(E_a/k) × (1/T_use - 1/T_stress)]</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Or: AF = exp[(E_a/8.617×10^(-5)) × (1/T_use - 1/T_stress)]</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where:
-- E_a = activation energy (eV)
-- k = Boltzmann constant (8.617 × 10^(-5) eV/K)
-- T = absolute temperature (K)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Typical E_a values:
-- Diffusion mechanisms: 0.3-0.5 eV
-- Electromigration: 0.6-1.2 eV
-- Time-dependent dielectric breakdown: 0.6-0.8 eV
-- Hot carrier injection: 0.1-0.2 eV
-- Oxide trap generation: 0.3-0.5 eV</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Reliability mathematics provides the statistical foundation for predicting IC lifetime and failure rates.</p>
+<br>
+<p>**Basic Reliability Functions:**</p>
+<br>
+<p>Survival (Reliability) Function:</p>
+<p>R(t) = exp(-λt)</p>
+<br>
+<p>Where λ = constant failure rate (failures/hour)</p>
+<p>R(t) = probability of survival to time t</p>
+<br>
+<p>**Failure Rate (Hazard Function):**</p>
+<p>λ(t) = f(t) / R(t)</p>
+<br>
+<p>For constant failure rate: λ(t) = λ</p>
+<br>
+<p>**Mean Time To Failure (MTTF):**</p>
+<p>MTTF = ∫₀^∞ R(t) dt = 1/λ (for constant failure rate)</p>
+<br>
+<p>**Mean Time Between Failures (MTBF):**</p>
+<p>MTBF = MTTF + MTTR (for repairable systems)</p>
+<br>
+<p>**Bathtub Curve - Three Failure Regions:**</p>
+<p>1. Early failure: λ(t) = λ₀ × (β-1) × (t/θ)^(β-1), β &lt; 1</p>
+<p>2. Random failure: λ(t) = constant (exponential distribution)</p>
+<p>3. Wear-out: λ(t) increases with time, β &gt; 1</p>
+<br>
+<p>**Weibull Distribution:**</p>
+<br>
+<p>Cumulative Distribution Function:</p>
+<p>F(t) = 1 - exp(-(t/η)^β)</p>
+<br>
+<p>Reliability Function:</p>
+<p>R(t) = exp(-(t/η)^β)</p>
+<br>
+<p>Probability Density Function:</p>
+<p>f(t) = (β/η) × (t/η)^(β-1) × exp(-(t/η)^β)</p>
+<br>
+<p>Where:</p>
+<p>- η = scale parameter (characteristic life, 63.2% fail point)</p>
+<p>- β = shape parameter (failure mode indicator)</p>
+<p>  - β &lt; 1: infant mortality</p>
+<p>  - β = 1: constant failure rate (exponential)</p>
+<p>  - β &gt; 1: wear-out failures</p>
+<p>  - β ≈ 2: fatigue (Coffin-Manson)</p>
+<p>  - β ≈ 5-14: wear-related failures</p>
+<br>
+<p>**Arrhenius Equation for Temperature Acceleration:**</p>
+<br>
+<p>Acceleration Factor (AF):</p>
+<p>AF = exp[(E_a/k) × (1/T_use - 1/T_stress)]</p>
+<br>
+<p>Or: AF = exp[(E_a/8.617×10^(-5)) × (1/T_use - 1/T_stress)]</p>
+<br>
+<p>Where:</p>
+<p>- E_a = activation energy (eV)</p>
+<p>- k = Boltzmann constant (8.617 × 10^(-5) eV/K)</p>
+<p>- T = absolute temperature (K)</p>
+<br>
+<p>Typical E_a values:</p>
+<p>- Diffusion mechanisms: 0.3-0.5 eV</p>
+<p>- Electromigration: 0.6-1.2 eV</p>
+<p>- Time-dependent dielectric breakdown: 0.6-0.8 eV</p>
+<p>- Hot carrier injection: 0.1-0.2 eV</p>
+<p>- Oxide trap generation: 0.3-0.5 eV</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Reliability Mathematics - Failure Mechanisms</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Understanding specific failure mechanisms enables accurate lifetime predictions.</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Black&#39;s Equation for Electromigration:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Mean Time To Failure (MTF):
-MTF = A × J^(-n) × exp(E_a/kT)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Or in terms of acceleration factor:
-AF_EM = (J_stress/J_use)^n × exp[(E_a/k) × (1/T_use - 1/T_stress)]</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where:
-- A = geometry/material constant
-- J = current density (A/cm²)
-- n = current density exponent (typically 1.7-3.0)
-- E_a = activation energy (0.6-1.2 eV for Cu, 0.5-0.9 eV for Al)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Black&#39;s Equation Parameters:**
-- Aluminum: n ≈ 2, E_a ≈ 0.5-0.6 eV
-- Copper: n ≈ 1.7-2.0, E_a ≈ 0.7-1.2 eV
-- Barrier layers significantly affect E_a</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Coffin-Manson Equation for Thermal Cycling:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Number of cycles to failure (N_f):
-N_f = C × (ΔT)^(-m) × (f)^(-k)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Or for acceleration factor:
-AF_TC = (ΔT_stress/ΔT_use)^m × (f_stress/f_use)^k</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where:
-- ΔT = temperature swing (°C)
-- f = cycling frequency
-- m = Coffin-Manson exponent (typically 1.5-4.0)
-- k = frequency exponent (typically 0-0.2)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Typical m values:
-- SnPb solder: 2.0-2.5
-- SAC solder: 2.5-3.5
-- Wire bonds: 1.5-2.0</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Modified Coffin-Manson (Sherby-Dorfman):**
-N_f = C × (Δε_p)^(-m)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where Δε_p = plastic strain range</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Time-Dependent Dielectric Breakdown (TDDB):**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>E-model (Field acceleration):
-MTF = A × exp(-γ × E_ox)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>E^(-1) model:
-MTF = A × exp(E_0/E_ox)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Voltage acceleration:
-AF_TDDB = exp[γ × (V_stress - V_use) / t_ox]</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where:
-- γ = acceleration parameter (cm/MV)
-- E_ox = electric field in oxide (MV/cm)
-- t_ox = oxide thickness</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Hot Carrier Injection (HCI):**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Degradation rate:
-d(ΔV_th)/dt = A × (g_m/I_D)^n × I_D^m × exp(E_a/kT)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Typical values: n ≈ 1-2, m ≈ 2-3, E_a ≈ 0.1-0.2 eV</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Negative Bias Temperature Instability (NBTI/PBTI):**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Threshold voltage shift:
-ΔV_th = A × V_G^α × t^n × exp(-E_a/kT)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Typical values:
-- n = 0.16-0.25 (stress), 0.05-0.15 (recovery)
-- α = 1.0-1.5
-- E_a = 0.07-0.18 eV</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Understanding specific failure mechanisms enables accurate lifetime predictions.</p>
+<br>
+<p>**Black&#39;s Equation for Electromigration:**</p>
+<br>
+<p>Mean Time To Failure (MTF):</p>
+<p>MTF = A × J^(-n) × exp(E_a/kT)</p>
+<br>
+<p>Or in terms of acceleration factor:</p>
+<p>AF_EM = (J_stress/J_use)^n × exp[(E_a/k) × (1/T_use - 1/T_stress)]</p>
+<br>
+<p>Where:</p>
+<p>- A = geometry/material constant</p>
+<p>- J = current density (A/cm²)</p>
+<p>- n = current density exponent (typically 1.7-3.0)</p>
+<p>- E_a = activation energy (0.6-1.2 eV for Cu, 0.5-0.9 eV for Al)</p>
+<br>
+<p>**Black&#39;s Equation Parameters:**</p>
+<p>- Aluminum: n ≈ 2, E_a ≈ 0.5-0.6 eV</p>
+<p>- Copper: n ≈ 1.7-2.0, E_a ≈ 0.7-1.2 eV</p>
+<p>- Barrier layers significantly affect E_a</p>
+<br>
+<p>**Coffin-Manson Equation for Thermal Cycling:**</p>
+<br>
+<p>Number of cycles to failure (N_f):</p>
+<p>N_f = C × (ΔT)^(-m) × (f)^(-k)</p>
+<br>
+<p>Or for acceleration factor:</p>
+<p>AF_TC = (ΔT_stress/ΔT_use)^m × (f_stress/f_use)^k</p>
+<br>
+<p>Where:</p>
+<p>- ΔT = temperature swing (°C)</p>
+<p>- f = cycling frequency</p>
+<p>- m = Coffin-Manson exponent (typically 1.5-4.0)</p>
+<p>- k = frequency exponent (typically 0-0.2)</p>
+<br>
+<p>Typical m values:</p>
+<p>- SnPb solder: 2.0-2.5</p>
+<p>- SAC solder: 2.5-3.5</p>
+<p>- Wire bonds: 1.5-2.0</p>
+<br>
+<p>**Modified Coffin-Manson (Sherby-Dorfman):**</p>
+<p>N_f = C × (Δε_p)^(-m)</p>
+<br>
+<p>Where Δε_p = plastic strain range</p>
+<br>
+<p>**Time-Dependent Dielectric Breakdown (TDDB):**</p>
+<br>
+<p>E-model (Field acceleration):</p>
+<p>MTF = A × exp(-γ × E_ox)</p>
+<br>
+<p>E^(-1) model:</p>
+<p>MTF = A × exp(E_0/E_ox)</p>
+<br>
+<p>Voltage acceleration:</p>
+<p>AF_TDDB = exp[γ × (V_stress - V_use) / t_ox]</p>
+<br>
+<p>Where:</p>
+<p>- γ = acceleration parameter (cm/MV)</p>
+<p>- E_ox = electric field in oxide (MV/cm)</p>
+<p>- t_ox = oxide thickness</p>
+<br>
+<p>**Hot Carrier Injection (HCI):**</p>
+<br>
+<p>Degradation rate:</p>
+<p>d(ΔV_th)/dt = A × (g_m/I_D)^n × I_D^m × exp(E_a/kT)</p>
+<br>
+<p>Typical values: n ≈ 1-2, m ≈ 2-3, E_a ≈ 0.1-0.2 eV</p>
+<br>
+<p>**Negative Bias Temperature Instability (NBTI/PBTI):**</p>
+<br>
+<p>Threshold voltage shift:</p>
+<p>ΔV_th = A × V_G^α × t^n × exp(-E_a/kT)</p>
+<br>
+<p>Typical values:</p>
+<p>- n = 0.16-0.25 (stress), 0.05-0.15 (recovery)</p>
+<p>- α = 1.0-1.5</p>
+<p>- E_a = 0.07-0.18 eV</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Testing Methodologies - NDT/DT</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Non-destructive testing (NDT) and destructive testing (DT) form the foundation of IC characterization.</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Non-Destructive Testing (NDT):**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**X-Ray Inspection:**
-- 2D X-ray: Wire bond inspection, bump inspection
-- X-ray CT: 3D internal structure analysis
-- Resolution: 0.5-5 μm depending on equipment
-- Applications: void detection, crack identification, bond lift detection</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Scanning Acoustic Microscopy (SAM/C-SAM):**
-- Principle: Acoustic impedance mismatch detection
-- Frequency: 10-200 MHz
-- Detects: delamination, cracks, voids, poor bonding
-- Resolution: ~λ/2 (7.5 μm at 200 MHz in water)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Infrared Thermography:**
-- Lock-in thermography: Periodic heating, phase-sensitive detection
-- Resolution: 1-10 μm with IR-transparent optics
-- Detects: hot spots, leakage paths, shorts
-- Wavelength: 1.2-16 μm (Si transparent at &gt;1.1 μm)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Optical Microscopy:**
-- Visible light: 0.2-0.5 μm resolution
-- Darkfield: Scratch, particle detection
-- Nomarski DIC: Topography visualization
-- Fluorescence: Photo-induced current (PICS) imaging</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Electrical NDT:**
-- Boundary scan (JTAG): Interconnect testing
-- In-circuit test (ICT): Component-level testing
-- Functional test: System-level validation
-- Parametric test: IV curves, timing, power</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Destructive Testing (DT):**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Decapsulation:**
-- Wet chemical: H₂SO₄/H₂O₂ mixture (1:1 to 1:10)
-- Thermal: 400-500°C for epoxy molding compounds
-- Plasma: SF₆/O₂ plasma, faster and more controlled</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Cross-Sectioning:**
-- Mechanical: Grinding/polishing with diamond pastes
-- FIB (Focused Ion Beam): Precision cross-sections, &lt;100 nm features
-- SEM imaging: 1-10 nm resolution</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Wire Bond Lift-off:**
-- Thermal: Solder reflow (180-250°C)
-- Mechanical: Tweezer lift with force measurement
-- Shear testing: Force vs. displacement curves</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Bond Pull/Shear Testing:**
-- Wire bond pull: 0.5-50 gram force range
-- Ball shear: 0.1-100 gram-force
-- Flip chip shear: Per JEDEC JESD22-B117</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Metallography:**
-- Grain size analysis: ASTM E112
-- IMC thickness measurement: Au-Al, Cu-Al, Sn-Ag-Cu
-- Kirkendall void detection</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Non-destructive testing (NDT) and destructive testing (DT) form the foundation of IC characterization.</p>
+<br>
+<p>**Non-Destructive Testing (NDT):**</p>
+<br>
+<p>**X-Ray Inspection:**</p>
+<p>- 2D X-ray: Wire bond inspection, bump inspection</p>
+<p>- X-ray CT: 3D internal structure analysis</p>
+<p>- Resolution: 0.5-5 μm depending on equipment</p>
+<p>- Applications: void detection, crack identification, bond lift detection</p>
+<br>
+<p>**Scanning Acoustic Microscopy (SAM/C-SAM):**</p>
+<p>- Principle: Acoustic impedance mismatch detection</p>
+<p>- Frequency: 10-200 MHz</p>
+<p>- Detects: delamination, cracks, voids, poor bonding</p>
+<p>- Resolution: ~λ/2 (7.5 μm at 200 MHz in water)</p>
+<br>
+<p>**Infrared Thermography:**</p>
+<p>- Lock-in thermography: Periodic heating, phase-sensitive detection</p>
+<p>- Resolution: 1-10 μm with IR-transparent optics</p>
+<p>- Detects: hot spots, leakage paths, shorts</p>
+<p>- Wavelength: 1.2-16 μm (Si transparent at &gt;1.1 μm)</p>
+<br>
+<p>**Optical Microscopy:**</p>
+<p>- Visible light: 0.2-0.5 μm resolution</p>
+<p>- Darkfield: Scratch, particle detection</p>
+<p>- Nomarski DIC: Topography visualization</p>
+<p>- Fluorescence: Photo-induced current (PICS) imaging</p>
+<br>
+<p>**Electrical NDT:**</p>
+<p>- Boundary scan (JTAG): Interconnect testing</p>
+<p>- In-circuit test (ICT): Component-level testing</p>
+<p>- Functional test: System-level validation</p>
+<p>- Parametric test: IV curves, timing, power</p>
+<br>
+<p>**Destructive Testing (DT):**</p>
+<br>
+<p>**Decapsulation:**</p>
+<p>- Wet chemical: H₂SO₄/H₂O₂ mixture (1:1 to 1:10)</p>
+<p>- Thermal: 400-500°C for epoxy molding compounds</p>
+<p>- Plasma: SF₆/O₂ plasma, faster and more controlled</p>
+<br>
+<p>**Cross-Sectioning:**</p>
+<p>- Mechanical: Grinding/polishing with diamond pastes</p>
+<p>- FIB (Focused Ion Beam): Precision cross-sections, &lt;100 nm features</p>
+<p>- SEM imaging: 1-10 nm resolution</p>
+<br>
+<p>**Wire Bond Lift-off:**</p>
+<p>- Thermal: Solder reflow (180-250°C)</p>
+<p>- Mechanical: Tweezer lift with force measurement</p>
+<p>- Shear testing: Force vs. displacement curves</p>
+<br>
+<p>**Bond Pull/Shear Testing:**</p>
+<p>- Wire bond pull: 0.5-50 gram force range</p>
+<p>- Ball shear: 0.1-100 gram-force</p>
+<p>- Flip chip shear: Per JEDEC JESD22-B117</p>
+<br>
+<p>**Metallography:**</p>
+<p>- Grain size analysis: ASTM E112</p>
+<p>- IMC thickness measurement: Au-Al, Cu-Al, Sn-Ag-Cu</p>
+<p>- Kirkendall void detection</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Signal Integrity Analysis</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Signal integrity is critical for high-speed IC and microcontroller testing and validation.</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Transmission Line Theory:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Characteristic Impedance (Lossless):
-Z₀ = √(L/C)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>For coaxial cable:
-Z₀ = (60/√ε_r) × ln(D/d)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>For microstrip:
-Z₀ = (87/√(ε_r + 1.41)) × ln(5.98h/(0.8w + t))</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where:
-- L = inductance per unit length (H/m)
-- C = capacitance per unit length (F/m)
-- ε_r = relative permittivity
-- h = height above ground
-- w = trace width
-- t = trace thickness</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Propagation Velocity:**
-v_p = c / √ε_eff = 1/√(LC)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>For FR4 (ε_r ≈ 4.5): v_p ≈ 1.6 × 10^8 m/s (16 cm/μs)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Time Delay:**
-t_pd = length / v_p
-For FR4: ~6 ns/m or ~1.8 ns/ft</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Reflection Coefficient:**
-Γ = (Z_L - Z₀) / (Z_L + Z₀)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where Z_L = load impedance</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Standing Wave Ratio:**
-VSWR = (1 + |Γ|) / (1 - |Γ|)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Return Loss:**
-RL = -20 × log₁₀(|Γ|) dB</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Insertion Loss:**
-IL = 20 × log₁₀(|S₂₁|) dB</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**S-Parameters:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Two-port network:
-- S₁₁: Input reflection coefficient
-- S₂₁: Forward transmission (insertion loss)
-- S₁₂: Reverse transmission (isolation)
-- S₂₂: Output reflection coefficient</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Eye Diagram Parameters:**
-- Eye height: Signal swing, relates to noise margin
-- Eye width: Timing margin, relates to jitter
-- Rise/fall time: 10%-90% or 20%-80% transitions
-- Jitter: Deterministic (DJ) + Random (RJ)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Jitter Analysis:**
-Total Jitter (TJ) at BER:
-TJ(BER) = DJ + RJ × Q(BER)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where Q(BER) = erfc^(-1)(2×BER)
-For BER = 10^(-12): Q ≈ 4.75
-For BER = 10^(-9): Q ≈ 3.90</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Bandwidth Estimation:**
-BW ≈ 0.35 / t_r (for Gaussian response)
-Or: BW ≈ 0.22 / t_r (for RC response)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Skin Effect:**
-Skin depth: δ = √(2ρ/ωμ)
-For copper at 1 GHz: δ ≈ 2.1 μm</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>AC resistance: R_ac ≈ R_dc × (w/2δ) for w &gt;&gt; δ</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Signal integrity is critical for high-speed IC and microcontroller testing and validation.</p>
+<br>
+<p>**Transmission Line Theory:**</p>
+<br>
+<p>Characteristic Impedance (Lossless):</p>
+<p>Z₀ = √(L/C)</p>
+<br>
+<p>For coaxial cable:</p>
+<p>Z₀ = (60/√ε_r) × ln(D/d)</p>
+<br>
+<p>For microstrip:</p>
+<p>Z₀ = (87/√(ε_r + 1.41)) × ln(5.98h/(0.8w + t))</p>
+<br>
+<p>Where:</p>
+<p>- L = inductance per unit length (H/m)</p>
+<p>- C = capacitance per unit length (F/m)</p>
+<p>- ε_r = relative permittivity</p>
+<p>- h = height above ground</p>
+<p>- w = trace width</p>
+<p>- t = trace thickness</p>
+<br>
+<p>**Propagation Velocity:**</p>
+<p>v_p = c / √ε_eff = 1/√(LC)</p>
+<br>
+<p>For FR4 (ε_r ≈ 4.5): v_p ≈ 1.6 × 10^8 m/s (16 cm/μs)</p>
+<br>
+<p>**Time Delay:**</p>
+<p>t_pd = length / v_p</p>
+<p>For FR4: ~6 ns/m or ~1.8 ns/ft</p>
+<br>
+<p>**Reflection Coefficient:**</p>
+<p>Γ = (Z_L - Z₀) / (Z_L + Z₀)</p>
+<br>
+<p>Where Z_L = load impedance</p>
+<br>
+<p>**Standing Wave Ratio:**</p>
+<p>VSWR = (1 + |Γ|) / (1 - |Γ|)</p>
+<br>
+<p>**Return Loss:**</p>
+<p>RL = -20 × log₁₀(|Γ|) dB</p>
+<br>
+<p>**Insertion Loss:**</p>
+<p>IL = 20 × log₁₀(|S₂₁|) dB</p>
+<br>
+<p>**S-Parameters:**</p>
+<br>
+<p>Two-port network:</p>
+<p>- S₁₁: Input reflection coefficient</p>
+<p>- S₂₁: Forward transmission (insertion loss)</p>
+<p>- S₁₂: Reverse transmission (isolation)</p>
+<p>- S₂₂: Output reflection coefficient</p>
+<br>
+<p>**Eye Diagram Parameters:**</p>
+<p>- Eye height: Signal swing, relates to noise margin</p>
+<p>- Eye width: Timing margin, relates to jitter</p>
+<p>- Rise/fall time: 10%-90% or 20%-80% transitions</p>
+<p>- Jitter: Deterministic (DJ) + Random (RJ)</p>
+<br>
+<p>**Jitter Analysis:**</p>
+<p>Total Jitter (TJ) at BER:</p>
+<p>TJ(BER) = DJ + RJ × Q(BER)</p>
+<br>
+<p>Where Q(BER) = erfc^(-1)(2×BER)</p>
+<p>For BER = 10^(-12): Q ≈ 4.75</p>
+<p>For BER = 10^(-9): Q ≈ 3.90</p>
+<br>
+<p>**Bandwidth Estimation:**</p>
+<p>BW ≈ 0.35 / t_r (for Gaussian response)</p>
+<p>Or: BW ≈ 0.22 / t_r (for RC response)</p>
+<br>
+<p>**Skin Effect:**</p>
+<p>Skin depth: δ = √(2ρ/ωμ)</p>
+<p>For copper at 1 GHz: δ ≈ 2.1 μm</p>
+<br>
+<p>AC resistance: R_ac ≈ R_dc × (w/2δ) for w &gt;&gt; δ</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Thermal Characterization</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Thermal characterization is essential for reliability prediction and performance validation.</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Thermal Resistance Definitions:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**θ_JA (Junction-to-Ambient):**
-θ_JA = (T_J - T_A) / P</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Measures total thermal path from junction to ambient air
-Includes conduction, convection, and radiation
-JEDEC standard: JESD51 series</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**θ_JC (Junction-to-Case):**
-θ_JC = (T_J - T_C) / P</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Measures thermal path from junction to package case
-Used for heatsink design
-Top (θ_JCtop) and bottom (θ_JCbot) values</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**θ_JB (Junction-to-Board):**
-θ_JB = (T_J - T_B) / P</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Measures thermal path through PCB
-Important for surface mount packages</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**ψ_JT (Junction-to-Top Characterization Parameter):**
-ψ_JT = (T_J - T_T) / P</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Not a true thermal resistance (path-dependent)
-Used for estimating T_J from T_T measurement</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Junction Temperature Calculation:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>For single heat source:
-T_J = T_A + P × θ_JA</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>With heatsink:
-T_J = T_A + P × (θ_JC + θ_CS + θ_SA)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Where:
-- θ_CS = case-to-sink thermal resistance (thermal pad)
-- θ_SA = sink-to-ambient thermal resistance</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Thermal Impedance (Transient):**
-Z_θJA(t) = ΔT(t) / P_step</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Normalized thermal impedance:
-Z_θnorm(t) = Z_θJA(t) / θ_JA</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Foster Model (Physical):**
-Z_θ(t) = Σ(R_i × (1 - exp(-t/τ_i)))</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Cauer Model (Ladder Network):**
-Physical representation with R-C ladder
-More accurate for coupled thermal networks</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Power Derating:**
-T_J(max) typically 125°C, 150°C, or 175°C</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Maximum power at temperature T_A:
-P_max(T_A) = (T_J(max) - T_A) / θ_JA</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Thermal Time Constants:**
-- Small SMD packages: 1-10 seconds
-- TO packages: 10-100 seconds
-- Large heat sinks: 100-1000+ seconds</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Typical θ_JA Values:**
-- SOIC-8: 150-200 °C/W
-- QFN-48: 20-40 °C/W
-- BGA-100: 15-30 °C/W
-- TO-220 (no heatsink): 50-60 °C/W
-- TO-220 (with heatsink): 5-15 °C/W total</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Thermal characterization is essential for reliability prediction and performance validation.</p>
+<br>
+<p>**Thermal Resistance Definitions:**</p>
+<br>
+<p>**θ_JA (Junction-to-Ambient):**</p>
+<p>θ_JA = (T_J - T_A) / P</p>
+<br>
+<p>Measures total thermal path from junction to ambient air</p>
+<p>Includes conduction, convection, and radiation</p>
+<p>JEDEC standard: JESD51 series</p>
+<br>
+<p>**θ_JC (Junction-to-Case):**</p>
+<p>θ_JC = (T_J - T_C) / P</p>
+<br>
+<p>Measures thermal path from junction to package case</p>
+<p>Used for heatsink design</p>
+<p>Top (θ_JCtop) and bottom (θ_JCbot) values</p>
+<br>
+<p>**θ_JB (Junction-to-Board):**</p>
+<p>θ_JB = (T_J - T_B) / P</p>
+<br>
+<p>Measures thermal path through PCB</p>
+<p>Important for surface mount packages</p>
+<br>
+<p>**ψ_JT (Junction-to-Top Characterization Parameter):**</p>
+<p>ψ_JT = (T_J - T_T) / P</p>
+<br>
+<p>Not a true thermal resistance (path-dependent)</p>
+<p>Used for estimating T_J from T_T measurement</p>
+<br>
+<p>**Junction Temperature Calculation:**</p>
+<br>
+<p>For single heat source:</p>
+<p>T_J = T_A + P × θ_JA</p>
+<br>
+<p>With heatsink:</p>
+<p>T_J = T_A + P × (θ_JC + θ_CS + θ_SA)</p>
+<br>
+<p>Where:</p>
+<p>- θ_CS = case-to-sink thermal resistance (thermal pad)</p>
+<p>- θ_SA = sink-to-ambient thermal resistance</p>
+<br>
+<p>**Thermal Impedance (Transient):**</p>
+<p>Z_θJA(t) = ΔT(t) / P_step</p>
+<br>
+<p>Normalized thermal impedance:</p>
+<p>Z_θnorm(t) = Z_θJA(t) / θ_JA</p>
+<br>
+<p>**Foster Model (Physical):**</p>
+<p>Z_θ(t) = Σ(R_i × (1 - exp(-t/τ_i)))</p>
+<br>
+<p>**Cauer Model (Ladder Network):**</p>
+<p>Physical representation with R-C ladder</p>
+<p>More accurate for coupled thermal networks</p>
+<br>
+<p>**Power Derating:**</p>
+<p>T_J(max) typically 125°C, 150°C, or 175°C</p>
+<br>
+<p>Maximum power at temperature T_A:</p>
+<p>P_max(T_A) = (T_J(max) - T_A) / θ_JA</p>
+<br>
+<p>**Thermal Time Constants:**</p>
+<p>- Small SMD packages: 1-10 seconds</p>
+<p>- TO packages: 10-100 seconds</p>
+<p>- Large heat sinks: 100-1000+ seconds</p>
+<br>
+<p>**Typical θ_JA Values:**</p>
+<p>- SOIC-8: 150-200 °C/W</p>
+<p>- QFN-48: 20-40 °C/W</p>
+<p>- BGA-100: 15-30 °C/W</p>
+<p>- TO-220 (no heatsink): 50-60 °C/W</p>
+<p>- TO-220 (with heatsink): 5-15 °C/W total</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Microcontroller Testing Considerations</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Microcontrollers require specialized testing approaches combining digital, analog, and system-level validation.</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Digital Core Testing:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Logic Testing:**
-- Gate-level simulation vs. silicon correlation
-- Scan chain testing (ATPG-generated patterns)
-- Boundary scan (IEEE 1149.1 JTAG)
-- Logic BIST (Built-In Self-Test)</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Memory Testing:**
-- SRAM: March algorithms (March C-, March X)
-- Flash: Read/verify, erase/verify, endurance
-- EEPROM: Data retention, endurance testing
-- Test algorithms: GALPAT, GALPAT+, Chipkill ECC</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Timing Analysis:**
-- Setup/hold time verification
-- Clock domain crossing (CDC) analysis
-- Maximum frequency (Fmax) characterization
-- Jitter tolerance testing</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Analog Peripherals:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**ADC Testing:**
-- INL/DNL measurement (Integral/Differential Nonlinearity)
-- SFDR/THD (Spurious-Free Dynamic Range/Total Harmonic Distortion)
-- SNR (Signal-to-Noise Ratio)
-- Effective number of bits (ENOB)
-ENOB = (SNR - 1.76) / 6.02
-- Sampling rate verification
-- Input impedance characterization</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**DAC Testing:**
-- INL/DNL measurement
-- Settling time (to 0.1%, 0.01%)
-- Glitch impulse energy
-- Output impedance</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Reference Voltage:**
-- Initial accuracy
-- Temperature coefficient (ppm/°C)
-- Long-term drift
-- Load regulation</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Communication Interfaces:**
-- UART: Bit error rate at various baud rates
-- SPI: Maximum clock frequency, mode 0-3 support
-- I2C: Speed modes (100k, 400k, 1MHz, 3.4MHz)
-- USB: Full-speed/high-speed compliance
-- CAN: Bit timing, error injection</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Power Management Testing:**</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Supply Characteristics:**
-- Operating voltage range (min/max)
-- Brownout detection threshold
-- LDO dropout voltage
-- Power-on-reset (POR) threshold
-- Reverse battery protection</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Current Consumption:**
-- Active mode: mA range, instruction-dependent
-- Sleep/idle modes: μA range
-- Stop/standby modes: nA-μA range
-- Wake-up time characterization</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Brownout Test Equation:**
-V_BOD(actual) = V_BOD(nominal) × (1 ± tolerance)
-Typical tolerance: ±5% to ±10%</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Watchdog Timer:**
-- Timeout period accuracy
-- Windowed watchdog verification
-- Reset generation on timeout</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Microcontrollers require specialized testing approaches combining digital, analog, and system-level validation.</p>
+<br>
+<p>**Digital Core Testing:**</p>
+<br>
+<p>**Logic Testing:**</p>
+<p>- Gate-level simulation vs. silicon correlation</p>
+<p>- Scan chain testing (ATPG-generated patterns)</p>
+<p>- Boundary scan (IEEE 1149.1 JTAG)</p>
+<p>- Logic BIST (Built-In Self-Test)</p>
+<br>
+<p>**Memory Testing:**</p>
+<p>- SRAM: March algorithms (March C-, March X)</p>
+<p>- Flash: Read/verify, erase/verify, endurance</p>
+<p>- EEPROM: Data retention, endurance testing</p>
+<p>- Test algorithms: GALPAT, GALPAT+, Chipkill ECC</p>
+<br>
+<p>**Timing Analysis:**</p>
+<p>- Setup/hold time verification</p>
+<p>- Clock domain crossing (CDC) analysis</p>
+<p>- Maximum frequency (Fmax) characterization</p>
+<p>- Jitter tolerance testing</p>
+<br>
+<p>**Analog Peripherals:**</p>
+<br>
+<p>**ADC Testing:**</p>
+<p>- INL/DNL measurement (Integral/Differential Nonlinearity)</p>
+<p>- SFDR/THD (Spurious-Free Dynamic Range/Total Harmonic Distortion)</p>
+<p>- SNR (Signal-to-Noise Ratio)</p>
+<p>- Effective number of bits (ENOB)</p>
+<p>ENOB = (SNR - 1.76) / 6.02</p>
+<p>- Sampling rate verification</p>
+<p>- Input impedance characterization</p>
+<br>
+<p>**DAC Testing:**</p>
+<p>- INL/DNL measurement</p>
+<p>- Settling time (to 0.1%, 0.01%)</p>
+<p>- Glitch impulse energy</p>
+<p>- Output impedance</p>
+<br>
+<p>**Reference Voltage:**</p>
+<p>- Initial accuracy</p>
+<p>- Temperature coefficient (ppm/°C)</p>
+<p>- Long-term drift</p>
+<p>- Load regulation</p>
+<br>
+<p>**Communication Interfaces:**</p>
+<p>- UART: Bit error rate at various baud rates</p>
+<p>- SPI: Maximum clock frequency, mode 0-3 support</p>
+<p>- I2C: Speed modes (100k, 400k, 1MHz, 3.4MHz)</p>
+<p>- USB: Full-speed/high-speed compliance</p>
+<p>- CAN: Bit timing, error injection</p>
+<br>
+<p>**Power Management Testing:**</p>
+<br>
+<p>**Supply Characteristics:**</p>
+<p>- Operating voltage range (min/max)</p>
+<p>- Brownout detection threshold</p>
+<p>- LDO dropout voltage</p>
+<p>- Power-on-reset (POR) threshold</p>
+<p>- Reverse battery protection</p>
+<br>
+<p>**Current Consumption:**</p>
+<p>- Active mode: mA range, instruction-dependent</p>
+<p>- Sleep/idle modes: μA range</p>
+<p>- Stop/standby modes: nA-μA range</p>
+<p>- Wake-up time characterization</p>
+<br>
+<p>**Brownout Test Equation:**</p>
+<p>V_BOD(actual) = V_BOD(nominal) × (1 ± tolerance)</p>
+<p>Typical tolerance: ±5% to ±10%</p>
+<br>
+<p>**Watchdog Timer:**</p>
+<p>- Timeout period accuracy</p>
+<p>- Windowed watchdog verification</p>
+<p>- Reset generation on timeout</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Test Equipment and Instrumentation</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Proper instrumentation is critical for accurate IC and microcontroller characterization.</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Parametric Test Stations:**
-- Keithley 2600/2700 series: Source measure units
-- Keysight B1500: Device analyzer, 10 fA resolution
-- Teradyne UltraFlex: High-speed parametric testing
-- Capabilities: IV curves, CV measurement, pulse testing</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Oscilloscopes:**
-- Bandwidth: 100 MHz to 50+ GHz
-- Sample rate: 1 GS/s to 100+ GS/s
-- Vertical resolution: 8-16 bits
-- Key specs: Rise time, noise floor, channel matching</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Logic Analyzers:**
-- Channels: 16 to 1000+
-- Sample rate: 100 MS/s to 10+ GS/s
-- Memory depth: 100 kpts to 10+ Gpts
-- Protocol decoders: UART, SPI, I2C, USB, Ethernet</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Spectrum Analyzers:**
-- Frequency range: 9 kHz to 110 GHz
-- Phase noise: -100 to -180 dBc/Hz
-- Noise floor: -165 dBm/Hz
-- Applications: EMI, signal integrity, RF testing</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Network Analyzers:**
-- VNA (Vector Network Analyzer): S-parameters
-- Frequency: DC to 110 GHz
-- Dynamic range: 110-140 dB
-- Calibration: SOLT, TRL, Thru-Reflect-Line</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Probing:**
-- Passive probes: 10x (100 MHz-1 GHz), 100x (higher freq)
-- Active probes: 1 GHz-7 GHz, 50 Ω input
-- RF probes: DC-50 GHz, on-wafer probing
-- Probe station: Micromanipulators, RF ground plane</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Test Fixtures:**
-- Socket testing: IC sockets, ZIF sockets
-- PCB fixtures: Test points, ground planes
-- Probe cards: Membrane, contact, flyover
-- Load boards: For BGA/QFN packages</textarea>
-        </div>
-    
-
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>**Environmental Chambers:**
-- Temperature: -65°C to +180°C
-- Humidity: 10% to 98% RH
-- Combined: Temp/humidity/vibration
-- Burn-in: 125°C, 168-1000 hours</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Proper instrumentation is critical for accurate IC and microcontroller characterization.</p>
+<br>
+<p>**Parametric Test Stations:**</p>
+<p>- Keithley 2600/2700 series: Source measure units</p>
+<p>- Keysight B1500: Device analyzer, 10 fA resolution</p>
+<p>- Teradyne UltraFlex: High-speed parametric testing</p>
+<p>- Capabilities: IV curves, CV measurement, pulse testing</p>
+<br>
+<p>**Oscilloscopes:**</p>
+<p>- Bandwidth: 100 MHz to 50+ GHz</p>
+<p>- Sample rate: 1 GS/s to 100+ GS/s</p>
+<p>- Vertical resolution: 8-16 bits</p>
+<p>- Key specs: Rise time, noise floor, channel matching</p>
+<br>
+<p>**Logic Analyzers:**</p>
+<p>- Channels: 16 to 1000+</p>
+<p>- Sample rate: 100 MS/s to 10+ GS/s</p>
+<p>- Memory depth: 100 kpts to 10+ Gpts</p>
+<p>- Protocol decoders: UART, SPI, I2C, USB, Ethernet</p>
+<br>
+<p>**Spectrum Analyzers:**</p>
+<p>- Frequency range: 9 kHz to 110 GHz</p>
+<p>- Phase noise: -100 to -180 dBc/Hz</p>
+<p>- Noise floor: -165 dBm/Hz</p>
+<p>- Applications: EMI, signal integrity, RF testing</p>
+<br>
+<p>**Network Analyzers:**</p>
+<p>- VNA (Vector Network Analyzer): S-parameters</p>
+<p>- Frequency: DC to 110 GHz</p>
+<p>- Dynamic range: 110-140 dB</p>
+<p>- Calibration: SOLT, TRL, Thru-Reflect-Line</p>
+<br>
+<p>**Probing:**</p>
+<p>- Passive probes: 10x (100 MHz-1 GHz), 100x (higher freq)</p>
+<p>- Active probes: 1 GHz-7 GHz, 50 Ω input</p>
+<p>- RF probes: DC-50 GHz, on-wafer probing</p>
+<p>- Probe station: Micromanipulators, RF ground plane</p>
+<br>
+<p>**Test Fixtures:**</p>
+<p>- Socket testing: IC sockets, ZIF sockets</p>
+<p>- PCB fixtures: Test points, ground planes</p>
+<p>- Probe cards: Membrane, contact, flyover</p>
+<p>- Load boards: For BGA/QFN packages</p>
+<br>
+<p>**Environmental Chambers:**</p>
+<p>- Temperature: -65°C to +180°C</p>
+<p>- Humidity: 10% to 98% RH</p>
+<p>- Combined: Temp/humidity/vibration</p>
+<p>- Burn-in: 125°C, 168-1000 hours</p></div>
             </div>
                 </div>
             </section>
@@ -3934,23 +1606,12 @@ Typical tolerance: ±5% to ±10%</textarea>
 
         // Initialize all copy buttons on page load
         document.addEventListener('DOMContentLoaded', function() {
-            // Code block copy buttons
             document.querySelectorAll('.code-copy-btn').forEach(function(button) {
                 button.addEventListener('click', function(e) {
                     e.stopPropagation();
                     const codeBlock = this.closest('.code-block-wrapper').querySelector('pre.code-block');
                     const codeText = codeBlock.textContent.trim();
                     copyToClipboard(codeText, this);
-                });
-            });
-            
-            // Text block copy buttons
-            document.querySelectorAll('.text-copy-btn').forEach(function(button) {
-                button.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    const textBlock = this.closest('.text-block-wrapper').querySelector('.text-block');
-                    const textContent = textBlock.value;
-                    copyToClipboard(textContent, this);
                 });
             });
         });

@@ -529,88 +529,6 @@
             color: #c9d1d9;
         }
         
-        /* TEXT BLOCK WRAPPER */
-        .text-block-wrapper {
-            position: relative;
-            margin: 24px 0;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid #30363d;
-            background: #161b22;
-        }
-        
-        .text-block-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px 12px;
-            background: #0d1117;
-            border-bottom: 1px solid #30363d;
-        }
-        
-        .text-block-label {
-            font-size: 0.75rem;
-            color: #8b949e;
-            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        .text-copy-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 4px 10px;
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid #30363d;
-            border-radius: 4px;
-            color: #8b949e;
-            font-size: 0.75rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        
-        .text-copy-btn:hover {
-            background: rgba(99, 102, 241, 0.2);
-            border-color: #6366f1;
-            color: #6366f1;
-        }
-        
-        .text-copy-btn.copied {
-            background: rgba(34, 197, 94, 0.15);
-            border-color: #22c55e;
-            color: #22c55e;
-        }
-        
-        .text-copy-btn svg {
-            width: 14px;
-            height: 14px;
-        }
-        
-        .text-block {
-            width: 100%;
-            min-height: 120px;
-            max-height: 400px;
-            padding: 16px;
-            background: #0d1117;
-            color: #c9d1d9;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            font-size: 0.95rem;
-            line-height: 1.7;
-            resize: vertical;
-            border: none;
-            border-top: 1px solid #30363d;
-        }
-        
-        .text-block:focus {
-            outline: none;
-            background: #161b22;
-        }
-        
         /* RECOMMENDATIONS */
         .recommendations-grid {
             display: grid;
@@ -817,268 +735,72 @@
                     
             <div class="finding-card">
                 <div class="finding-title">Market Types and Access</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Day trading spans multiple markets with varying barriers. Stocks require $25,000 minimum (PDT rule) and trade 9:30 AM-4:00 PM ET. Forex operates 24/5 with $100+ minimum. Futures require $500-$5,000 and offer tax advantages (60/40 rule). Options trade with stocks but require $2,000+. Crypto trades 24/7 with $10+ minimum. Each market has unique characteristics: stocks offer fundamental analysis, forex provides leverage, futures enable tax efficiency, options offer leverage and strategies, crypto offers 24/7 access.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Day trading spans multiple markets with varying barriers. Stocks require $25,000 minimum (PDT rule) and trade 9:30 AM-4:00 PM ET. Forex operates 24/5 with $100+ minimum. Futures require $500-$5,000 and offer tax advantages (60/40 rule). Options trade with stocks but require $2,000+. Crypto trades 24/7 with $10+ minimum. Each market has unique characteristics: stocks offer fundamental analysis, forex provides leverage, futures enable tax efficiency, options offer leverage and strategies, crypto offers 24/7 access.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Beginner Strategies</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Momentum trading rides strong price moves driven by news/volume—find stocks moving &gt;5% with high volume, enter on pullback to support, exit when momentum slows. Breakout trading enters when price breaks through resistance with volume confirmation—target equals consolidation height added to breakout point. Simple scalping takes tiny profits (5-10 cents) multiple times per day on liquid stocks (AAPL, TSLA, SPY)—fast in, fast out, volume over precision. These strategies require minimal technical knowledge and can be practiced on paper trading platforms.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Momentum trading rides strong price moves driven by news/volume—find stocks moving &gt;5% with high volume, enter on pullback to support, exit when momentum slows. Breakout trading enters when price breaks through resistance with volume confirmation—target equals consolidation height added to breakout point. Simple scalping takes tiny profits (5-10 cents) multiple times per day on liquid stocks (AAPL, TSLA, SPY)—fast in, fast out, volume over precision. These strategies require minimal technical knowledge and can be practiced on paper trading platforms.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Technical Analysis Fundamentals</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Candlestick patterns signal reversals: bullish (hammer, bullish engulfing, morning star) and bearish (shooting star, bearish engulfing, evening star). Trend indicators include moving averages (9, 20, 50, 200 periods), MACD, and ADX (&gt;25 = strong trend). Momentum indicators include RSI (overbought &gt;70, oversold &lt;30), stochastic, and CCI. Volume indicators include OBV (smart money tracking), volume profile, and VWAP (institutional benchmark). Support/resistance comes in horizontal, trendline, moving average, psychological (round numbers), and volume node forms.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Candlestick patterns signal reversals: bullish (hammer, bullish engulfing, morning star) and bearish (shooting star, bearish engulfing, evening star). Trend indicators include moving averages (9, 20, 50, 200 periods), MACD, and ADX (&gt;25 = strong trend). Momentum indicators include RSI (overbought &gt;70, oversold &lt;30), stochastic, and CCI. Volume indicators include OBV (smart money tracking), volume profile, and VWAP (institutional benchmark). Support/resistance comes in horizontal, trendline, moving average, psychological (round numbers), and volume node forms.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Intermediate Strategies</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Gap and Go: stock gaps up &gt;5% on news/volume, enter above pre-market high or on VWAP bounce, stop below pre-market low, target 2-3x risk. VWAP Fade: price extended far from VWAP, enter on reversal at extreme, stop beyond extreme, target back to VWAP. Opening Range Breakout: first 5-15 minutes establish range, enter on breakout with volume, stop at other side of range, target range height projected from breakout. Iron Condor (options): sell OTM call and put spreads in low volatility range-bound markets, max profit equals premiums collected.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Gap and Go: stock gaps up &gt;5% on news/volume, enter above pre-market high or on VWAP bounce, stop below pre-market low, target 2-3x risk. VWAP Fade: price extended far from VWAP, enter on reversal at extreme, stop beyond extreme, target back to VWAP. Opening Range Breakout: first 5-15 minutes establish range, enter on breakout with volume, stop at other side of range, target range height projected from breakout. Iron Condor (options): sell OTM call and put spreads in low volatility range-bound markets, max profit equals premiums collected.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Risk Management Principles</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Position size formula: Position Size = Dollar Risk ÷ (Entry Price - Stop Loss Price). Example: $10,000 account, 1% risk = $100, entry $50, stop $48, risk per share $2, position = 50 shares. Risk rules: max 1-2% per trade, max 3-5% daily loss, max 10% weekly loss, minimum 1:2 risk/reward ratio. Stop loss types: fixed dollar, technical (below support), percentage, trailing (locks profits), time-based (exit if no movement in X minutes). Daily stop: when hit, walk away from screens.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Position size formula: Position Size = Dollar Risk ÷ (Entry Price - Stop Loss Price). Example: $10,000 account, 1% risk = $100, entry $50, stop $48, risk per share $2, position = 50 shares. Risk rules: max 1-2% per trade, max 3-5% daily loss, max 10% weekly loss, minimum 1:2 risk/reward ratio. Stop loss types: fixed dollar, technical (below support), percentage, trailing (locks profits), time-based (exit if no movement in X minutes). Daily stop: when hit, walk away from screens.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Advanced Strategies</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Iron Butterfly: sell ATM straddle, buy OTM wings for protection, profit from low volatility. Calendar Spread: sell near-term option, buy longer-dated same strike, profit from time decay differential. Ratio Backspread: buy 2 OTM options, sell 1 ATM option, unlimited profit, limited risk—bet on big move either direction. Pairs Trading: find correlated stocks (KO/PEP), calculate historical spread, when spread widens short overperformer/long underperformer, exit when spread normalizes. Mean Reversion: identify overextended prices, bet on return to average, works in range-bound markets.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Iron Butterfly: sell ATM straddle, buy OTM wings for protection, profit from low volatility. Calendar Spread: sell near-term option, buy longer-dated same strike, profit from time decay differential. Ratio Backspread: buy 2 OTM options, sell 1 ATM option, unlimited profit, limited risk—bet on big move either direction. Pairs Trading: find correlated stocks (KO/PEP), calculate historical spread, when spread widens short overperformer/long underperformer, exit when spread normalizes. Mean Reversion: identify overextended prices, bet on return to average, works in range-bound markets.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Futures Trading</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Futures advantages: lower capital requirements, no PDT rule, tax advantages (60/40 rule), 24-hour trading, high leverage. Popular contracts: ES (S&amp;P 500 E-mini, $50/point), NQ (Nasdaq 100 E-mini, $20/point), CL (Crude Oil, $100/tick), 6E (Euro FX, $15.63/tick). Futures require understanding of contract specifications, tick values, margin requirements, and expiration cycles. They offer tax treatment where 60% of gains taxed as long-term regardless of holding period.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Futures advantages: lower capital requirements, no PDT rule, tax advantages (60/40 rule), 24-hour trading, high leverage. Popular contracts: ES (S&amp;P 500 E-mini, $50/point), NQ (Nasdaq 100 E-mini, $20/point), CL (Crude Oil, $100/tick), 6E (Euro FX, $15.63/tick). Futures require understanding of contract specifications, tick values, margin requirements, and expiration cycles. They offer tax treatment where 60% of gains taxed as long-term regardless of holding period.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Algorithmic Trading Introduction</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Algo trading uses computer programs to execute trades based on predefined rules—faster, more precise, emotion-free. Levels range from assisted (alerts + manual execution) to semi-auto (auto analysis + manual execution) to fully automated (bot places trades) to HFT (microsecond execution, institutional only). Platforms include TradingView (Pine Script—easiest), Python (Backtrader, Zipline, QuantConnect), MultiCharts (EasyLanguage), NinjaTrader (C#). Basic strategy: IF price &gt; VWAP AND RSI &lt; 30 AND volume &gt; 2x average THEN buy, set stop loss and take profit.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Algo trading uses computer programs to execute trades based on predefined rules—faster, more precise, emotion-free. Levels range from assisted (alerts + manual execution) to semi-auto (auto analysis + manual execution) to fully automated (bot places trades) to HFT (microsecond execution, institutional only). Platforms include TradingView (Pine Script—easiest), Python (Backtrader, Zipline, QuantConnect), MultiCharts (EasyLanguage), NinjaTrader (C#). Basic strategy: IF price &gt; VWAP AND RSI &lt; 30 AND volume &gt; 2x average THEN buy, set stop loss and take profit.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">High-Frequency Trading</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>HFT differs from retail trading in speed (microseconds vs seconds/minutes), infrastructure (colocated servers vs home internet), edge (speed/technology vs analysis/psychology), capital ($10M-$10B+ vs $10K-$100K), and trade volume (millions/day vs 10-100/day). HFT strategies include market making (quote bid/ask continuously, profit from spread, requires massive scale), latency arbitrage (exploit price differences across exchanges, requires colocated servers), and order flow toxicity detection (identify informed vs uninformed flow). Technology: C++, F#, Rust (not Python for execution), FPGAs, custom ASICs, microwave networks (faster than fiber), colocated servers—costs millions in infrastructure.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>HFT differs from retail trading in speed (microseconds vs seconds/minutes), infrastructure (colocated servers vs home internet), edge (speed/technology vs analysis/psychology), capital ($10M-$10B+ vs $10K-$100K), and trade volume (millions/day vs 10-100/day). HFT strategies include market making (quote bid/ask continuously, profit from spread, requires massive scale), latency arbitrage (exploit price differences across exchanges, requires colocated servers), and order flow toxicity detection (identify informed vs uninformed flow). Technology: C++, F#, Rust (not Python for execution), FPGAs, custom ASICs, microwave networks (faster than fiber), colocated servers—costs millions in infrastructure.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Quantitative Trading</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Quant strategies include trend following (momentum-based, hold until trend breaks), mean reversion (prices revert to average, fade extremes, works in ranges), statistical arbitrage (mathematical edges, pairs/triplet trading, market-neutral), and machine learning (pattern recognition, predictive modeling, reinforcement learning). Backtesting metrics: Sharpe Ratio (&gt;1 good, &gt;2 excellent), Max Drawdown (largest peak-to-trough decline), Win Rate (percentage winning), Profit Factor (&gt;1.5 target), Expectancy (average profit per trade). Pitfalls: overfitting, look-ahead bias, ignoring slippage/commissions, inadequate in-sample vs out-of-sample validation.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Quant strategies include trend following (momentum-based, hold until trend breaks), mean reversion (prices revert to average, fade extremes, works in ranges), statistical arbitrage (mathematical edges, pairs/triplet trading, market-neutral), and machine learning (pattern recognition, predictive modeling, reinforcement learning). Backtesting metrics: Sharpe Ratio (&gt;1 good, &gt;2 excellent), Max Drawdown (largest peak-to-trough decline), Win Rate (percentage winning), Profit Factor (&gt;1.5 target), Expectancy (average profit per trade). Pitfalls: overfitting, look-ahead bias, ignoring slippage/commissions, inadequate in-sample vs out-of-sample validation.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Institutional Trading</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Institutions move markets with size, use algorithms (VWAP, TWAP, iceberg orders), access dark pools, work with prime brokers, employ analyst teams. Order types: VWAP (execute to match volume-weighted average), TWAP (time-weighted average), Iceberg (show small portion, hide rest), Dark Pool (hidden from public), Limit (better than market). Reading institutional activity: Volume Profile shows where institutions traded, Footprint Charts show order flow at each price, Delta Divergence compares price vs buying/selling pressure, Large Block Trades reveal big money movement.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Institutions move markets with size, use algorithms (VWAP, TWAP, iceberg orders), access dark pools, work with prime brokers, employ analyst teams. Order types: VWAP (execute to match volume-weighted average), TWAP (time-weighted average), Iceberg (show small portion, hide rest), Dark Pool (hidden from public), Limit (better than market). Reading institutional activity: Volume Profile shows where institutions traded, Footprint Charts show order flow at each price, Delta Divergence compares price vs buying/selling pressure, Large Block Trades reveal big money movement.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Market Making Mechanics</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Market makers quote bid ($49.90) and ask ($50.10), profit from spread ($0.20 if both sides hit). Challenges include adverse selection (trading against informed players), inventory risk (holding unwanted positions), and capital requirements (posting quotes requires margin). Strategies: passive (post quotes, wait for orders), aggressive (hunt for liquidity, initiate trades), hybrid (mix of both). Requirements: significant capital ($1M+), exchange membership, technology infrastructure, regulatory compliance, risk management systems. Venues: stock exchanges, forex ECNs, crypto exchanges, options exchanges.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Market makers quote bid ($49.90) and ask ($50.10), profit from spread ($0.20 if both sides hit). Challenges include adverse selection (trading against informed players), inventory risk (holding unwanted positions), and capital requirements (posting quotes requires margin). Strategies: passive (post quotes, wait for orders), aggressive (hunt for liquidity, initiate trades), hybrid (mix of both). Requirements: significant capital ($1M+), exchange membership, technology infrastructure, regulatory compliance, risk management systems. Venues: stock exchanges, forex ECNs, crypto exchanges, options exchanges.</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Success Statistics Reality Check</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Consistently profitable traders: 1-20%. Make a living at trading: ~4%. Profitable after 5 years: ~1%. Quit within 1 month: 40%. Lose initial investment in 6 months: 90%. Daily loss rate (net of fees): 97% lose on any given day. Failure reasons: poor risk management (no stops, oversized positions), psychology (emotions override logic), overtrading (action not edge), inadequate capital (can&#39;t withstand drawdowns), no edge (trading without statistical advantage), fees and costs (eat small edges).</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Consistently profitable traders: 1-20%. Make a living at trading: ~4%. Profitable after 5 years: ~1%. Quit within 1 month: 40%. Lose initial investment in 6 months: 90%. Daily loss rate (net of fees): 97% lose on any given day. Failure reasons: poor risk management (no stops, oversized positions), psychology (emotions override logic), overtrading (action not edge), inadequate capital (can&#39;t withstand drawdowns), no edge (trading without statistical advantage), fees and costs (eat small edges).</p></div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Trading Psychology</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Emotional traps: Fear (selling early, missing entries, avoiding valid setups), Greed (oversizing, letting winners become losers, chasing trades), Revenge Trading (immediately winning back losses—largest account killer, leads to tilt and blowups). Professional habits: treat as business not gambling, process over outcomes (good trades can lose), accept losses as cost of business, patience (wait for A+ setups only), continuous learning (markets evolve). Daily routine: pre-market analysis (1-2 hours), trading hours (focused, no distractions), post-market review (journal, analyze), continuous education.</textarea>
-        </div>
-    </div>
+                <div class="finding-text"><p>Emotional traps: Fear (selling early, missing entries, avoiding valid setups), Greed (oversizing, letting winners become losers, chasing trades), Revenge Trading (immediately winning back losses—largest account killer, leads to tilt and blowups). Professional habits: treat as business not gambling, process over outcomes (good trades can lose), accept losses as cost of business, patience (wait for A+ setups only), continuous learning (markets evolve). Daily routine: pre-market analysis (1-2 hours), trading hours (focused, no distractions), post-market review (journal, analyze), continuous education.</p></div>
             </div>
                 </div>
             </section>
@@ -1292,23 +1014,12 @@
 
         // Initialize all copy buttons on page load
         document.addEventListener('DOMContentLoaded', function() {
-            // Code block copy buttons
             document.querySelectorAll('.code-copy-btn').forEach(function(button) {
                 button.addEventListener('click', function(e) {
                     e.stopPropagation();
                     const codeBlock = this.closest('.code-block-wrapper').querySelector('pre.code-block');
                     const codeText = codeBlock.textContent.trim();
                     copyToClipboard(codeText, this);
-                });
-            });
-            
-            // Text block copy buttons
-            document.querySelectorAll('.text-copy-btn').forEach(function(button) {
-                button.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    const textBlock = this.closest('.text-block-wrapper').querySelector('.text-block');
-                    const textContent = textBlock.value;
-                    copyToClipboard(textContent, this);
                 });
             });
         });
