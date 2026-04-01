@@ -402,6 +402,215 @@
             line-height: 1.7;
         }
         
+        /* CODE BLOCKS WITH COPY BUTTON */
+        .code-block-wrapper {
+            position: relative;
+            margin: 16px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #0d1117;
+            border: 1px solid #30363d;
+        }
+        
+        .code-block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background: #161b22;
+            border-bottom: 1px solid #30363d;
+        }
+        
+        .code-block-language {
+            font-size: 0.75rem;
+            color: #8b949e;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .code-copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .code-copy-btn:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+        }
+        
+        .code-copy-btn.copied {
+            background: rgba(34, 197, 94, 0.15);
+            border-color: var(--accent-success);
+            color: var(--accent-success);
+        }
+        
+        .code-copy-btn svg {
+            width: 14px;
+            height: 14px;
+        }
+        
+        pre.code-block {
+            margin: 0;
+            padding: 16px;
+            overflow-x: auto;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #c9d1d9;
+        }
+        
+        pre.code-block code {
+            font-family: inherit;
+            font-size: inherit;
+            background: none;
+            padding: 0;
+            border-radius: 0;
+        }
+        
+        /* Inline code in text */
+        .finding-text code {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent-primary);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+        }
+        
+        /* Syntax highlighting colors */
+        .token.comment {
+            color: #8b949e;
+        }
+        
+        .token.keyword {
+            color: #ff7b72;
+        }
+        
+        /* SPECS AND SPEEDS CONTAINERS */
+        .specs-container,
+        .speeds-container {
+            margin-top: 20px;
+        }
+        
+        .specs-container .code-block-wrapper,
+        .speeds-container .code-block-wrapper {
+            margin: 0;
+        }
+        
+        .token.string {
+            color: #a5d6ff;
+        }
+        
+        .token.number {
+            color: #79c0ff;
+        }
+        
+        .token.function {
+            color: #d2a8ff;
+        }
+        
+        .token.operator {
+            color: #79c0ff;
+        }
+        
+        .token.punctuation {
+            color: #c9d1d9;
+        }
+        
+        /* TEXT BLOCK WRAPPER */
+        .text-block-wrapper {
+            position: relative;
+            margin: 24px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #30363d;
+            background: #161b22;
+        }
+        
+        .text-block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background: #0d1117;
+            border-bottom: 1px solid #30363d;
+        }
+        
+        .text-block-label {
+            font-size: 0.75rem;
+            color: #8b949e;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .text-copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            color: #8b949e;
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .text-copy-btn:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: #6366f1;
+            color: #6366f1;
+        }
+        
+        .text-copy-btn.copied {
+            background: rgba(34, 197, 94, 0.15);
+            border-color: #22c55e;
+            color: #22c55e;
+        }
+        
+        .text-copy-btn svg {
+            width: 14px;
+            height: 14px;
+        }
+        
+        .text-block {
+            width: 100%;
+            min-height: 120px;
+            max-height: 400px;
+            padding: 16px;
+            background: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            resize: vertical;
+            border: none;
+            border-top: 1px solid #30363d;
+        }
+        
+        .text-block:focus {
+            outline: none;
+            background: #161b22;
+        }
+        
         /* RECOMMENDATIONS */
         .recommendations-grid {
             display: grid;
@@ -694,6 +903,62 @@
             if (speechSynth.speaking) {
                 speechSynth.cancel();
             }
+        });
+
+        // COPY TO CLIPBOARD FUNCTIONALITY
+        async function copyToClipboard(text, button) {
+            try {
+                await navigator.clipboard.writeText(text);
+                
+                // Visual feedback
+                button.classList.add('copied');
+                button.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Copied!
+                `;
+                
+                // Revert after 2 seconds
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    button.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        Copy
+                    `;
+                }, 2000);
+                
+                return true;
+            } catch (err) {
+                console.error('Failed to copy:', err);
+                return false;
+            }
+        }
+
+        // Initialize all copy buttons on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Code block copy buttons
+            document.querySelectorAll('.code-copy-btn').forEach(function(button) {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const codeBlock = this.closest('.code-block-wrapper').querySelector('pre.code-block');
+                    const codeText = codeBlock.textContent.trim();
+                    copyToClipboard(codeText, this);
+                });
+            });
+            
+            // Text block copy buttons
+            document.querySelectorAll('.text-copy-btn').forEach(function(button) {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const textBlock = this.closest('.text-block-wrapper').querySelector('.text-block');
+                    const textContent = textBlock.value;
+                    copyToClipboard(textContent, this);
+                });
+            });
         });
     </script>
 </body>

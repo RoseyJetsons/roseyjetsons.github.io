@@ -94,12 +94,111 @@
             z-index: 1;
         }
         
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
         .header-meta {
             display: flex;
             gap: 16px;
             align-items: center;
             margin-bottom: 24px;
             flex-wrap: wrap;
+        }
+        
+        /* READ ALOUD BUTTON */
+        .read-aloud-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .read-aloud-btn:hover {
+            border-color: var(--accent-primary);
+            background: var(--bg-card-hover);
+        }
+        
+        .read-aloud-btn.active {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--accent-primary);
+        }
+        
+        .read-aloud-btn .icon {
+            font-size: 1.2rem;
+            display: inline-block;
+        }
+        
+        .read-aloud-btn .icon::before {
+            content: '🔊';
+        }
+        
+        .read-aloud-btn.playing .icon::before {
+            content: '⏹️';
+        }
+        
+        /* READ ALOUD CONTROLS */
+        .read-aloud-controls {
+            display: none;
+            align-items: center;
+            gap: 10px;
+            margin-left: 10px;
+        }
+        
+        .read-aloud-controls.visible {
+            display: flex;
+        }
+        
+        .read-aloud-controls select,
+        .read-aloud-controls input[type="range"] {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 4px;
+            padding: 4px 8px;
+        }
+        
+        .read-aloud-controls select:focus,
+        .read-aloud-controls input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+        
+        /* READING PROGRESS BAR */
+        .reading-progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: transparent;
+            z-index: 1000;
+            pointer-events: none;
+        }
+        
+        .reading-progress-bar {
+            height: 100%;
+            background: var(--gradient-primary);
+            width: 0%;
+            transition: width 0.3s ease;
         }
         
         .status-badge {
@@ -303,6 +402,215 @@
             line-height: 1.7;
         }
         
+        /* CODE BLOCKS WITH COPY BUTTON */
+        .code-block-wrapper {
+            position: relative;
+            margin: 16px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #0d1117;
+            border: 1px solid #30363d;
+        }
+        
+        .code-block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background: #161b22;
+            border-bottom: 1px solid #30363d;
+        }
+        
+        .code-block-language {
+            font-size: 0.75rem;
+            color: #8b949e;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .code-copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .code-copy-btn:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+        }
+        
+        .code-copy-btn.copied {
+            background: rgba(34, 197, 94, 0.15);
+            border-color: var(--accent-success);
+            color: var(--accent-success);
+        }
+        
+        .code-copy-btn svg {
+            width: 14px;
+            height: 14px;
+        }
+        
+        pre.code-block {
+            margin: 0;
+            padding: 16px;
+            overflow-x: auto;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #c9d1d9;
+        }
+        
+        pre.code-block code {
+            font-family: inherit;
+            font-size: inherit;
+            background: none;
+            padding: 0;
+            border-radius: 0;
+        }
+        
+        /* Inline code in text */
+        .finding-text code {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent-primary);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+        }
+        
+        /* Syntax highlighting colors */
+        .token.comment {
+            color: #8b949e;
+        }
+        
+        .token.keyword {
+            color: #ff7b72;
+        }
+        
+        /* SPECS AND SPEEDS CONTAINERS */
+        .specs-container,
+        .speeds-container {
+            margin-top: 20px;
+        }
+        
+        .specs-container .code-block-wrapper,
+        .speeds-container .code-block-wrapper {
+            margin: 0;
+        }
+        
+        .token.string {
+            color: #a5d6ff;
+        }
+        
+        .token.number {
+            color: #79c0ff;
+        }
+        
+        .token.function {
+            color: #d2a8ff;
+        }
+        
+        .token.operator {
+            color: #79c0ff;
+        }
+        
+        .token.punctuation {
+            color: #c9d1d9;
+        }
+        
+        /* TEXT BLOCK WRAPPER */
+        .text-block-wrapper {
+            position: relative;
+            margin: 24px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #30363d;
+            background: #161b22;
+        }
+        
+        .text-block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background: #0d1117;
+            border-bottom: 1px solid #30363d;
+        }
+        
+        .text-block-label {
+            font-size: 0.75rem;
+            color: #8b949e;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .text-copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            color: #8b949e;
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .text-copy-btn:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: #6366f1;
+            color: #6366f1;
+        }
+        
+        .text-copy-btn.copied {
+            background: rgba(34, 197, 94, 0.15);
+            border-color: #22c55e;
+            color: #22c55e;
+        }
+        
+        .text-copy-btn svg {
+            width: 14px;
+            height: 14px;
+        }
+        
+        .text-block {
+            width: 100%;
+            min-height: 120px;
+            max-height: 400px;
+            padding: 16px;
+            background: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            resize: vertical;
+            border: none;
+            border-top: 1px solid #30363d;
+        }
+        
+        .text-block:focus {
+            outline: none;
+            background: #161b22;
+        }
+        
         /* RECOMMENDATIONS */
         .recommendations-grid {
             display: grid;
@@ -465,9 +773,15 @@
     <header class="research-header">
         <div class="header-content">
             
-            <div class="header-meta">
-                <span class="status-badge completed">✓ Completed</span>
-                <span class="research-date">📅 March 27, 2026</span>
+            <div class="header-top">
+                <div class="header-left">
+                    <span class="status-badge completed">✓ Completed</span>
+                    <span class="research-date">📅 March 27, 2026</span>
+                    <button class="read-aloud-btn" onclick="toggleReadAloud()">
+                        <span class="icon"></span>
+                        <span class="text">Read Aloud</span>
+                    </button>
+                </div>
             </div>
             <h1 class="research-title">X-ray Testing for Space-Qualified ICs</h1>
             <p class="research-subtitle">Comprehensive analysis of X-ray testing methodologies for integrated circuits in space applications</p>
@@ -503,27 +817,97 @@
                     
             <div class="finding-card">
                 <div class="finding-title">Radiation Effects Categories</div>
-                <div class="finding-text">Space radiation causes three primary types of damage to electronics: **Total Ionizing Dose (TID)** causing cumulative degradation over mission lifetime; **Single Event Effects (SEE)** including upsets, latchup, and burnout from individual particle strikes; and **Displacement Damage Dose (DDD)** creating permanent lattice defects affecting transistor performance.</div>
+                <div class="finding-text">
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>Space radiation causes three primary types of damage to electronics: **Total Ionizing Dose (TID)** causing cumulative degradation over mission lifetime; **Single Event Effects (SEE)** including upsets, latchup, and burnout from individual particle strikes; and **Displacement Damage Dose (DDD)** creating permanent lattice defects affecting transistor performance.</textarea>
+        </div>
+    </div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">X-ray Testing Hierarchy</div>
-                <div class="finding-text">Three tiers of X-ray testing exist: **Radiography** (2D imaging, $500-2,000) for basic defect detection; **Computed Tomography** (3D imaging, $2,000-15,000) for internal structure analysis; and **X-ray Microscopy** (sub-micron resolution, $10,000-50,000+) for detailed defect characterization and wire bond inspection.</div>
+                <div class="finding-text">
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>Three tiers of X-ray testing exist: **Radiography** (2D imaging, $500-2,000) for basic defect detection; **Computed Tomography** (3D imaging, $2,000-15,000) for internal structure analysis; and **X-ray Microscopy** (sub-micron resolution, $10,000-50,000+) for detailed defect characterization and wire bond inspection.</textarea>
+        </div>
+    </div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Resolution Requirements by Application</div>
-                <div class="finding-text">Component-level inspection requires 5-10 micron resolution; package-level needs 1-5 microns; while advanced node ICs (7nm and below) demand sub-micron resolution only available through X-ray microscopy. Most commercial CT scanners provide 5-20 micron resolution, adequate for through-hole component inspection but insufficient for fine-pitch BGA analysis.</div>
+                <div class="finding-text">
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>Component-level inspection requires 5-10 micron resolution; package-level needs 1-5 microns; while advanced node ICs (7nm and below) demand sub-micron resolution only available through X-ray microscopy. Most commercial CT scanners provide 5-20 micron resolution, adequate for through-hole component inspection but insufficient for fine-pitch BGA analysis.</textarea>
+        </div>
+    </div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Cost-Effective Testing Strategy</div>
-                <div class="finding-text">A tiered approach maximizes value: screen all components with basic radiography ($500-1,000 per batch), perform CT scanning on critical/high-value parts ($2,000-5,000), and reserve microscopy for failure analysis or qualification of mission-critical components ($10,000+). This strategy typically costs 60-70% less than testing everything at highest level.</div>
+                <div class="finding-text">
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>A tiered approach maximizes value: screen all components with basic radiography ($500-1,000 per batch), perform CT scanning on critical/high-value parts ($2,000-5,000), and reserve microscopy for failure analysis or qualification of mission-critical components ($10,000+). This strategy typically costs 60-70% less than testing everything at highest level.</textarea>
+        </div>
+    </div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Standards Compliance Complexity</div>
-                <div class="finding-text">ECSS-Q-ST-20 (European), NASA-STD-8739.8 (US Government), and MIL-STD-883 (Military) have different requirements for test levels, acceptance criteria, and documentation. Commercial space missions often use ECSS Class 2 or NASA Level B requirements, while critical missions require Class 1 or Level A with full qualification testing.</div>
+                <div class="finding-text">
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>ECSS-Q-ST-20 (European), NASA-STD-8739.8 (US Government), and MIL-STD-883 (Military) have different requirements for test levels, acceptance criteria, and documentation. Commercial space missions often use ECSS Class 2 or NASA Level B requirements, while critical missions require Class 1 or Level A with full qualification testing.</textarea>
+        </div>
+    </div>
             </div>
                 </div>
             </section>
@@ -662,5 +1046,163 @@
             </div>
         </aside>
     </div>
+
+    <!-- READ ALOUD CONTROLS -->
+    <div class="read-aloud-bar" style="position: sticky; top: 60px; background: var(--bg-secondary); padding: 12px 24px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: center; align-items: center; gap: 15px; z-index: 99;">
+        <span style="font-size: 0.9rem; color: var(--text-secondary);">🔊 Read Aloud</span>
+        <button class="read-aloud-btn" id="readAloudBtn" onclick="toggleReadAloud()" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--accent-primary); border: none; border-radius: 6px; color: white; font-size: 0.9rem; font-weight: 500; cursor: pointer; transition: all 0.2s;">
+            <span class="icon" style="font-size: 1.1rem;">▶️</span>
+            <span class="text">Play</span>
+        </button>
+        <div class="read-aloud-controls" id="readAloudControls" style="display: none; align-items: center; gap: 10px;">
+            <select id="voiceSelect" style="padding: 6px 10px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-primary); font-size: 0.85rem; min-width: 150px;"></select>
+            <span style="font-size: 0.85rem; color: var(--text-secondary);">⚡</span>
+            <input type="range" id="rateSlider" min="0.5" max="2" value="1" step="0.1" style="width: 80px;">
+            <span id="rateValue" style="font-size: 0.85rem; color: var(--text-secondary); min-width: 35px;">1.0x</span>
+        </div>
+    </div>
+
+    <!-- READING PROGRESS BAR -->
+    <div class="reading-progress-container">
+        <div class="reading-progress-bar"></div>
+    </div>
+
+    <!-- READ ALOUD FUNCTIONALITY -->
+    <script>
+        let speechSynth = window.speechSynthesis;
+        let utterance = null;
+        let isReading = false;
+        let currentSection = null;
+
+        function toggleReadAloud() {
+            const btn = document.querySelector('.read-aloud-btn');
+            
+            if (isReading) {
+                stopReading();
+            } else {
+                startReading();
+            }
+        }
+
+        function startReading() {
+            const btn = document.querySelector('.read-aloud-btn');
+            btn.classList.add('playing');
+            btn.querySelector('.text').textContent = 'Stop';
+            
+            // Get all readable content
+            const title = document.querySelector('.research-title')?.textContent || '';
+            const subtitle = document.querySelector('.research-subtitle')?.textContent || '';
+            const abstract = document.querySelector('#abstract .section-text')?.textContent || '';
+            const methodology = document.querySelector('#methodology .section-text')?.textContent || '';
+            const findings = Array.from(document.querySelectorAll('#findings .finding-title, #findings .finding-text'))
+                .map(el => el.textContent).join(' ');
+            
+            // Combine all text
+            const fullText = `${title}. ${subtitle}. \n\nAbstract. ${abstract} \n\nMethodology. ${methodology} \n\nKey Findings. ${findings}`;
+            
+            // Create utterance
+            utterance = new SpeechSynthesisUtterance(fullText);
+            utterance.rate = 1.0; // Normal speed
+            utterance.pitch = 1.0; // Normal pitch
+            utterance.volume = 1.0; // Full volume
+            
+            // Update progress bar as reading progresses
+            utterance.onboundary = function(event) {
+                const progress = (event.charIndex / utterance.text.length) * 100;
+                document.querySelector('.reading-progress-bar').style.width = progress + '%';
+            };
+            
+            utterance.onend = function() {
+                stopReading();
+            };
+            
+            utterance.onerror = function(event) {
+                console.error('Speech synthesis error:', event);
+                stopReading();
+            };
+            
+            speechSynth.speak(utterance);
+            isReading = true;
+        }
+
+        function stopReading() {
+            if (speechSynth.speaking) {
+                speechSynth.cancel();
+            }
+            
+            const btn = document.querySelector('.read-aloud-btn');
+            btn.classList.remove('playing');
+            btn.querySelector('.text').textContent = 'Read Aloud';
+            
+            // Reset progress bar
+            document.querySelector('.reading-progress-bar').style.width = '0%';
+            
+            isReading = false;
+            utterance = null;
+        }
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', function() {
+            if (speechSynth.speaking) {
+                speechSynth.cancel();
+            }
+        });
+
+        // COPY TO CLIPBOARD FUNCTIONALITY
+        async function copyToClipboard(text, button) {
+            try {
+                await navigator.clipboard.writeText(text);
+                
+                // Visual feedback
+                button.classList.add('copied');
+                button.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Copied!
+                `;
+                
+                // Revert after 2 seconds
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    button.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        Copy
+                    `;
+                }, 2000);
+                
+                return true;
+            } catch (err) {
+                console.error('Failed to copy:', err);
+                return false;
+            }
+        }
+
+        // Initialize all copy buttons on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Code block copy buttons
+            document.querySelectorAll('.code-copy-btn').forEach(function(button) {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const codeBlock = this.closest('.code-block-wrapper').querySelector('pre.code-block');
+                    const codeText = codeBlock.textContent.trim();
+                    copyToClipboard(codeText, this);
+                });
+            });
+            
+            // Text block copy buttons
+            document.querySelectorAll('.text-copy-btn').forEach(function(button) {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const textBlock = this.closest('.text-block-wrapper').querySelector('.text-block');
+                    const textContent = textBlock.value;
+                    copyToClipboard(textContent, this);
+                });
+            });
+        });
+    </script>
 </body>
 </html>

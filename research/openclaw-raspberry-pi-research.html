@@ -402,6 +402,215 @@
             line-height: 1.7;
         }
         
+        /* CODE BLOCKS WITH COPY BUTTON */
+        .code-block-wrapper {
+            position: relative;
+            margin: 16px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #0d1117;
+            border: 1px solid #30363d;
+        }
+        
+        .code-block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background: #161b22;
+            border-bottom: 1px solid #30363d;
+        }
+        
+        .code-block-language {
+            font-size: 0.75rem;
+            color: #8b949e;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .code-copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .code-copy-btn:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+        }
+        
+        .code-copy-btn.copied {
+            background: rgba(34, 197, 94, 0.15);
+            border-color: var(--accent-success);
+            color: var(--accent-success);
+        }
+        
+        .code-copy-btn svg {
+            width: 14px;
+            height: 14px;
+        }
+        
+        pre.code-block {
+            margin: 0;
+            padding: 16px;
+            overflow-x: auto;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #c9d1d9;
+        }
+        
+        pre.code-block code {
+            font-family: inherit;
+            font-size: inherit;
+            background: none;
+            padding: 0;
+            border-radius: 0;
+        }
+        
+        /* Inline code in text */
+        .finding-text code {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent-primary);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+        }
+        
+        /* Syntax highlighting colors */
+        .token.comment {
+            color: #8b949e;
+        }
+        
+        .token.keyword {
+            color: #ff7b72;
+        }
+        
+        /* SPECS AND SPEEDS CONTAINERS */
+        .specs-container,
+        .speeds-container {
+            margin-top: 20px;
+        }
+        
+        .specs-container .code-block-wrapper,
+        .speeds-container .code-block-wrapper {
+            margin: 0;
+        }
+        
+        .token.string {
+            color: #a5d6ff;
+        }
+        
+        .token.number {
+            color: #79c0ff;
+        }
+        
+        .token.function {
+            color: #d2a8ff;
+        }
+        
+        .token.operator {
+            color: #79c0ff;
+        }
+        
+        .token.punctuation {
+            color: #c9d1d9;
+        }
+        
+        /* TEXT BLOCK WRAPPER */
+        .text-block-wrapper {
+            position: relative;
+            margin: 24px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #30363d;
+            background: #161b22;
+        }
+        
+        .text-block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background: #0d1117;
+            border-bottom: 1px solid #30363d;
+        }
+        
+        .text-block-label {
+            font-size: 0.75rem;
+            color: #8b949e;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .text-copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            color: #8b949e;
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .text-copy-btn:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: #6366f1;
+            color: #6366f1;
+        }
+        
+        .text-copy-btn.copied {
+            background: rgba(34, 197, 94, 0.15);
+            border-color: #22c55e;
+            color: #22c55e;
+        }
+        
+        .text-copy-btn svg {
+            width: 14px;
+            height: 14px;
+        }
+        
+        .text-block {
+            width: 100%;
+            min-height: 120px;
+            max-height: 400px;
+            padding: 16px;
+            background: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            resize: vertical;
+            border: none;
+            border-top: 1px solid #30363d;
+        }
+        
+        .text-block:focus {
+            outline: none;
+            background: #161b22;
+        }
+        
         /* RECOMMENDATIONS */
         .recommendations-grid {
             display: grid;
@@ -590,14 +799,14 @@
             <!-- ABSTRACT -->
             <section class="content-section" id="abstract">
                 <h2 class="section-title">Abstract</h2>
-                <p class="section-text">This research explores integrating OpenClaw AI agents with Raspberry Pi 4 systems for remote control, software programming, and automated testing—particularly for computer vision applications using OpenCV. The analysis covers headless OpenClaw deployment on Raspberry Pi, SSH-based remote control architectures, OpenCV installation and optimization strategies, VNC/display server configurations for headless environments, automated testing frameworks with pytest, and CI/CD integration. Key findings include optimal system configurations achieving 15-25 FPS with OpenCV at 640x480 resolution, systemd service configurations for persistent OpenClaw operation, and hybrid architectures combining local Pi processing with remote AI agent orchestration.</p>
+                <p class="section-text">This research explores integrating OpenClaw AI agents with Raspberry Pi 4 systems for remote control, software programming, and automated testing—particularly for computer vision applications using OpenCV. The analysis covers headless OpenClaw deployment on Raspberry Pi, SSH-based remote control architectures, OpenCV installation and optimization strategies, VNC/display server configurations for headless environments, automated testing frameworks with pytest, and CI/CD integration.</p>
             </section>
 
             <!-- METHODOLOGY -->
             <section class="content-section" id="methodology">
                 <h2 class="section-title">Methodology</h2>
                 <div class="section-text">
-                    This research employed multiple approaches:<br><br>1. **Architecture Analysis**: Examined OpenClaw's node system, gateway architecture, and remote control capabilities for Raspberry Pi integration.<br><br>2. **Performance Benchmarking**: Analyzed OpenCV performance characteristics on Raspberry Pi 4, including installation methods, optimization flags, and camera interface comparisons.<br><br>3. **Workflow Design**: Explored remote programming, testing, and deployment patterns using SSH, VNC, and headless display solutions.<br><br>4. **Tool Integration**: Investigated pytest, tox, and CI/CD tools for automated testing on embedded systems.<br><br>5. **Best Practices Survey**: Reviewed community resources, documentation, and real-world deployments for practical recommendations.
+                    This research employed multiple approaches: Architecture Analysis of OpenClaw node system and gateway; Performance Benchmarking of OpenCV on Raspberry Pi 4; Workflow Design for remote programming and testing; Tool Integration with pytest and CI/CD; and Best Practices Survey from community resources.
                 </div>
             </section>
 
@@ -608,37 +817,903 @@
                     
             <div class="finding-card">
                 <div class="finding-title">OpenClaw on Raspberry Pi: Architecture & Setup</div>
-                <div class="finding-text">OpenClaw runs efficiently on Raspberry Pi 4 (minimum 2GB RAM, 4GB+ recommended) as a headless AI agent node. The recommended setup uses Raspberry Pi OS Lite (64-bit) for minimal resource consumption, with OpenClaw installed via npm or as a systemd service for persistent operation.<br><br>**Installation Methods:**<br><br>1. **Global npm install** (Quick setup):<br>   sudo npm install -g openclaw<br>   openclaw init<br>   openclaw gateway start<br><br>2. **Systemd Service** (Production-ready):<br>   Create /etc/systemd/system/openclaw-gateway.service<br><br>**Key Architectural Components:**<br>- **Gateway**: Core OpenClaw daemon listening on port 18789<br>- **Node System**: Allows multiple Pi instances to register as controlled nodes<br>- **Remote Access**: SSH tunneling, Tailscale, or reverse proxy for external access<br>- **Plugins**: Extensible architecture for custom integrations</div>
+                <div class="finding-text">
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>OpenClaw runs efficiently on Raspberry Pi 4 (minimum 2GB RAM, 4GB+ recommended) as a headless AI agent node. The recommended setup uses Raspberry Pi OS Lite (64-bit) for minimal resource consumption.</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Installation Methods:**</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>1. **Global npm install** (Quick setup):</textarea>
+        </div>
+    
+
+        <div class="code-block-wrapper">
+            <div class="code-block-header">
+                <span class="code-block-language">bash</span>
+                <button class="code-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <pre class="code-block"><code>sudo npm install -g openclaw
+openclaw init
+openclaw gateway start</code></pre>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>2. **One-line installer** (Recommended):</textarea>
+        </div>
+    
+
+        <div class="code-block-wrapper">
+            <div class="code-block-header">
+                <span class="code-block-language">bash</span>
+                <button class="code-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <pre class="code-block"><code>curl -fsSL https://openclaw.ai/install.sh | bash</code></pre>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>3. **Systemd Service** (Production-ready):
+Create `/etc/systemd/system/openclaw-gateway.service` with Type=simple, User=pi, ExecStart=/usr/bin/openclaw gateway --force, Restart=always</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**System Requirements:**
+- Raspberry Pi 4 (2GB minimum, 4GB+ recommended)
+- Raspberry Pi OS Lite 64-bit
+- Node.js 22+ or 24
+- 2GB swap for 2GB RAM models
+- 16GB+ microSD or USB SSD</textarea>
+        </div>
+    </div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">SSH-Based Remote Control Architecture</div>
-                <div class="finding-text">SSH provides the backbone for secure remote control of Raspberry Pi instances running OpenClaw. Multiple architectural patterns enable different use cases:<br><br>**Pattern 1: Direct SSH Tunneling**<br>ssh -L 18789:localhost:18789 pi@raspberry-pi.local<br># Access OpenClaw dashboard at http://localhost:18789<br><br>**Pattern 2: OpenClaw Remote Mode** (macOS app)<br>- macOS OpenClaw app provides "Remote over SSH" mode<br>- Automatically handles SSH tunneling<br>- Enables health checks, web chat, and node management<br>- /ssh command in ClawControl opens interactive sessions<br><br>**Pattern 3: Tailscale Zero-Config Networking**<br>- Install tailscale on Pi: sudo apt install tailscale<br>- sudo tailscale up<br>- Access via assigned IP from any device on Tailscale network<br><br>**Pattern 4: Reverse Proxy (Nginx + SSL)**<br>- Set up nginx with SSL termination<br>- Proxy pass to localhost:18789<br>- Enables HTTPS access from anywhere<br><br>**Security Best Practices:**<br>- SSH key authentication only (disable password auth)<br>- Fail2ban for brute force protection<br>- UFW firewall with minimal port exposure<br>- Regular security updates</div>
+                <div class="finding-text">
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>SSH provides the backbone for secure remote control of Raspberry Pi instances running OpenClaw. Multiple architectural patterns enable different use cases:</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Pattern 1: Direct SSH Tunneling**</textarea>
+        </div>
+    
+
+        <div class="code-block-wrapper">
+            <div class="code-block-header">
+                <span class="code-block-language">bash</span>
+                <button class="code-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <pre class="code-block"><code>ssh -L 18789:localhost:18789 pi@raspberry-pi.local
+# Access OpenClaw dashboard at http://localhost:18789</code></pre>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Pattern 2: OpenClaw Remote Mode** (macOS app)
+- macOS OpenClaw app provides &#39;Remote over SSH&#39; mode
+- Automatically handles SSH tunneling
+- Enables health checks, web chat, and node management
+- `/ssh` command in ClawControl opens interactive sessions</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Pattern 3: Tailscale Zero-Config Networking**</textarea>
+        </div>
+    
+
+        <div class="code-block-wrapper">
+            <div class="code-block-header">
+                <span class="code-block-language">bash</span>
+                <button class="code-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <pre class="code-block"><code>sudo apt install tailscale
+sudo tailscale up
+# Get assigned IP: tailscale ip</code></pre>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Pattern 4: Reverse Proxy** (Nginx + SSL)
+- Set up nginx with SSL termination
+- Proxy pass to localhost:18789
+- Enables HTTPS access from anywhere</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Security Best Practices:**
+- SSH key authentication only (disable password auth)
+- Fail2ban for brute force protection
+- UFW firewall with minimal port exposure
+- Regular security updates</textarea>
+        </div>
+    </div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">OpenCV Installation & Optimization on Raspberry Pi 4</div>
-                <div class="finding-text">OpenCV performance on Raspberry Pi 4 varies significantly based on installation method and optimization. Three primary approaches exist:<br><br>**Method 1: apt Installation** (Fastest, Least Optimized)<br>- sudo apt install python3-opencv python3-numpy<br>- Pros: 30-second install, system-integrated<br>- Cons: Generic build, no ARM optimizations, older version<br>- Performance: ~5-10 FPS at 640x480<br><br>**Method 2: pip Installation** (Fast, Moderate Optimization)<br>- pip install opencv-contrib-python numpy<br>- Pros: 2-minute install, newer version, isolated environment<br>- Cons: Pre-built wheels may lack full optimization<br>- Performance: ~10-15 FPS at 640x480<br><br>**Method 3: Compile from Source** (Slowest, Best Performance)<br>- Full cmake build with ARM optimizations<br>- Pros: Full ARM/NEON optimization, latest features, GStreamer support<br>- Cons: 2-4 hour compile time, complex process<br>- Performance: ~20-30 FPS at 640x480<br><br>**Critical Optimization Flags:**<br>- ENABLE_NEON=ON: Enables ARM NEON SIMD instructions<br>- ENABLE_VFPV3=ON: Enables VFPv3 floating-point optimizations<br>- WITH_GSTREAMER=ON: Enables hardware-accelerated video decode<br>- WITH_V4L=ON: Enables V4L2 camera interface<br><br>**Performance Benchmarks (Raspberry Pi 4 4GB):**<br>| Resolution | apt | pip | Compiled |<br>|------------|-----|-----|----------|<br>| 320x240 | 15 FPS | 20 FPS | 35 FPS |<br>| 640x480 | 5 FPS | 10 FPS | 25 FPS |<br>| 1280x720 | 2 FPS | 3 FPS | 8 FPS |</div>
+                <div class="finding-text">
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>OpenCV performance on Raspberry Pi 4 varies significantly based on installation method and optimization. Three primary approaches exist:</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Method 1: apt Installation** (Fastest, Least Optimized)</textarea>
+        </div>
+    
+
+        <div class="code-block-wrapper">
+            <div class="code-block-header">
+                <span class="code-block-language">bash</span>
+                <button class="code-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <pre class="code-block"><code>sudo apt install python3-opencv python3-numpy</code></pre>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>- Pros: 30-second install, system-integrated
+- Cons: Generic build, no ARM optimizations, older version
+- Performance: ~5-10 FPS at 640x480</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Method 2: pip Installation** (Fast, Moderate Optimization)</textarea>
+        </div>
+    
+
+        <div class="code-block-wrapper">
+            <div class="code-block-header">
+                <span class="code-block-language">bash</span>
+                <button class="code-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <pre class="code-block"><code>pip install opencv-contrib-python numpy</code></pre>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>- Pros: 2-minute install, newer version, isolated environment
+- Cons: Pre-built wheels may lack full optimization
+- Performance: ~10-15 FPS at 640x480</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Method 3: Compile from Source** (Slowest, Best Performance)
+- Full cmake build with ARM optimizations
+- Pros: Full ARM/NEON optimization, latest features, GStreamer support
+- Cons: 2-4 hour compile time, complex process
+- Performance: ~20-30 FPS at 640x480</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Critical Optimization Flags:**
+- `ENABLE_NEON=ON`: Enables ARM NEON SIMD instructions
+- `ENABLE_VFPV3=ON`: Enables VFPv3 floating-point optimizations
+- `WITH_GSTREAMER=ON`: Enables hardware-accelerated video decode
+- `WITH_V4L=ON`: Enables V4L2 camera interface</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Performance Benchmarks (Raspberry Pi 4 4GB):**
+| Resolution | apt | pip | Compiled |
+|------------|-----|-----|----------|
+| 320x240 | 15 FPS | 20 FPS | 35 FPS |
+| 640x480 | 5 FPS | 10 FPS | 25 FPS |
+| 1280x720 | 2 FPS | 3 FPS | 8 FPS |</textarea>
+        </div>
+    </div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Camera Integration: CSI vs USB vs IP</div>
-                <div class="finding-text">Three camera interfaces are available for OpenCV on Raspberry Pi, each with distinct characteristics:<br><br>**CSI Camera Module** (Best Performance)<br>- Direct hardware interface, highest bandwidth, lowest latency<br>- Requires CSI port, limited to 2 cameras max<br>- Performance: 30-60 FPS depending on resolution<br>- Use cv2.VideoCapture(0, cv2.CAP_V4L2)<br><br>**USB Webcam** (Convenient, Moderate Performance)<br>- Universal compatibility, hot-swappable<br>- USB bandwidth limits, higher latency<br>- Performance: 15-30 FPS at 640x480<br>- Use picamera2 library for libcamera integration<br><br>**IP Camera / RTSP Stream** (Network-Based)<br>- Remote cameras, no Pi hardware required<br>- Network latency, bandwidth dependent<br>- Performance: 10-25 FPS (network dependent)<br>- Use cv2.VideoCapture with rtsp:// URL<br>- Optimize with GStreamer hardware decode for H.264</div>
+                <div class="finding-text">
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>Three camera interfaces are available for OpenCV on Raspberry Pi, each with distinct characteristics:</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**CSI Camera Module** (Best Performance)
+- Direct hardware interface, highest bandwidth, lowest latency
+- Requires CSI port, limited to 2 cameras max
+- Performance: 30-60 FPS depending on resolution
+- Use `cv2.VideoCapture(0, cv2.CAP_V4L2)`</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**USB Webcam** (Convenient, Moderate Performance)
+- Universal compatibility, hot-swappable
+- USB bandwidth limits, higher latency
+- Performance: 15-30 FPS at 640x480
+- Use picamera2 library for libcamera integration</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**IP Camera / RTSP Stream** (Network-Based)
+- Remote cameras, no Pi hardware required
+- Network latency, bandwidth dependent
+- Performance: 10-25 FPS (network dependent)
+- Use `cv2.VideoCapture` with `rtsp://` URL
+- Optimize with GStreamer hardware decode for H.264</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Camera Selection Guide:**
+- CSI: Best for fixed installations, maximum performance
+- USB: Best for prototyping, flexibility
+- IP/RTSP: Best for distributed systems, remote cameras</textarea>
+        </div>
+    </div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Headless Display & VNC for GUI Applications</div>
-                <div class="finding-text">OpenCV's cv2.imshow() requires a display server. In headless environments, several solutions enable GUI functionality:<br><br>**Solution 1: VNC Server** (Interactive Remote Desktop)<br>- sudo apt install realvnc-server<br>- Enable VNC in raspi-config<br>- Pros: Full desktop access, interactive debugging<br>- Cons: High bandwidth, not suitable for automation<br><br>**Solution 2: Xvfb (Virtual Framebuffer)** (Headless Testing)<br>- sudo apt install xvfb<br>- xvfb-run -a python3 your_opencv_app.py<br>- Pros: True headless operation, scriptable, low overhead<br>- Cons: No visual output (good for testing, not debugging)<br>- Use case: Automated testing, CI/CD pipelines<br><br>**Solution 3: Frame Capture Without Display** (Best for Production)<br>- Save frames to file or stream over network<br>- No display overhead, fastest performance<br>- Use case: Production systems, remote streaming<br><br>**Python Xvfb Wrapper:**<br>from xvfbwrapper import Xvfb<br>vdisplay = Xvfb(width=1280, height=1024, color_depth=16)<br>vdisplay.start()<br># Your OpenCV code here<br>vdisplay.stop()</div>
+                <div class="finding-text">
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>OpenCV&#39;s `cv2.imshow()` requires a display server. In headless environments, several solutions enable GUI functionality:</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Solution 1: VNC Server** (Interactive Remote Desktop)</textarea>
+        </div>
+    
+
+        <div class="code-block-wrapper">
+            <div class="code-block-header">
+                <span class="code-block-language">bash</span>
+                <button class="code-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <pre class="code-block"><code>sudo apt install realvnc-server
+# Enable VNC in raspi-config</code></pre>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>- Pros: Full desktop access, interactive debugging
+- Cons: High bandwidth, not suitable for automation</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Solution 2: Xvfb** (Virtual Framebuffer, Headless Testing)</textarea>
+        </div>
+    
+
+        <div class="code-block-wrapper">
+            <div class="code-block-header">
+                <span class="code-block-language">bash</span>
+                <button class="code-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <pre class="code-block"><code>sudo apt install xvfb
+xvfb-run -a python3 your_opencv_app.py</code></pre>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>- Pros: True headless operation, scriptable, low overhead
+- Cons: No visual output (good for testing, not debugging)
+- Use case: Automated testing, CI/CD pipelines</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Solution 3: Frame Capture Without Display** (Best for Production)
+- Save frames to file or stream over network
+- No display overhead, fastest performance
+- Use case: Production systems, remote streaming</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Solution 4: Network Streaming (MJPEG)**
+- Use Flask to stream MJPEG over HTTP
+- View in browser from any device
+- Use case: Remote monitoring, debugging</textarea>
+        </div>
+    </div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Automated Testing Framework for OpenCV Apps</div>
-                <div class="finding-text">Comprehensive testing strategy for OpenCV applications on Raspberry Pi:<br><br>**Test Framework Setup:**<br>- pip install pytest pytest-asyncio pytest-cov<br>- pip install opencv-python-headless<br><br>**Test Fixtures:**<br>- Sample images from file<br>- Synthetic images using numpy<br>- Mock camera generating predetermined frames<br><br>**Sample Tests:**<br>- Edge detection accuracy<br>- Object detection timing<br>- Memory usage verification<br>- Frame processing speed<br><br>**Run Tests:**<br>- pytest tests/ -v --cov=src<br>- pytest tests/test_processing.py -v --cov-report=html<br>- xvfb-run pytest for GUI-dependent tests</div>
+                <div class="finding-text">
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>Comprehensive testing strategy for OpenCV applications on Raspberry Pi:</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Test Framework Setup:**</textarea>
+        </div>
+    
+
+        <div class="code-block-wrapper">
+            <div class="code-block-header">
+                <span class="code-block-language">bash</span>
+                <button class="code-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <pre class="code-block"><code>pip install pytest pytest-asyncio pytest-cov hypothesis
+pip install opencv-python-headless</code></pre>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Test Fixtures:**
+- Sample images from file
+- Synthetic images using numpy
+- Mock camera generating predetermined frames</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Sample Tests:**
+- Edge detection accuracy
+- Object detection timing
+- Memory usage verification
+- Frame processing speed</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Run Tests:**</textarea>
+        </div>
+    
+
+        <div class="code-block-wrapper">
+            <div class="code-block-header">
+                <span class="code-block-language">bash</span>
+                <button class="code-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <pre class="code-block"><code>pytest tests/ -v --cov=src
+pytest tests/test_processing.py -v --cov-report=html
+xvfb-run pytest</code></pre>
+        </div>
+    </div>
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">OpenClaw-Controlled Testing Workflows</div>
-                <div class="finding-text">OpenClaw orchestrates automated testing and development workflows on Raspberry Pi:<br><br>**Workflow 1: Remote Test Execution via SSH**<br>- SSH into Pi and run pytest with xvfb-run<br>- Capture test output and coverage reports<br>- Return results to control station<br><br>**Workflow 2: OpenClaw Plugin for Pi Control**<br>- Custom plugin with commands for Pi operations<br>- pi-test: Run tests on Raspberry Pi<br>- pi-status: Check Pi system status<br>- pi-deploy: Deploy new code to Pi<br><br>**Workflow 3: Continuous Integration Script**<br>- Build on host machine<br>- Deploy to Pi via rsync<br>- Run tests on Pi<br>- Report results<br><br>**Workflow 4: Health Check Service**<br>- Periodic checks of Pi status<br>- SSH reachability<br>- OpenClaw running<br>- Camera accessible<br>- Disk space available<br>- Alert on failures</div>
+                <div class="finding-text">
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>OpenClaw orchestrates automated testing and development workflows on Raspberry Pi:</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Workflow 1: Remote Test Execution via SSH**
+- SSH into Pi and run pytest with xvfb-run
+- Capture test output and coverage reports
+- Return results to control station</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Workflow 2: OpenClaw Plugin for Pi Control**
+- Custom plugin with commands for Pi operations
+- `pi-test`: Run tests on Raspberry Pi
+- `pi-status`: Check Pi system status
+- `pi-deploy`: Deploy new code to Pi</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Workflow 3: Continuous Integration Script**
+- Build on host machine
+- Deploy to Pi via rsync
+- Run tests on Pi
+- Report results</textarea>
+        </div>
+    
+
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>**Workflow 4: Health Check Service**
+- Periodic checks of Pi status
+- SSH reachability
+- OpenClaw running
+- Camera accessible
+- Disk space available
+- Alert on failures</textarea>
+        </div>
+    </div>
             </div>
                 </div>
             </section>
@@ -851,6 +1926,62 @@
             if (speechSynth.speaking) {
                 speechSynth.cancel();
             }
+        });
+
+        // COPY TO CLIPBOARD FUNCTIONALITY
+        async function copyToClipboard(text, button) {
+            try {
+                await navigator.clipboard.writeText(text);
+                
+                // Visual feedback
+                button.classList.add('copied');
+                button.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Copied!
+                `;
+                
+                // Revert after 2 seconds
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    button.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        Copy
+                    `;
+                }, 2000);
+                
+                return true;
+            } catch (err) {
+                console.error('Failed to copy:', err);
+                return false;
+            }
+        }
+
+        // Initialize all copy buttons on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Code block copy buttons
+            document.querySelectorAll('.code-copy-btn').forEach(function(button) {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const codeBlock = this.closest('.code-block-wrapper').querySelector('pre.code-block');
+                    const codeText = codeBlock.textContent.trim();
+                    copyToClipboard(codeText, this);
+                });
+            });
+            
+            // Text block copy buttons
+            document.querySelectorAll('.text-copy-btn').forEach(function(button) {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const textBlock = this.closest('.text-block-wrapper').querySelector('.text-block');
+                    const textContent = textBlock.value;
+                    copyToClipboard(textContent, this);
+                });
+            });
         });
     </script>
 </body>

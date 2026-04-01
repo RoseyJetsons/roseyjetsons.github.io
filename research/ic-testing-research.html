@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carvera Air: Complete Guide to CNC Carving | RoseyJetsons</title>
+    <title>IC & Microcontroller Testing Guide | RoseyJetsons</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -776,17 +776,17 @@
             <div class="header-top">
                 <div class="header-left">
                     <span class="status-badge completed">✓ Completed</span>
-                    <span class="research-date">📅 March 31, 2026</span>
+                    <span class="research-date">📅 March 29, 2026</span>
                     <button class="read-aloud-btn" onclick="toggleReadAloud()">
                         <span class="icon"></span>
                         <span class="text">Read Aloud</span>
                     </button>
                 </div>
             </div>
-            <h1 class="research-title">Carvera Air: Complete Guide to CNC Carving</h1>
-            <p class="research-subtitle">Comprehensive analysis of design principles, software, and techniques for the Carvera Air desktop CNC machine</p>
+            <h1 class="research-title">IC & Microcontroller Testing Guide</h1>
+            <p class="research-subtitle">Comprehensive reference for semiconductor testing methodologies, reliability mathematics, signal integrity, and thermal characterization</p>
             <div class="header-categories">
-                <span class="category-tag">🔬 Research</span><span class="category-tag">📌 Makerspace</span><span class="category-tag">📌 CNC</span><span class="category-tag">📌 Design</span>
+                <span class="category-tag">🔬 Research</span><span class="category-tag">📌 Electronics Engineering</span><span class="category-tag">🔧 Hardware Testing</span><span class="category-tag">📌 Reliability</span>
             </div>
         </div>
     </header>
@@ -799,14 +799,14 @@
             <!-- ABSTRACT -->
             <section class="content-section" id="abstract">
                 <h2 class="section-title">Abstract</h2>
-                <p class="section-text">This research explores comprehensive design and manufacturing principles for the Carvera Air, a desktop 3-axis CNC machine designed for hobbyists and makers. With a work area of 30 × 20 × 13 cm, the Carvera Air is perfect for small-scale projects including jewelry, signs, chess pieces, and prototypes. The analysis covers core design principles including tool diameter constraints, corner radius limitations, and relief carving depths. Software recommendations include Makera CAM (included free), VCarve Pro ($370), Fusion 360 (free for hobbyists), and Easel (browser-based). The research provides practical guidance on material selection, speeds and feeds, and common beginner mistakes to avoid.</p>
+                <p class="section-text">This comprehensive guide covers non-destructive and destructive testing methodologies for integrated circuits and microcontrollers. The research explores X-ray radiography, computed tomography, scanning acoustic microscopy, optical microscopy, and electrical functional testing for non-destructive analysis. Destructive methods including wire bond testing, cross-section analysis, SEM, FIB, and TEM are detailed with practical applications. The guide provides extensive coverage of reliability mathematics including Arrhenius equation, Black's equation for electromigration, Coffin-Manson thermal cycling, and MIL-HDBK-217F predictions. Signal integrity analysis covers S-parameters, transmission line effects, and eye diagram analysis. Thermal characterization includes thermal resistance parameters, junction temperature calculations, and power derating.</p>
             </section>
 
             <!-- METHODOLOGY -->
             <section class="content-section" id="methodology">
                 <h2 class="section-title">Methodology</h2>
                 <div class="section-text">
-                    This research employed a multi-source approach combining official documentation, community resources, and practical CNC design principles:<br><br>1. **Official Documentation**: Analyzed Makera's technical specifications, user guides, and product documentation for the Carvera Air.<br><br>2. **Software Research**: Evaluated four CAM software options—Makera CAM, VCarve Pro, Fusion 360, and Easel—based on features, ease of use, cost, and suitability for the Carvera Air's capabilities.<br><br>3. **Community Analysis**: Reviewed user experiences on Reddit (r/Carvera), forums, and YouTube tutorials to identify common mistakes, best practices, and real-world performance.<br><br>4. **Technical Principles**: Applied established CNC design principles including tool diameter constraints, corner radius requirements, and material removal considerations.<br><br>5. **Material Research**: Surveyed material properties, cutting characteristics, and recommended parameters for woods, plastics, and soft metals.
+                    This research employed a systematic approach combining technical literature review, standards analysis, and practical engineering assessment.
                 </div>
             </section>
 
@@ -816,7 +816,7 @@
                 <div class="findings-grid">
                     
             <div class="finding-card">
-                <div class="finding-title">Work Area Constraints</div>
+                <div class="finding-title">Non-Destructive Testing Methodologies</div>
                 <div class="finding-text">
         <div class="text-block-wrapper">
             <div class="text-block-header">
@@ -829,13 +829,13 @@
                     Copy
                 </button>
             </div>
-            <textarea class="text-block" readonly>The Carvera Air offers a 30 × 20 × 13 cm work volume with 12 cm gantry clearance. Design with a 10-20mm safety margin for clamping, tool approach paths, and material irregularities. Perfect for jewelry, chess pieces, small signs, phone cases, and architectural models—not suitable for large furniture or full-size prototypes.</textarea>
+            <textarea class="text-block" readonly>NDT methods enable inspection without device damage. X-ray radiography (1-10 μm resolution, $500-2,000) detects wire bond defects, die placement errors, and package cracks. X-ray CT provides 3D visualization (0.1-10 μm resolution, $2,000-15,000). Scanning acoustic microscopy (20-500 MHz, $1,000-5,000) excels at delamination detection. Optical microscopy (0.2-0.3 μm resolution) remains essential for surface inspection.</textarea>
         </div>
     </div>
             </div>
 
             <div class="finding-card">
-                <div class="finding-title">Corner Radius = Bit Radius</div>
+                <div class="finding-title">Destructive Testing Methodologies</div>
                 <div class="finding-text">
         <div class="text-block-wrapper">
             <div class="text-block-header">
@@ -848,13 +848,13 @@
                     Copy
                 </button>
             </div>
-            <textarea class="text-block" readonly>This is the #1 mistake beginners make. Internal corners will ALWAYS be rounded by the bit radius. A 6mm bit creates a 3mm radius corner; a 3mm bit creates a 1.5mm radius. Golden rule: internal corner radius should be at least 1/3 of cavity depth for clean cuts.</textarea>
+            <textarea class="text-block" readonly>DT methods require device modification but reveal critical internal details. Wire bond shear testing (minimum 300-600g) and pull testing (350-650g) quantify bond strength per MIL-STD-883. Cross-section analysis exposes internal structures. SEM (1-20 nm resolution) provides high-resolution imaging with EDX. FIB (10-50 nm milling) enables precision circuit edit. TEM (0.1-0.2 nm resolution) reveals atomic-level details.</textarea>
         </div>
     </div>
             </div>
 
             <div class="finding-card">
-                <div class="finding-title">Minimum Feature Sizes</div>
+                <div class="finding-title">Reliability Mathematics</div>
                 <div class="finding-text">
         <div class="text-block-wrapper">
             <div class="text-block-header">
@@ -867,13 +867,13 @@
                     Copy
                 </button>
             </div>
-            <textarea class="text-block" readonly>Minimum feature width = 1.5 × bit diameter. A 3mm bit can reliably cut 4.5mm features; a 1.5mm bit handles 2.25mm details. Wall thickness: 2-3mm for rough cuts, 1-1.5mm for fine detail, 0.5-1mm for delicate features (requires care).</textarea>
+            <textarea class="text-block" readonly>Temperature acceleration follows Arrhenius equation: AF = exp[(Ea/k) × (1/Tuse - 1/Tstress)] with activation energies ranging from 0.1-0.2 eV for hot carrier injection to 0.8-1.5 eV for diffusion-controlled mechanisms. Black&#39;s equation for electromigration: MTTF = A × (1/J^n) × exp(Ea/kT). Coffin-Manson for thermal cycling: Nf = C × (Δε_p)^(-m). MIL-HDBK-217F provides component-level predictions.</textarea>
         </div>
     </div>
             </div>
 
             <div class="finding-card">
-                <div class="finding-title">Relief Carving Depths</div>
+                <div class="finding-title">Signal Integrity Analysis</div>
                 <div class="finding-text">
         <div class="text-block-wrapper">
             <div class="text-block-header">
@@ -886,13 +886,13 @@
                     Copy
                 </button>
             </div>
-            <textarea class="text-block" readonly>Bas-relief (1-3mm) for subtle decoration; medium relief (3-10mm) for signs and plaques; high relief (10-20mm) for dramatic sculptures; through-cut for cutouts and puzzles. Engraving depth typically 0.025-0.25mm, maximum practical 3.5mm.</textarea>
+            <textarea class="text-block" readonly>S-parameters characterize high-frequency behavior: S11 (input reflection), S21 (forward transmission), S12 (reverse isolation), S22 (output reflection). Return loss targets &gt;10-15 dB. Rise time-bandwidth relationship: BW × Tr ≈ 0.35. Transmission line effects become significant when Tprop &gt; Tr/6.</textarea>
         </div>
     </div>
             </div>
 
             <div class="finding-card">
-                <div class="finding-title">Material Hierarchy by Difficulty</div>
+                <div class="finding-title">Thermal Characterization</div>
                 <div class="finding-text">
         <div class="text-block-wrapper">
             <div class="text-block-header">
@@ -905,26 +905,7 @@
                     Copy
                 </button>
             </div>
-            <textarea class="text-block" readonly>Easy: Balsa, plywood, basswood, MDF. Medium: Cherry, poplar, acrylic. Hard: Maple, hard acrylic. Very Hard: Aluminum (12mm max), brass (6mm max), steel (3mm engraving only). Beginners should start with basswood or MDF using a 3mm end mill.</textarea>
-        </div>
-    </div>
-            </div>
-
-            <div class="finding-card">
-                <div class="finding-title">Software Options Compared</div>
-                <div class="finding-text">
-        <div class="text-block-wrapper">
-            <div class="text-block-header">
-                <span class="text-block-label">📝 Text Content</span>
-                <button class="text-copy-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    Copy
-                </button>
-            </div>
-            <textarea class="text-block" readonly>Makera CAM (free, included) — beginner-friendly, pre-configured, cloud-based. VCarve Pro ($370) — best for 2.5D carving and lettering. Fusion 360 (free for hobbyists) — full 3D CAD+CAM, industry standard, steeper learning curve. Easel (free/$20/mo) — easiest browser-based option with project library.</textarea>
+            <textarea class="text-block" readonly>Thermal resistance parameters: θJA (junction-to-ambient), θJC (junction-to-case), θJB (junction-to-board). Junction temperature: Tj = Ta + P × θJA. Typical θJA: 42°C/W for SOIC-8, 35°C/W for QFN-32, 15°C/W for BGA-100.</textarea>
         </div>
     </div>
             </div>
@@ -939,177 +920,81 @@
                 <div class="recommendations-grid">
                     
                     <div class="recommendation-card">
-                        <div class="recommendation-title">For Absolute Beginners</div>
-                        <div class="recommendation-text">Start with Makera CAM (included free) and basswood or 12-18mm MDF. Use a 3mm (1/8") end mill at 8,000-10,000 RPM. Begin with simple projects: nameplates, basic shapes, shallow engraving. Always test on scrap material first. Watch Makera's YouTube tutorials.</div>
+                        <div class="recommendation-title">For Component-Level Testing</div>
+                        <div class="recommendation-text">Start with optical microscopy ($500-2,000 equipment or $100-300 commercial). Use X-ray radiography ($500-2,000 per batch). CT scanning for wire bond verification ($2,000-5,000). Budget $5,000-15,000 for comprehensive characterization.</div>
                     </div>
                     
                     <div class="recommendation-card">
-                        <div class="recommendation-title">For Sign Making & Lettering</div>
-                        <div class="recommendation-text">Invest in VCarve Pro ($370) for its superior V-carving toolpaths and text tools. Design with generous corner radii. Use basswood or poplar for clean cuts. Typical sign depth: 3-6mm. Bas-relief lettering works beautifully at 1-2mm depth.</div>
+                        <div class="recommendation-title">For Failure Analysis</div>
+                        <div class="recommendation-text">Begin with non-destructive methods (X-ray, optical). Cross-section analysis ($500-1,500). SEM with EDX ($1,000-3,000). FIB ($2,000-10,000+). Total FA budget: $5,000-50,000+.</div>
                     </div>
                     
                     <div class="recommendation-card">
-                        <div class="recommendation-title">For 3D Models & Parts</div>
-                        <div class="recommendation-text">Use Fusion 360 (free for hobbyists) for full 3D modeling and complex toolpaths. Consider grain direction in wood designs. Design for the 13cm Z-axis limit—split larger parts into sections. Add tabs to held cutouts to prevent parts from falling during cutting.</div>
+                        <div class="recommendation-title">For Reliability Testing</div>
+                        <div class="recommendation-text">Use accelerated life testing per Arrhenius. Thermal cycling per JESD22-A104. HAST per JESD22-A110. HTOL per JESD22-A103. Estimate 2-8 weeks.</div>
                     </div>
                     
                     <div class="recommendation-card">
-                        <div class="recommendation-title">For Jewelry & Fine Detail</div>
-                        <div class="recommendation-text">Use 1.5mm bits for details down to 2mm. Basswood is ideal—fine grain, easy to finish. Bas-relief at 1-3mm depth creates beautiful pendants and decorative pieces. Consider 4-axis upgrade for cylindrical items like rings and bracelets.</div>
+                        <div class="recommendation-title">For Signal Integrity Testing</div>
+                        <div class="recommendation-text">Characterize with VNA up to knee frequency. For 1 Gbps, test to 2.5 GHz minimum. Target return loss >10 dB. Budget $5,000-20,000 for equipment or $500-2,000 commercial.</div>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <div class="recommendation-title">For Thermal Management</div>
+                        <div class="recommendation-text">Measure θJA per JEDEC standards. Add thermal vias under high-power packages. Target junction temp <125°C. Budget $2,000-10,000 for equipment.</div>
                     </div>
                 </div>
             </section>
-            <!-- SPECS -->
-            <section class="content-section" id="specs">
-                <h2 class="section-title">Machine Specifications</h2>
-                <div class="specs-container">
-                    <div class="code-block-wrapper">
-                        <div class="code-block-header">
-                            <span class="code-block-language">JSON</span>
-                            <button class="code-copy-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                </svg>
-                                Copy
-                            </button>
+            <!-- FACILITIES -->
+            <section class="content-section" id="facilities">
+                <h2 class="section-title">Testing Facilities</h2>
+                <div class="facilities-grid">
+                    
+                    <div class="facility-card">
+                        <div class="facility-name">Texas A&M CREEMAC</div>
+                        <div class="facility-details">
+                            <span class="facility-location">📍 College Station, TX, USA</span>
+                            <span class="facility-cost">💰 undefined</span>
                         </div>
-                        <pre class="code-block"><code>[
-  {
-    &quot;name&quot;: &quot;Work Area&quot;,
-    &quot;value&quot;: &quot;30 × 20 × 13 cm (11.8\&quot; × 7.9\&quot; × 5.1\&quot;)&quot;
-  },
-  {
-    &quot;name&quot;: &quot;4th Axis&quot;,
-    &quot;value&quot;: &quot;9.2 × 20 cm (3.6\&quot; × 7.9\&quot;)&quot;
-  },
-  {
-    &quot;name&quot;: &quot;Gantry Clearance&quot;,
-    &quot;value&quot;: &quot;12 cm (4.7\&quot;)&quot;
-  },
-  {
-    &quot;name&quot;: &quot;Accuracy&quot;,
-    &quot;value&quot;: &quot;±0.05 mm&quot;
-  },
-  {
-    &quot;name&quot;: &quot;Repeatability&quot;,
-    &quot;value&quot;: &quot;±0.02 mm&quot;
-  },
-  {
-    &quot;name&quot;: &quot;Max Speed&quot;,
-    &quot;value&quot;: &quot;6,000 mm/min (236 in/min)&quot;
-  },
-  {
-    &quot;name&quot;: &quot;Spindle&quot;,
-    &quot;value&quot;: &quot;200W, 13,000 RPM&quot;
-  },
-  {
-    &quot;name&quot;: &quot;Connectivity&quot;,
-    &quot;value&quot;: &quot;WiFi, USB-C, Ethernet&quot;
-  }
-]</code></pre>
+                        <div class="facility-capabilities">CT scanning, X-ray microscopy, failure analysis</div>
                     </div>
-                </div>
-            </section>
-            <!-- SPEEDS AND FEEDS -->
-            <section class="content-section" id="speeds-and-feeds">
-                <h2 class="section-title">Speeds and Feeds Reference</h2>
-                <div class="speeds-container">
-                    <div class="code-block-wrapper">
-                        <div class="code-block-header">
-                            <span class="code-block-language">JSON</span>
-                            <button class="code-copy-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                </svg>
-                                Copy
-                            </button>
+                    
+                    <div class="facility-card">
+                        <div class="facility-name">Rohde & Schwarz FA Center</div>
+                        <div class="facility-details">
+                            <span class="facility-location">📍 Munich, Germany</span>
+                            <span class="facility-cost">💰 undefined</span>
                         </div>
-                        <pre class="code-block"><code>[
-  {
-    &quot;material&quot;: &quot;Softwood (6mm bit)&quot;,
-    &quot;rpm&quot;: &quot;8,000-10,000&quot;,
-    &quot;feed&quot;: &quot;100-150 mm/s&quot;
-  },
-  {
-    &quot;material&quot;: &quot;Softwood (3mm bit)&quot;,
-    &quot;rpm&quot;: &quot;10,000&quot;,
-    &quot;feed&quot;: &quot;80-120 mm/s&quot;
-  },
-  {
-    &quot;material&quot;: &quot;Hardwood (6mm bit)&quot;,
-    &quot;rpm&quot;: &quot;6,000-8,000&quot;,
-    &quot;feed&quot;: &quot;60-100 mm/s&quot;
-  },
-  {
-    &quot;material&quot;: &quot;Hardwood (3mm bit)&quot;,
-    &quot;rpm&quot;: &quot;8,000-10,000&quot;,
-    &quot;feed&quot;: &quot;50-80 mm/s&quot;
-  },
-  {
-    &quot;material&quot;: &quot;Acrylic (3mm bit)&quot;,
-    &quot;rpm&quot;: &quot;6,000-8,000&quot;,
-    &quot;feed&quot;: &quot;30-50 mm/s&quot;
-  }
-]</code></pre>
+                        <div class="facility-capabilities">Complete FA, SEM, FIB, optical</div>
+                    </div>
+                    
+                    <div class="facility-card">
+                        <div class="facility-name">Menlo FA Services</div>
+                        <div class="facility-details">
+                            <span class="facility-location">📍 Cupertino, CA, USA</span>
+                            <span class="facility-cost">💰 undefined</span>
+                        </div>
+                        <div class="facility-capabilities">FA, reverse engineering, CT</div>
+                    </div>
+                    
+                    <div class="facility-card">
+                        <div class="facility-name">Morris Associates</div>
+                        <div class="facility-details">
+                            <span class="facility-location">📍 Berwyn, PA, USA</span>
+                            <span class="facility-cost">💰 undefined</span>
+                        </div>
+                        <div class="facility-capabilities">FA, reliability, NDT</div>
+                    </div>
+                    
+                    <div class="facility-card">
+                        <div class="facility-name">Quali-Chek</div>
+                        <div class="facility-details">
+                            <span class="facility-location">📍 San Jose, CA, USA</span>
+                            <span class="facility-cost">💰 undefined</span>
+                        </div>
+                        <div class="facility-capabilities">FA, X-ray, burn-in</div>
                     </div>
                 </div>
-            </section>
-            <!-- RELATED LINKS -->
-            <section class="content-section" id="related-links">
-                <h2 class="section-title">Related Resources</h2>
-                <ul class="links-list">
-                    
-                    <li>
-                        <a href="https://www.makera.com" target="_blank" rel="noopener noreferrer">
-                            <span class="icon">🏠</span>
-                            <span>Makera Official Website</span>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="https://www.makera.com/blogs" target="_blank" rel="noopener noreferrer">
-                            <span class="icon">📝</span>
-                            <span>Makera Blog & Tutorials</span>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="https://wiki.makera.com" target="_blank" rel="noopener noreferrer">
-                            <span class="icon">📚</span>
-                            <span>Makera Wiki</span>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="https://reddit.com/r/Carvera" target="_blank" rel="noopener noreferrer">
-                            <span class="icon">👥</span>
-                            <span>r/Carvera Community</span>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="https://www.vectric.com" target="_blank" rel="noopener noreferrer">
-                            <span class="icon">🎨</span>
-                            <span>VCarve Pro (Vectric)</span>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="https://www.autodesk.com/products/fusion-360" target="_blank" rel="noopener noreferrer">
-                            <span class="icon">🔧</span>
-                            <span>Fusion 360 (Autodesk)</span>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="https://easel.inventables.com" target="_blank" rel="noopener noreferrer">
-                            <span class="icon">💻</span>
-                            <span>Easel (Inventables)</span>
-                        </a>
-                    </li>
-                </ul>
             </section>
             
             <!-- NAVIGATION BUTTONS -->
@@ -1131,9 +1016,7 @@
                     <li><a href="#methodology">Methodology</a></li>
                     <li><a href="#findings">Key Findings</a></li>
                     <li><a href="#recommendations">Recommendations</a></li>
-                    <li><a href="#specs">Machine Specifications</a></li>
-                    <li><a href="#speeds-and-feeds">Speeds and Feeds</a></li>
-                    <li><a href="#related-links">Related Resources</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
                 </ul>
             </div>
         </aside>

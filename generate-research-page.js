@@ -72,12 +72,138 @@ function renderCategories(categories) {
 }
 
 function renderFindings(findings) {
-    return findings.map(finding => `
+    return findings.map(finding => {
+        const processedContent = processContentWithCodeBlocks(finding.content);
+        return `
             <div class="finding-card">
                 <div class="finding-title">${finding.title}</div>
-                <div class="finding-text">${finding.content.replace(/\n/g, '<br>')}</div>
-            </div>`
-    ).join('\n');
+                <div class="finding-text">${processedContent}</div>
+            </div>`;
+    }).join('\n');
+}
+
+function processContentWithCodeBlocks(content) {
+    if (!content) return '';
+    
+    // Split content into lines and process
+    const lines = content.split('\n');
+    let result = [];
+    let inCodeBlock = false;
+    let codeLanguage = '';
+    let codeContent = [];
+    let textLines = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+        // Check for code block start
+        if (line.trim().startsWith('```')) {
+            // Process any accumulated text lines first
+            if (textLines.length > 0) {
+                result.push(renderTextBlock(textLines));
+                textLines = [];
+            }
+            
+            if (!inCodeBlock) {
+                // Start of code block
+                inCodeBlock = true;
+                codeLanguage = line.trim().substring(3) || 'bash';
+                codeContent = [];
+            } else {
+                // End of code block
+                inCodeBlock = false;
+                const codeText = codeContent.join('\n');
+                result.push(renderCodeBlock(codeLanguage, codeText));
+                codeLanguage = '';
+                codeContent = [];
+            }
+        } else if (inCodeBlock) {
+            // Inside code block, collect content
+            codeContent.push(line);
+        } else {
+            // Regular text line
+            if (line.trim()) {
+                textLines.push(line);
+            } else if (textLines.length > 0) {
+                // Empty line signals end of text block
+                const block = renderTextBlock(textLines);
+                if (block) result.push(block);
+                textLines = [];
+            }
+        }
+    }
+    
+    // Process remaining text
+    if (textLines.length > 0) {
+        result.push(renderTextBlock(textLines));
+    }
+    
+    // If still in code block at end, close it
+    if (inCodeBlock && codeContent.length > 0) {
+        const codeText = codeContent.join('\n');
+        result.push(renderCodeBlock(codeLanguage, codeText));
+    }
+    
+    return result.join('\n');
+}
+
+function renderTextBlock(lines) {
+    if (!lines || lines.length === 0) return '';
+    
+    // Process each line - escape HTML and convert inline code
+    const processedLines = lines.map(line => {
+        let processedLine = escapeHtml(line);
+        
+        // Convert inline code (text between backticks)
+        processedLine = processedLine.replace(/`([^`]+)`/g, '<code>$1</code>');
+        
+        return processedLine;
+    }).join('<br>');
+    
+    return `
+        <div class="text-block-wrapper">
+            <div class="text-block-header">
+                <span class="text-block-label">📝 Text Content</span>
+                <button class="text-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea class="text-block" readonly>${escapeHtml(lines.join('\n'))}</textarea>
+        </div>
+    `;
+}
+
+function renderCodeBlock(language, content) {
+    return `
+        <div class="code-block-wrapper">
+            <div class="code-block-header">
+                <span class="code-block-language">${language}</span>
+                <button class="code-copy-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <pre class="code-block"><code>${escapeHtml(content)}</code></pre>
+        </div>
+    `;
+}
+
+function escapeHtml(text) {
+    const htmlEntities = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+    };
+    return text.replace(/[&<>"']/g, char => htmlEntities[char]);
 }
 
 function renderRecommendations(recommendations) {
@@ -118,6 +244,62 @@ function renderFacilities(facilities) {
             </section>`;
 }
 
+function renderSpecs(specs) {
+    if (!specs || specs.length === 0) return '';
+    
+    // Convert specs to a formatted JSON string
+    const specsJson = JSON.stringify(specs, null, 2);
+    
+    return `
+            <!-- SPECS -->
+            <section class="content-section" id="specs">
+                <h2 class="section-title">Machine Specifications</h2>
+                <div class="specs-container">
+                    <div class="code-block-wrapper">
+                        <div class="code-block-header">
+                            <span class="code-block-language">JSON</span>
+                            <button class="code-copy-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                                Copy
+                            </button>
+                        </div>
+                        <pre class="code-block"><code>${escapeHtml(specsJson)}</code></pre>
+                    </div>
+                </div>
+            </section>`;
+}
+
+function renderSpeedsAndFeeds(speedsAndFeeds) {
+    if (!speedsAndFeeds || speedsAndFeeds.length === 0) return '';
+    
+    // Convert speeds and feeds to a formatted JSON string
+    const speedsJson = JSON.stringify(speedsAndFeeds, null, 2);
+    
+    return `
+            <!-- SPEEDS AND FEEDS -->
+            <section class="content-section" id="speeds-and-feeds">
+                <h2 class="section-title">Speeds and Feeds Reference</h2>
+                <div class="speeds-container">
+                    <div class="code-block-wrapper">
+                        <div class="code-block-header">
+                            <span class="code-block-language">JSON</span>
+                            <button class="code-copy-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                                Copy
+                            </button>
+                        </div>
+                        <pre class="code-block"><code>${escapeHtml(speedsJson)}</code></pre>
+                    </div>
+                </div>
+            </section>`;
+}
+
 function renderRelatedLinks(links) {
     if (!links || links.length === 0) return '';
     
@@ -149,6 +331,12 @@ function generateTOC() {
     }
     if (researchData.facilities && researchData.facilities.length > 0) {
         toc += '\n                    <li><a href="#facilities">Facilities</a></li>';
+    }
+    if (researchData.specs && researchData.specs.length > 0) {
+        toc += '\n                    <li><a href="#specs">Machine Specifications</a></li>';
+    }
+    if (researchData.speedsAndFeeds && researchData.speedsAndFeeds.length > 0) {
+        toc += '\n                    <li><a href="#speeds-and-feeds">Speeds and Feeds</a></li>';
     }
     if (researchData.relatedLinks && researchData.relatedLinks.length > 0) {
         toc += '\n                    <li><a href="#related-links">Related Resources</a></li>';
@@ -207,6 +395,8 @@ html = html.replace('<!-- CONTENT_START -->', `
 html = html.replace('<!-- OPTIONAL_SECTIONS -->', 
     renderRecommendations(researchData.recommendations) +
     renderFacilities(researchData.facilities) +
+    renderSpecs(researchData.specs) +
+    renderSpeedsAndFeeds(researchData.speedsAndFeeds) +
     renderRelatedLinks(researchData.relatedLinks)
 );
 
