@@ -14,12 +14,12 @@
             --text-primary: #e4e4e8;
             --text-secondary: #a0a0a8;
             --text-muted: #707078;
-            --accent-primary: #06b6d4;
-            --accent-secondary: #3b82f6;
-            --accent-tertiary: #8b5cf6;
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-tertiary: #ec4899;
             --accent-success: #22c55e;
             --accent-warning: #f59e0b;
-            --border-color: rgba(6, 182, 212, 0.2);
+            --border-color: rgba(99, 102, 241, 0.2);
             --gradient-primary: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
         }
         
@@ -82,8 +82,8 @@
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(ellipse at top right, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
-                        radial-gradient(ellipse at bottom left, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+            background: radial-gradient(ellipse at top right, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                        radial-gradient(ellipse at bottom left, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
             pointer-events: none;
         }
         
@@ -98,34 +98,60 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 32px;
+            margin-bottom: 20px;
         }
         
-        .research-tag {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .research-meta {
-            display: flex;
-            gap: 24px;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        
-        .meta-item {
+        .header-left {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 16px;
+            flex-wrap: wrap;
         }
         
-        .header-content h1 {
+        .header-meta {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        
+        /* READ ALOUD BUTTON */
+        .read-aloud-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .read-aloud-btn:hover {
+            border-color: var(--accent-primary);
+            background: var(--bg-card-hover);
+        }
+        
+        .read-aloud-btn.active {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--accent-primary);
+        }
+        
+        .read-aloud-btn .icon {
+            font-size: 1.2rem;
+            display: inline-block;
+        }
+        
+        .read-aloud-btn .icon::before {
+            content: '▶';
+        }
+        
+        .header-title {
             font-size: 3.5rem;
             font-weight: 800;
             line-height: 1.1;
@@ -136,7 +162,7 @@
             background-clip: text;
         }
         
-        .header-content .subtitle {
+        .header-description {
             font-size: 1.3rem;
             color: var(--text-secondary);
             max-width: 800px;
@@ -418,7 +444,7 @@
                 order: -1;
             }
             
-            .header-content h1 {
+            .header-title {
                 font-size: 2.5rem;
             }
             
@@ -446,14 +472,17 @@
     <header class="research-header">
         <div class="header-content">
             <div class="header-top">
-                <span class="research-tag">Energy Research</span>
-                <div class="research-meta">
-                    <span class="meta-item">📅 April 3, 2026</span>
-                    <span class="meta-item">📖 3 min read</span>
+                <div class="header-left">
+                    <div class="header-meta">
+                        <span class="read-aloud-btn" onclick="readAloud()">
+                            <span class="icon"></span>
+                            <span>Read Aloud</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <h1>Fusion Energy Research 2024-2025</h1>
-            <p class="subtitle">
+            <h1 class="header-title">Fusion Energy Research 2024-2025</h1>
+            <p class="header-description">
                 Unprecedented breakthroughs in fusion energy, from NIF's net energy gain to private companies racing toward commercial viability.
             </p>
         </div>
@@ -678,5 +707,21 @@
             </a>
         </div>
     </footer>
+
+    <script>
+        function readAloud() {
+            const btn = document.querySelector('.read-aloud-btn');
+            const content = document.querySelector('.article-content');
+            
+            if ('speechSynthesis' in window) {
+                btn.classList.toggle('active');
+                const text = content.innerText;
+                const utterance = new SpeechSynthesisUtterance(text);
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert('Audio reading not supported in this browser');
+            }
+        }
+    </script>
 </body>
 </html>
