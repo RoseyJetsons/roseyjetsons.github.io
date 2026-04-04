@@ -12,7 +12,7 @@ This is a personal landing page showcasing:
 ## 🚀 Quick Links
 
 - **GitHub Profile:** [RoseyJetsons](https://github.com/RoseyJetsons)
-- **This Site:** [roseynetsons.github.io](https://roseynetsons.github.io)
+- **This Site:** [roseyjetsons.github.io](https://roseyjetsons.github.io)
 
 ## 📝 Updating Content
 
