@@ -672,6 +672,150 @@
                 flex-direction: column;
             }
         }
+        
+        /* FINDING TAGS */
+        .finding-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .finding-tag {
+            padding: 3px 10px;
+            background: rgba(99, 102, 241, 0.08);
+            border: 1px solid rgba(99, 102, 241, 0.15);
+            border-radius: 12px;
+            font-size: 0.7rem;
+            color: var(--accent-secondary);
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+            text-transform: lowercase;
+        }
+        
+        /* COMMON MISTAKES */
+        .mistakes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .mistake-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px 20px;
+            background: rgba(245, 158, 11, 0.06);
+            border: 1px solid rgba(245, 158, 11, 0.15);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .mistake-icon {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        /* LEARNING PATH */
+        .learning-path {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-top: 24px;
+            position: relative;
+        }
+        
+        .learning-path::before {
+            content: '';
+            position: absolute;
+            left: 19px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-color);
+        }
+        
+        .path-step {
+            display: flex;
+            gap: 20px;
+            position: relative;
+        }
+        
+        .path-step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            z-index: 1;
+        }
+        
+        .path-step-content {
+            flex: 1;
+            padding-top: 6px;
+        }
+        
+        .path-step-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        
+        .path-step-details {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        /* KEY STATISTICS */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-4px);
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: capitalize;
+        }
     </style>
 </head>
 <body>
@@ -694,7 +838,7 @@
             <div class="header-top">
                 <div class="header-left">
                     <span class="status-badge completed">✓ Completed</span>
-                    <span class="research-date">📅 March 30, 2026</span>
+                    <span class="research-date">📅 March 29, 2026</span>
                     <button class="read-aloud-btn" onclick="toggleReadAloud()">
                         <span class="icon"></span>
                         <span class="text">Read Aloud</span>
@@ -785,6 +929,7 @@
 <p>- V_FB = flat-band voltage</p>
 <p>- φ_F = Fermi potential</p>
 <p>- N_A = substrate doping concentration</p></div>
+                <div class="finding-tags"><span class="finding-tag">device-physics</span><span class="finding-tag">semiconductor-equations</span><span class="finding-tag">transistor-modeling</span><span class="finding-tag">fundamental-theory</span></div>
             </div>
 
             <div class="finding-card">
@@ -839,6 +984,7 @@
 <p>- C_db = C_j × A_D × (1 + V_DB/φ_j)^(-m)</p>
 <br>
 <p>Miller capacitance: C_M = C_gd × (1 + g_m × R_L)</p></div>
+                <div class="finding-tags"><span class="finding-tag">small-signal</span><span class="finding-tag">frequency-response</span><span class="finding-tag">transconductance</span><span class="finding-tag">capacitance</span></div>
             </div>
 
             <div class="finding-card">
@@ -898,6 +1044,7 @@
 <br>
 <p>Friis formula for cascaded stages:</p>
 <p>F_total = F₁ + (F₂-1)/A₁ + (F₃-1)/(A₁×A₂) + ...</p></div>
+                <div class="finding-tags"><span class="finding-tag">noise-analysis</span><span class="finding-tag">thermal-noise</span><span class="finding-tag">shot-noise</span><span class="finding-tag">flicker-noise</span><span class="finding-tag">signal-integrity</span></div>
             </div>
 
             <div class="finding-card">
@@ -966,6 +1113,7 @@
 <p>- Time-dependent dielectric breakdown: 0.6-0.8 eV</p>
 <p>- Hot carrier injection: 0.1-0.2 eV</p>
 <p>- Oxide trap generation: 0.3-0.5 eV</p></div>
+                <div class="finding-tags"><span class="finding-tag">reliability</span><span class="finding-tag">failure-analysis</span><span class="finding-tag">weibull-distribution</span><span class="finding-tag">arrhenius-equation</span><span class="finding-tag">acceleration-factors</span></div>
             </div>
 
             <div class="finding-card">
@@ -1047,6 +1195,7 @@
 <p>- n = 0.16-0.25 (stress), 0.05-0.15 (recovery)</p>
 <p>- α = 1.0-1.5</p>
 <p>- E_a = 0.07-0.18 eV</p></div>
+                <div class="finding-tags"><span class="finding-tag">electromigration</span><span class="finding-tag">thermal-cycling</span><span class="finding-tag">tddb</span><span class="finding-tag">hci</span><span class="finding-tag">nbtI</span></div>
             </div>
 
             <div class="finding-card">
@@ -1111,6 +1260,7 @@
 <p>- Grain size analysis: ASTM E112</p>
 <p>- IMC thickness measurement: Au-Al, Cu-Al, Sn-Ag-Cu</p>
 <p>- Kirkendall void detection</p></div>
+                <div class="finding-tags"><span class="finding-tag">testing-methodology</span><span class="finding-tag">ndt</span><span class="finding-tag">dt</span><span class="finding-tag">characterization</span><span class="finding-tag">failure-analysis</span></div>
             </div>
 
             <div class="finding-card">
@@ -1190,6 +1340,7 @@
 <p>For copper at 1 GHz: δ ≈ 2.1 μm</p>
 <br>
 <p>AC resistance: R_ac ≈ R_dc × (w/2δ) for w &gt;&gt; δ</p></div>
+                <div class="finding-tags"><span class="finding-tag">signal-integrity</span><span class="finding-tag">transmission-lines</span><span class="finding-tag">s-parameters</span><span class="finding-tag">high-speed</span></div>
             </div>
 
             <div class="finding-card">
@@ -1266,6 +1417,7 @@
 <p>- BGA-100: 15-30 °C/W</p>
 <p>- TO-220 (no heatsink): 50-60 °C/W</p>
 <p>- TO-220 (with heatsink): 5-15 °C/W total</p></div>
+                <div class="finding-tags"><span class="finding-tag">thermal</span><span class="finding-tag">junction-temperature</span><span class="finding-tag">thermal-resistance</span><span class="finding-tag">reliability</span></div>
             </div>
 
             <div class="finding-card">
@@ -1345,6 +1497,7 @@
 <p>- Timeout period accuracy</p>
 <p>- Windowed watchdog verification</p>
 <p>- Reset generation on timeout</p></div>
+                <div class="finding-tags"><span class="finding-tag">microcontroller</span><span class="finding-tag">digital-testing</span><span class="finding-tag">analog-testing</span><span class="finding-tag">peripherals</span></div>
             </div>
 
             <div class="finding-card">
@@ -1398,6 +1551,7 @@
 <p>- Humidity: 10% to 98% RH</p>
 <p>- Combined: Temp/humidity/vibration</p>
 <p>- Burn-in: 125°C, 168-1000 hours</p></div>
+                <div class="finding-tags"><span class="finding-tag">test-equipment</span><span class="finding-tag">instrumentation</span><span class="finding-tag">measurement</span><span class="finding-tag">characterization</span></div>
             </div>
                 </div>
             </section>

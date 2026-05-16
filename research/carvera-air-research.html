@@ -672,6 +672,150 @@
                 flex-direction: column;
             }
         }
+        
+        /* FINDING TAGS */
+        .finding-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .finding-tag {
+            padding: 3px 10px;
+            background: rgba(99, 102, 241, 0.08);
+            border: 1px solid rgba(99, 102, 241, 0.15);
+            border-radius: 12px;
+            font-size: 0.7rem;
+            color: var(--accent-secondary);
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+            text-transform: lowercase;
+        }
+        
+        /* COMMON MISTAKES */
+        .mistakes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .mistake-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px 20px;
+            background: rgba(245, 158, 11, 0.06);
+            border: 1px solid rgba(245, 158, 11, 0.15);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .mistake-icon {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        /* LEARNING PATH */
+        .learning-path {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-top: 24px;
+            position: relative;
+        }
+        
+        .learning-path::before {
+            content: '';
+            position: absolute;
+            left: 19px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-color);
+        }
+        
+        .path-step {
+            display: flex;
+            gap: 20px;
+            position: relative;
+        }
+        
+        .path-step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            z-index: 1;
+        }
+        
+        .path-step-content {
+            flex: 1;
+            padding-top: 6px;
+        }
+        
+        .path-step-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        
+        .path-step-details {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        /* KEY STATISTICS */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-4px);
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: capitalize;
+        }
     </style>
 </head>
 <body>
@@ -694,7 +838,7 @@
             <div class="header-top">
                 <div class="header-left">
                     <span class="status-badge completed">✓ Completed</span>
-                    <span class="research-date">📅 March 31, 2026</span>
+                    <span class="research-date">📅 March 30, 2026</span>
                     <button class="read-aloud-btn" onclick="toggleReadAloud()">
                         <span class="icon"></span>
                         <span class="text">Read Aloud</span>
@@ -736,31 +880,37 @@
             <div class="finding-card">
                 <div class="finding-title">Work Area Constraints</div>
                 <div class="finding-text"><p>The Carvera Air offers a 30 × 20 × 13 cm work volume with 12 cm gantry clearance. Design with a 10-20mm safety margin for clamping, tool approach paths, and material irregularities. Perfect for jewelry, chess pieces, small signs, phone cases, and architectural models—not suitable for large furniture or full-size prototypes.</p></div>
+                
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Corner Radius = Bit Radius</div>
                 <div class="finding-text"><p>This is the #1 mistake beginners make. Internal corners will ALWAYS be rounded by the bit radius. A 6mm bit creates a 3mm radius corner; a 3mm bit creates a 1.5mm radius. Golden rule: internal corner radius should be at least 1/3 of cavity depth for clean cuts.</p></div>
+                
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Minimum Feature Sizes</div>
                 <div class="finding-text"><p>Minimum feature width = 1.5 × bit diameter. A 3mm bit can reliably cut 4.5mm features; a 1.5mm bit handles 2.25mm details. Wall thickness: 2-3mm for rough cuts, 1-1.5mm for fine detail, 0.5-1mm for delicate features (requires care).</p></div>
+                
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Relief Carving Depths</div>
                 <div class="finding-text"><p>Bas-relief (1-3mm) for subtle decoration; medium relief (3-10mm) for signs and plaques; high relief (10-20mm) for dramatic sculptures; through-cut for cutouts and puzzles. Engraving depth typically 0.025-0.25mm, maximum practical 3.5mm.</p></div>
+                
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Material Hierarchy by Difficulty</div>
                 <div class="finding-text"><p>Easy: Balsa, plywood, basswood, MDF. Medium: Cherry, poplar, acrylic. Hard: Maple, hard acrylic. Very Hard: Aluminum (12mm max), brass (6mm max), steel (3mm engraving only). Beginners should start with basswood or MDF using a 3mm end mill.</p></div>
+                
             </div>
 
             <div class="finding-card">
                 <div class="finding-title">Software Options Compared</div>
                 <div class="finding-text"><p>Makera CAM (free, included) — beginner-friendly, pre-configured, cloud-based. VCarve Pro ($370) — best for 2.5D carving and lettering. Fusion 360 (free for hobbyists) — full 3D CAD+CAM, industry standard, steeper learning curve. Easel (free/$20/mo) — easiest browser-based option with project library.</p></div>
+                
             </div>
                 </div>
             </section>
@@ -945,6 +1095,52 @@
                     </li>
                 </ul>
             </section>
+            <!-- COMMON MISTAKES -->
+            <section class="content-section" id="common-mistakes">
+                <h2 class="section-title">Common Mistakes to Avoid</h2>
+                <div class="mistakes-list">
+                    
+                    <div class="mistake-item">
+                        <span class="mistake-icon">⚠️</span>
+                        <span>Designing sharp internal corners—they will always come out rounded</span>
+                    </div>
+                    
+                    <div class="mistake-item">
+                        <span class="mistake-icon">⚠️</span>
+                        <span>Cutting too deep in one pass—breaks bits and creates poor finish</span>
+                    </div>
+                    
+                    <div class="mistake-item">
+                        <span class="mistake-icon">⚠️</span>
+                        <span>Ignoring grain direction in wood—can cause unpredictable chipping</span>
+                    </div>
+                    
+                    <div class="mistake-item">
+                        <span class="mistake-icon">⚠️</span>
+                        <span>Skipping test runs—always test on scrap material first</span>
+                    </div>
+                    
+                    <div class="mistake-item">
+                        <span class="mistake-icon">⚠️</span>
+                        <span>Using wrong speeds/feeds—causes burning or rough surfaces</span>
+                    </div>
+                    
+                    <div class="mistake-item">
+                        <span class="mistake-icon">⚠️</span>
+                        <span>Forgetting clamping space—design for fixturing requirements</span>
+                    </div>
+                    
+                    <div class="mistake-item">
+                        <span class="mistake-icon">⚠️</span>
+                        <span>Undersized tabs—parts fall out and move during cutting</span>
+                    </div>
+                    
+                    <div class="mistake-item">
+                        <span class="mistake-icon">⚠️</span>
+                        <span>Using too small a bit for the job—fragile and slow</span>
+                    </div>
+                </div>
+            </section>
             
             <!-- NAVIGATION BUTTONS -->
             <div class="research-nav-buttons">
@@ -968,6 +1164,7 @@
                     <li><a href="#specs">Machine Specifications</a></li>
                     <li><a href="#speeds-and-feeds">Speeds and Feeds</a></li>
                     <li><a href="#related-links">Related Resources</a></li>
+                    <li><a href="#common-mistakes">Common Mistakes</a></li>
                 </ul>
             </div>
         </aside>

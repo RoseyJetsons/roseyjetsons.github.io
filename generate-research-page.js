@@ -74,10 +74,14 @@ function renderCategories(categories) {
 function renderFindings(findings) {
     return findings.map(finding => {
         const processedContent = processContentWithCodeBlocks(finding.content);
+        const tagsHtml = (finding.tags && finding.tags.length > 0)
+            ? `<div class="finding-tags">${finding.tags.map(t => `<span class="finding-tag">${escapeHtml(t)}</span>`).join('')}</div>`
+            : '';
         return `
             <div class="finding-card">
                 <div class="finding-title">${finding.title}</div>
                 <div class="finding-text">${processedContent}</div>
+                ${tagsHtml}
             </div>`;
     }).join('\n');
 }
@@ -280,6 +284,61 @@ function renderRelatedLinks(links) {
             </section>`;
 }
 
+function renderCommonMistakes(mistakes) {
+    if (!mistakes || mistakes.length === 0) return '';
+    
+    return `
+            <!-- COMMON MISTAKES -->
+            <section class="content-section" id="common-mistakes">
+                <h2 class="section-title">Common Mistakes to Avoid</h2>
+                <div class="mistakes-list">
+                    ${mistakes.map(m => `
+                    <div class="mistake-item">
+                        <span class="mistake-icon">⚠️</span>
+                        <span>${escapeHtml(m)}</span>
+                    </div>`).join('\n                    ')}
+                </div>
+            </section>`;
+}
+
+function renderLearningPath(path) {
+    if (!path || path.length === 0) return '';
+    
+    return `
+            <!-- LEARNING PATH -->
+            <section class="content-section" id="learning-path">
+                <h2 class="section-title">Learning Path</h2>
+                <div class="learning-path">
+                    ${path.map((item, i) => `
+                    <div class="path-step">
+                        <div class="path-step-number">${i + 1}</div>
+                        <div class="path-step-content">
+                            <div class="path-step-title">${escapeHtml(item.level)}</div>
+                            <div class="path-step-details">${escapeHtml(item.details)}</div>
+                        </div>
+                    </div>`).join('\n                    ')}
+                </div>
+            </section>`;
+}
+
+function renderKeyStatistics(stats) {
+    if (!stats || typeof stats !== 'object' || Object.keys(stats).length === 0) return '';
+    
+    const entries = Object.entries(stats);
+    return `
+            <!-- KEY STATISTICS -->
+            <section class="content-section" id="key-statistics">
+                <h2 class="section-title">Key Statistics</h2>
+                <div class="stats-grid">
+                    ${entries.map(([key, value]) => `
+                    <div class="stat-card">
+                        <div class="stat-value">${escapeHtml(String(value))}</div>
+                        <div class="stat-label">${escapeHtml(key.replace(/([A-Z])/g, ' $1').replace(/^./, s => s.toUpperCase())).replace(/_/g, ' ')}</div>
+                    </div>`).join('\n                    ')}
+                </div>
+            </section>`;
+}
+
 // Generate table of contents
 function generateTOC() {
     let toc = `
@@ -301,6 +360,15 @@ function generateTOC() {
     }
     if (researchData.relatedLinks && researchData.relatedLinks.length > 0) {
         toc += '\n                    <li><a href="#related-links">Related Resources</a></li>';
+    }
+    if (researchData.commonMistakes && researchData.commonMistakes.length > 0) {
+        toc += '\n                    <li><a href="#common-mistakes">Common Mistakes</a></li>';
+    }
+    if (researchData.learningPath && researchData.learningPath.length > 0) {
+        toc += '\n                    <li><a href="#learning-path">Learning Path</a></li>';
+    }
+    if (researchData.keyStatistics && typeof researchData.keyStatistics === 'object' && Object.keys(researchData.keyStatistics).length > 0) {
+        toc += '\n                    <li><a href="#key-statistics">Key Statistics</a></li>';
     }
     
     return toc;
@@ -353,12 +421,15 @@ html = html.replace('<!-- CONTENT_START -->', `
 `);
 
 // Add optional sections
-html = html.replace('<!-- OPTIONAL_SECTIONS -->', 
+  html = html.replace('<!-- OPTIONAL_SECTIONS -->', 
     renderRecommendations(researchData.recommendations) +
     renderFacilities(researchData.facilities) +
     renderSpecs(researchData.specs) +
     renderSpeedsAndFeeds(researchData.speedsAndFeeds) +
-    renderRelatedLinks(researchData.relatedLinks)
+    renderRelatedLinks(researchData.relatedLinks) +
+    renderCommonMistakes(researchData.commonMistakes) +
+    renderLearningPath(researchData.learningPath) +
+    renderKeyStatistics(researchData.keyStatistics)
 );
 
 // Table of contents
